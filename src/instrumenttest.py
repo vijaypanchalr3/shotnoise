@@ -7,12 +7,12 @@ from termcolor import cprint
 
 
 def instrumenttest():
-
+    SR830 = None
     cprint("----------------------------Instrument check------------------------\n\n\n","yellow")
     
     try:                            # try for RS232/serial connection
-        ser = serial.Serial()
-        ser = serial.Serial('COM1', baudrate=9600, timeout=1)
+        SR830 = serial.Serial()
+        SR830 = serial.Serial('COM1', baudrate=9600, timeout=1)
         cprint("serial connection at COM1","green")
         cprint("WANT TO PROCEED (y)","blue")
         if input()=="y":
@@ -44,10 +44,10 @@ def instrumenttest():
         sys.exit()
 
     cprint("----------------------------Instrument test finished------------------------\n\n\n","yellow")
-
+    return SR830
 
 
 
 
 if __name__=="__main__":
-    print("tests are not written") 
+    pass
