@@ -10,7 +10,7 @@ bare_arguments= sys.argv[1:]         # except first: file name
 
 # this are options
 options = "f:"
-full_options = ["file="]
+full_options = ["file"]
 
 
 def choosefile():

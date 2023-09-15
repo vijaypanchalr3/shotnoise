@@ -1,5 +1,6 @@
 from config import choosefile
 import csv
+import sys
 import instrumenttest
 import time
 from termcolor import cprint
@@ -43,7 +44,7 @@ def read_data(dev,i=3,errdelay=3):
                     time.sleep(errdelay)
                 else:
                     sys.exit()
-        
+            return 0
     
 def freq(dev,value,errdelay=3):
     """
@@ -84,11 +85,11 @@ def simple_partition_loop(dev,_min,_max,partitions):
     """
     length = int((_max-_min)/partitions)
     current =_min
-    while current<_max:
+    while current<=_max:
         freq(dev,current)
-        read_data(dev,i=3)
+        data = read_data(dev,i=3)
+        filewriter.writerow([current,data])
         current+=length
-
 
 
 
