@@ -4,7 +4,7 @@ import core
 # load CLI interface and setup instruent
 new_setup = core.Setup()
 device = new_setup.device
-dev = core.instrument.Instrument(device=device)
+dev = core.Instrument(device=device)
 
 
 
