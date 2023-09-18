@@ -10,6 +10,15 @@ import re
 
 
 class Setup(sysarg.CLI):
+    """
+    INTERFACE setup
+
+    SR830 allows two type of interface,
+    1) RS232
+    2) GPIB
+
+    i worked with GPIB interface !
+    """
     def __init__(self) -> None:
         super().__init__()
         if self.get_connection()=='GPIB':
@@ -47,15 +56,12 @@ if __name__=="__main__":
     new.setup_gpib()
 
 
+
+
+# this is old class, must be removed at the end
 class Interface:
     """
-    tests and ping interface,
 
-    SR830 allows two type of interface,
-    1) RS232
-    2) GPIB
-
-    i worked with GPIB interface !
     """
     def __init__(self, connection) -> None:
         self.device = None
