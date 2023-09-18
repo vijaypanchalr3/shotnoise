@@ -1,19 +1,53 @@
-# GIVE GPIB as SYSTEM ARG
-# GIVE ADDRESS as SYSTEM ARG
+from core.utils import sysarg
 
 
-from utils import defaults
-
-
-# import serial
 import pyvisa
+import serial
 import sys
 from termcolor import cprint
+import re
 
-connection = "GPIB"
-address = "1"
 
-class interface:
+
+class Setup(sysarg.CLI):
+    def __init__(self) -> None:
+        super().__init__()
+        if self.get_connection()=='GPIB':
+            self.setup_gpib()
+        else:
+            print("not setup RS232, don't have time")
+
+
+
+    def setup_gpib(self):
+                                    
+        try:                        # GPIB connection check
+            resources = pyvisa.ResourceManager()
+            device = ""
+            for resource in resources.list_resources():
+                if re.compile(r'GPIB[0-9]::\b\d{1,2}\b::INSTR').search(resource):
+                    if re.split('::',resource)[1]==self.connection:
+                        device = resource
+                        break
+                    else:
+                        device = resource
+            if device=="":
+                cprint("ERROR: please check GPIB connection", "red")
+                sys.exit()
+            
+            self.device = resource.open_resource(device) 
+
+        except:
+            cprint("ERROR in detecting GPIB, there must be problem with setup of pyvisa or there is no connection of gpib\n you should look either in pyvisa documentation or try for RS232 interface","red",attrs=['bold'])
+
+
+
+if __name__=="__main__":
+    new = Setup()
+    new.setup_gpib()
+
+
+class Interface:
     """
     tests and ping interface,
 
@@ -23,12 +57,14 @@ class interface:
 
     i worked with GPIB interface !
     """
-    def __init__(self) -> None:
+    def __init__(self, connection) -> None:
         self.device = None
         self.connection = connection
 
-        cprint("----------------------------Instrument check------------------------\n\n","yellow")
 
+    def check(self) -> None:
+
+        cprint("----------------------------Instrument check------------------------\n\n","yellow")
 
         try:                            # try for RS232/serial connection
             self.device = serial.Serial('COM1', baudrate=9600, timeout=1)
@@ -63,14 +99,15 @@ class interface:
             sys.exit()
 
         cprint("----------------------------Instrument test finished------------------------\n\n\n","yellow")
-
-        pass
     
     def connection_type(self) -> str:
         return self.connection
 
     def machine(self):
         return self.device
+
+    def ping(self) -> None:
+        pass
     
 
 

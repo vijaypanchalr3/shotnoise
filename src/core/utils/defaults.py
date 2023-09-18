@@ -6,3 +6,30 @@
 
 # refer to SR830 manual for more info.
 
+
+
+
+class DefaultParams:
+    """
+    specify default parameters
+    
+    for more info:
+    refer to SR830 manual for more info.
+    """
+
+
+    time_constant = 5
+    sensitivity = 5
+    # filter_slope = 
+
+    baud_rate = 9600
+    sample_rate = 10
+    gpib_address = 1
+    connection = 'GPIB'
+
+    fmin = 01E+3
+    fmax = 01E+5
+    partitions = 4
+    levels = 4
+
+    data= 3

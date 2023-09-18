@@ -1,7 +1,7 @@
-from config import choosefile
+from archive_legacy.config import choosefile
 import csv
 import sys
-import instrumenttest
+import archive_legacy.instrumenttest as instrumenttest
 import time
 from termcolor import cprint
 
