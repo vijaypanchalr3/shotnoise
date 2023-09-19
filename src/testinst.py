@@ -1,4 +1,4 @@
-from core.instruments import Instrument
+from core.common import Instrument
 
 
 

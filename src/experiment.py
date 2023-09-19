@@ -1,8 +1,7 @@
-from core.utils import getfile
-from core import instruments
+from core.devices import SR830
+from core import common
 
-
-sr830 = instruments.SR830()
+sr830 = common.common()
 
 
 sr830.writerow([5554,4545454])

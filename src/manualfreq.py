@@ -1,4 +1,4 @@
-from core.instruments import Instrument
+from core.common import Instrument
 
 
 import time
@@ -19,7 +19,6 @@ time.sleep(5)
 totol_readings_in_row = 10
 freq = SR830.inst_freq
 
-for i in range(10):
 
 
 

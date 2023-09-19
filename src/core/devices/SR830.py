@@ -1,38 +1,4 @@
-from core.load import Setup
-from core.utils import getfile
-
-
-
-class common:
-    """
-    basic SCPI language support
-    
-    """
-    def __init__(self) -> None:
-        self.setup = Setup()
-        self.device = self.setup.device
-        self.ping()
-        self.load_file = getfile.Get_File(self.setup.get_file())
-    
-    def writerow(self,data)-> None:
-        self.load_file.writerow(data)
-    
-    def readrow(self,data):
-        return self.load_file.readrow()
-    
-    def ping(self)-> None:
-        self.device.query("*IDN?")
-        
-    def reset(self)-> None:
-        self.device.query("*RST")
-
-    def clear_status(self)-> None:
-        self.device.query("*CLS")
-
-    def std_event(self)->None:
-        pass
-
-
+from core.common import common
 
 class SR830(common):
     """
@@ -40,6 +6,10 @@ class SR830(common):
     """
     def __init__(self) -> None:
         super().__init__()
+        if self.connection == "GPIB":
+            self.set_frequency = self.set_frequency()
+
+
         self.set_frequency(self.setup.get_fmin())
         self.set_sample_rate(self.setup.get_sample_rate())
         self.time_constant(self.setup.get_time_constant())   

@@ -1,4 +1,3 @@
-from core.utils import sysarg
 
 import inspect
 import csv
