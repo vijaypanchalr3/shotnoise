@@ -1,13 +1,45 @@
 from core.load import Setup
+from core.utils import getfile
 
-class Instrument:
+
+
+class common:
     """
-
+    basic SCPI language support
+    
     """
     def __init__(self) -> None:
         self.setup = Setup()
         self.device = self.setup.device
-        self.reset()
+        self.ping()
+        self.load_file = getfile.Get_File(self.setup.get_file())
+    
+    def writerow(self,data)-> None:
+        self.load_file.writerow(data)
+    
+    def readrow(self,data):
+        return self.load_file.readrow()
+    
+    def ping(self)-> None:
+        self.device.query("*IDN?")
+        
+    def reset(self)-> None:
+        self.device.query("*RST")
+
+    def clear_status(self)-> None:
+        self.device.query("*CLS")
+
+    def std_event(self)->None:
+        pass
+
+
+
+class SR830(common):
+    """
+    class for SR830 specific SPCI commands.
+    """
+    def __init__(self) -> None:
+        super().__init__()
         self.set_frequency(self.setup.get_fmin())
         self.set_sample_rate(self.setup.get_sample_rate())
         self.time_constant(self.setup.get_time_constant())   
@@ -16,14 +48,6 @@ class Instrument:
         self.data_variable = self.setup.get_data_var()
         self.inst_freq= self.setup.get_freq()
 
-
-    def ping(self)-> None:
-        self.device.query("*IDN?")
-        pass
-
-    def reset(self)-> None:
-        self.device.query("*RST")
-        pass
 
     def set_frequency(self, value, errdelay = 3) -> None:
         """change reference frequency"""

@@ -1,6 +1,6 @@
-from core.utils import getpath
+from core.utils import sysarg
 
-
+import inspect
 import csv
 import os
 
@@ -9,31 +9,33 @@ class Get_File:
     INFO: 
     
     """
-    def __init__(self, filename) -> None:
-        _project_dir_path_abs = getpath.getpath()
+    def __init__(self,file) -> None:
+        current_frame = inspect.currentframe()
+        caller_frame = inspect.getouterframes(current_frame)[1]
+        current_filename = caller_frame.filename
+        _project_dir_path_abs = os.path.abspath(os.path.dirname(current_filename))
 
         if os.path.exists(os.path.join(_project_dir_path_abs,"data")):
             _data_dir_path_abs = os.path.join(_project_dir_path_abs,"data")
         else:
             os.mkdir(os.path.join(_project_dir_path_abs,"data"))
             _data_dir_path_abs = os.path.join(_project_dir_path_abs,"data")
-
         print(_data_dir_path_abs)
-        if filename=='default':
-            filename = "auto0.csv"
+        if file=='default':
+            file = "auto0.csv"
             count = 0
             while os.path.exists(os.path.join(_data_dir_path_abs,f"auto{count}.csv")):
                 count+=1
-                filename = f"auto{count}.csv"
+                file = f"auto{count}.csv"
 
-        filename = os.path.join(_data_dir_path_abs,filename)
+        file = os.path.join(_data_dir_path_abs,file)
         
         # i did not used re module down here
-        if not ((filename[len(filename)-1]=='v')and(filename[len(filename)-2]=='s')and(filename[len(filename)-3]=='c')and(filename[len(filename)-4]=='.')):
-            filename = filename+".csv"
+        if not ((file[len(file)-1]=='v')and(file[len(file)-2]=='s')and(file[len(file)-3]=='c')and(file[len(file)-4]=='.')):
+            file = file+".csv"
         else:
             pass
-        self.file = open(filename,'w',newline='')
+        self.file = open(file,'w',newline='')
         self.writer = csv.writer(self.file)
 
     def writerow(self, data)-> None:

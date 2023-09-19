@@ -1,5 +1,5 @@
 from core.utils import sysarg
-
+from core.utils import getfile
 
 import pyvisa
 import serial
@@ -21,7 +21,6 @@ class Setup(sysarg.CLI):
     """
     def __init__(self) -> None:
         super().__init__()
-        
         cprint("----------------------------Instrument check------------------------\n\n","yellow")
         if self.get_connection()=='GPIB':
             self.setup_gpib()

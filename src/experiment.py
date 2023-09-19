@@ -1,9 +1,14 @@
-from core.instruments import Instrument
+from core.utils import getfile
+from core import instruments
 
 
-SR830 = Instrument()
+sr830 = instruments.SR830()
 
-SR830.set_frequency(5456)
+
+sr830.writerow([5554,4545454])
+# SR830 = Instrument()
+
+# SR830.set_frequency(5456)
 
 
 
