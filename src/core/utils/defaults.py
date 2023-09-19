@@ -25,8 +25,8 @@ class DefaultParams:
     baud_rate = 9600
     sample_rate = 10
     gpib_address = 1
-    connection = 'GPIB'
-
+    connection = 1          # means GPIB, 1: GPIB, 2: RS232, 3: USB, 4: LAN
+    connections = {1:"GPIB", 2:"RS232", 3:"USB", 4:"LAN"}
     fmin = 01E+3
     fmax = 01E+5
     partitions = 4

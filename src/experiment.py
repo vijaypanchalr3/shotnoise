@@ -1,14 +1,7 @@
-from core.devices import SR830
-from core import common
+from core import sr830
 
-sr830 = common.common()
-
-
-sr830.writerow([5554,4545454])
-# SR830 = Instrument()
-
-# SR830.set_frequency(5456)
-
+new_instance = sr830.SR830()
+new_instance.ping()
 
 
 # make partition loop

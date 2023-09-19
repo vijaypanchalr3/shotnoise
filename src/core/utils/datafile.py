@@ -1,12 +1,10 @@
-
 import inspect
 import csv
 import os
 
 class Get_File:
     """
-    INFO: 
-    
+    INFO:  just to write file, must be CSV 
     """
     def __init__(self,file) -> None:
         current_frame = inspect.currentframe()

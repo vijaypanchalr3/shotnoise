@@ -1,4 +1,3 @@
-from core.utils import sysarg
 
 import pyvisa
 import serial
@@ -8,10 +7,10 @@ import re
 
 
 
-class Setup(sysarg.CLI):
+class Setup():
     """
     INTERFACE setup
-
+#
     SR830 allows two type of interface,
     1) RS232
     2) GPIB

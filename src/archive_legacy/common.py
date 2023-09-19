@@ -1,5 +1,5 @@
-from core.load import Setup
-from core.utils import getfile
+from core.interfaces.load import Setup
+from core.utils import datafile
 
 
 
@@ -13,7 +13,7 @@ class Common:
         self.connection = self.setup.get_connection()
         self.device = self.setup.get_device()
         self.ping()
-        self.load_file = getfile.Get_File(self.setup.get_file())
+        self.load_file = datafile.Get_File(self.setup.get_file())
 
     def writerow(self,data)-> None:
         self.load_file.writerow(data)
@@ -22,8 +22,7 @@ class Common:
         return self.load_file.readrow()
     
     def ping(self)-> None:
-        if self.connection=="GPIB":
-            self.device.query("*IDN?")
+        self.device.query("*IDN?")
         
     def reset(self)-> None:
         self.device.query("*RST")

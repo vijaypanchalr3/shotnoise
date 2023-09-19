@@ -1,7 +1,6 @@
 import os
 
 def getpath():
-    _cur_dir_path_abs = os.path.abspath(os.path.dirname(__file__))
     files = os.listdir(_cur_dir_path_abs)
     while not 'core' in files:
         _cur_dir_path_abs = os.path.abspath(os.path.join(_cur_dir_path_abs,os.pardir))

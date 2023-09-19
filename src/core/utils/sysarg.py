@@ -31,8 +31,8 @@ class CLI:
         self.argparser.add_argument('-sr', '--samplerate', metavar='', type=int, choices=range(1,15), default=self.defaults.sample_rate, help="sample rate for output sampling from following choises  "+str(tuple(range(1,15))))
         self.argparser.add_argument('-dt', '--data', metavar='', type=int,choices=range(1,5),default=self.defaults.data, help="give default data variable from following choises  "+str(tuple(range(1,5))))
         self.argparser.add_argument('-bd', '--baud', metavar='', type=int, default=self.defaults.baud_rate, help="set baud rate for connection defaults to 9600")
-        self.argparser.add_argument('-g', '--gpib', metavar='',type=int, default=self.defaults.gpib_address, help="set gpib address to this integer value, defaults to 1")
-        self.argparser.add_argument('-c', '--connection', metavar='GPIB/RS232', type=str, choices=['GPIB','RS232'], default=self.defaults.connection, help="set connection of your interface, default to GPIB")
+        self.argparser.add_argument('-c', '--connection', metavar='1:GPIB,2:RS232,3:LAN,4:USB', type=str, choices=range(1,5), default=self.defaults.connection, help="1: GPIB, 2: RS232, 3: USB, 4: LAN")
+
 
     def get_file(self) -> str:
         return self.args.file   
@@ -50,7 +50,7 @@ class CLI:
         return self.args.levels
     
     def get_connection(self)->str:
-        return self.args.connection
+        return defaults.DefaultParams.connections[self.args.connection]
 
     def get_gpib(self)->int:
         return self.args.gpib
@@ -67,5 +67,3 @@ class CLI:
     def get_freq(self)->float:
         return self.args.get_freq
     
-if __name__=='__main__':
-    x= CLI()
