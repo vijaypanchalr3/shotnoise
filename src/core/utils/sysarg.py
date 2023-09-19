@@ -32,8 +32,8 @@ class CLI:
         self.argparser.add_argument('-dt', '--data', metavar='', type=int,choices=range(1,5),default=self.defaults.data, help="give default data variable from following choises  "+str(tuple(range(1,5))))
         self.argparser.add_argument('-bd', '--baud', metavar='', type=int, default=self.defaults.baud_rate, help="set baud rate for connection defaults to 9600")
         self.argparser.add_argument('-c', '--connection', metavar='1:GPIB,2:RS232,3:LAN,4:USB', type=str, choices=range(1,5), default=self.defaults.connection, help="1: GPIB, 2: RS232, 3: USB, 4: LAN")
-
-
+        self.argparser.add_argument('-td','--timedelay', metavar="2", type=int, default=self.defaults.time_delay, help="time delay between write and read commands")
+        
     def get_file(self) -> str:
         return self.args.file   
 
@@ -65,5 +65,7 @@ class CLI:
         return self.args.data
         
     def get_freq(self)->float:
-        return self.args.get_freq
+        return self.args.freq
     
+    def get_time_delay(self)->int:
+        return self.args.timedelay

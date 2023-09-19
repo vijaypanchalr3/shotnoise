@@ -1,7 +1,12 @@
 from core import sr830
 
+
+import time
+
 new_instance = sr830.SR830()
-new_instance.ping()
+time.sleep(2)
+print(new_instance.ping())
+print("hello")
 
 
 # make partition loop
