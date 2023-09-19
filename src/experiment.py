@@ -1,15 +1,10 @@
-import core
+from core.instruments import Instrument
 
 
-# load CLI interface and setup instruent
-new_setup = core.Setup()
-device = new_setup.device
-dev = core.Instrument(device=device)
+SR830 = Instrument()
 
+SR830.set_frequency(5456)
 
-
-# device reset
-dev.reset()
 
 
 # make partition loop

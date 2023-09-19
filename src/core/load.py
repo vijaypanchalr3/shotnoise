@@ -3,7 +3,7 @@ from core.utils import sysarg
 
 import pyvisa
 import serial
-import sys
+from sys import exit
 from termcolor import cprint
 import re
 
@@ -21,15 +21,16 @@ class Setup(sysarg.CLI):
     """
     def __init__(self) -> None:
         super().__init__()
+        
+        cprint("----------------------------Instrument check------------------------\n\n","yellow")
         if self.get_connection()=='GPIB':
             self.setup_gpib()
         else:
-            print("not setup RS232, don't have time")
+            self.setup_RS232()
+        cprint("----------------------------Instrument test finished------------------------\n\n\n","yellow")
 
 
-
-    def setup_gpib(self):
-                                    
+    def setup_gpib(self):                                    
         try:                        # GPIB connection check
             resources = pyvisa.ResourceManager()
             device = ""
@@ -42,36 +43,13 @@ class Setup(sysarg.CLI):
                         device = resource
             if device=="":
                 cprint("ERROR: please check GPIB connection", "red")
-                sys.exit()
-            
+                exit()
             self.device = resource.open_resource(device) 
-
         except:
             cprint("ERROR in detecting GPIB, there must be problem with setup of pyvisa or there is no connection of gpib\n you should look either in pyvisa documentation or try for RS232 interface","red",attrs=['bold'])
 
 
-
-if __name__=="__main__":
-    new = Setup()
-    new.setup_gpib()
-
-
-
-
-# this is old class, must be removed at the end
-class Interface:
-    """
-
-    """
-    def __init__(self, connection) -> None:
-        self.device = None
-        self.connection = connection
-
-
-    def check(self) -> None:
-
-        cprint("----------------------------Instrument check------------------------\n\n","yellow")
-
+    def setup_RS232(self):
         try:                            # try for RS232/serial connection
             self.device = serial.Serial('COM1', baudrate=9600, timeout=1)
             cprint("serial connection at COM1","green")
@@ -79,41 +57,14 @@ class Interface:
             if input()=="y":
                 pass
             else:
-                sys.exit()
+                exit()
             self.connection = "RS232"
         except:
             cprint("WARNING: no RS-232 connection detected","blue",attrs=['bold'])
 
 
-        try:                            # try for GPIB connection
-            resource = pyvisa.ResourceManager()
-            print(resource.list_resources())
-            self.device = resource.open_resource(resource.list_resources()[0]) 
-            cprint(self.SR830,"green")
-            cprint("WANT TO PROCEED (y)","blue",attrs=['bold'])
-            if input()=="y":
-                pass
-            else:
-                sys.exit()
-            self.connection = "GPIB"
-        except:
-            cprint("WARNING: no GPIB connection detected","blue",attrs=['bold'])
-
-
-        if self.connection == "none":
-            cprint("ERROR: No connection detected.","red",attrs=['bold'])
-            sys.exit()
-
-        cprint("----------------------------Instrument test finished------------------------\n\n\n","yellow")
-    
-    def connection_type(self) -> str:
-        return self.connection
-
-    def machine(self):
-        return self.device
-
-    def ping(self) -> None:
-        pass
-    
+if __name__=="__main__":
+    new = Setup()
+    new.setup_gpib()
 
 

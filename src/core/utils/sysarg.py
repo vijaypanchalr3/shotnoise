@@ -6,9 +6,8 @@ import argparse
 
 class CLI:
     """
-    
+    this is CLI argument and default setup for script
     """
-
     def __init__(self) -> None:
         self.defaults = defaults.DefaultParams()
         self.argparser = argparse.ArgumentParser(
@@ -23,6 +22,7 @@ class CLI:
     def arguments(self) ->None:
         self.argparser.add_argument('-f','--file', metavar='*.csv', type=str, default="default", help="give an file to write data")
         self.argparser.add_argument('-fl','--fmin', type=float, default=self.defaults.fmin, help="give lower limit for reference frequency")
+        self.argparser.add_argument('-fr','--freq', type=float, default=1E3, help="give reference frequency")
         self.argparser.add_argument('-fh','--fmax', type=float, default=self.defaults.fmax, help="give upper limit for reference frequency")
         self.argparser.add_argument('-pa','--partitions',type=int, default=self.defaults.partitions, help="give partition for frequency division")
         self.argparser.add_argument('-le','--level', type=int, default=self.defaults.levels, help="similar to levels it take increases partitions and resolution")
@@ -54,6 +54,18 @@ class CLI:
 
     def get_gpib(self)->int:
         return self.args.gpib
+    
+    def get_sample_rate(self)->int:
+        return self.args.samplerate
+    
+    def get_time_constant(self)->int:
+        return self.args.timeconst
+    
+    def get_data_var(self)-> int:
+        return self.args.data
+        
+    def get_freq(self)->float:
+        return self.args.get_freq
     
 if __name__=='__main__':
     x= CLI()

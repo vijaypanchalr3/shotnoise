@@ -1,6 +1,6 @@
-import pytest
+
 
 
 def test_getfile():
-    filename = "test"
+    return __file__
     # don't have time for this
