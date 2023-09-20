@@ -1,8 +1,3 @@
-# GIVE GPIB as SYSTEM ARG and default values
-# GIVE ADDRESS as SYSTEM ARG and default values
-# GIVE board number
-
-# GIVE all PARAMS of instrument
 
 # refer to SR830 manual for more info.
 
@@ -22,6 +17,7 @@ class DefaultParams:
     sensitivity = 5
     # filter_slope = 
 
+    time_delay = 2
     baud_rate = 9600
     sample_rate = 10
     gpib_address = 1

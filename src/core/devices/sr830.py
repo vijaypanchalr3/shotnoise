@@ -1,8 +1,11 @@
 from core.utils import sysarg
 from core.utils import datafile
 
+
+import time
 new_instance = sysarg.CLI()
 if new_instance.get_connection()=="GPIB":
+
     from core.interfaces import gpib
     
     class SR830(gpib.GPIB):
@@ -10,42 +13,51 @@ if new_instance.get_connection()=="GPIB":
             super().__init__()
 
             # setup initial values
-            self.set_frequency(new_instance.get_freq())
-            self.set_sample_rate(new_instance.get_sample_rate())
-            self.time_constant(new_instance.get_time_constant())   
+            # self.set_frequency(new_instance.get_freq())
+            # self.set_sample_rate(new_instance.get_sample_rate())
+            # self.time_constant(new_instance.get_time_constant())   
             self.get_levels = new_instance.get_levels
             self.get_partitions = new_instance.get_partitions
-        
+            self.time_delay = new_instance.get_time_delay 
+
         def set_frequency(self, value, errdelay = 3) -> None:
             """change reference frequency"""
-            self.device.write("FREQ "+"{:.1E}".format(value))
+            self.interface.write("FREQ "+"{:.1E}".format(value))
+            time.sleep(self.time_delay)
             pass
 
         def set_phase(self,value) -> None:
-            self.device.query("PHAS "+str(value))
+            self.interface.write("PHAS "+str(value))
+            time.sleep(self.time_delay)
             pass
 
         def time_constant(self,choise) -> None:
-            self.device.query("OFLT "+str(choise))
+            self.interface.write("OFLT "+str(choise))
+            time.sleep(self.time_delay)
             pass
 
         def sensitivity(self,choise) -> None:
-            self.device.query("SENS "+str(choise))
+            self.interface.write("SENS "+str(choise))
+            time.sleep(self.time_delay)
             pass
 
         def set_sample_rate(self, choise)->None:
-            self.device.query("SRAT "+str(choise))
+            self.interface.write("SRAT "+str(choise))
+            time.sleep(self.time_delay)
 
         def start_data_acquision(self) -> None:
-            self.device.query("STRT")
+            self.interface.write("STRT")
+            time.sleep(self.time_delay)
             pass
 
         def pause_data_acquision(self) -> None:
-            self.device.query("PAUS")
+            self.interface.write("PAUS")
+            time.sleep(self.time_delay)
             pass
 
         def reset_data_acquision(self) -> None:
-            self.device.query("REST")
+            self.interface.write("REST")
+            time.sleep(self.time_delay)
             pass
 
         def get_data(self) -> None:
@@ -61,7 +73,7 @@ if new_instance.get_connection()=="GPIB":
             data_variable = 3 => R,
             data_variable = 4 => phase
             """
-            return self.device.query("OUTP? "+str(data_variable))
+            return self.interface.query("OUTP? "+str(data_variable))
 
         
 else:

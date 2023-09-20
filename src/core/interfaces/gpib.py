@@ -1,6 +1,7 @@
 import pyvisa
 import sys
 from termcolor import cprint
+import time
 # import re
 
 
@@ -41,14 +42,18 @@ class GPIB:
             cprint("ERROR in detecting GPIB, there must be problem with setup of pyvisa or there is no connection of gpib\n you should look either in pyvisa documentation or try for RS232 interface","red",attrs=['bold'])
             sys.exit()
 
-    def ping(self)-> None:
-        self.interface.query("*IDN?\n")
+    def ping(self):
+        self.interface.write("*IDN?\n")
+        time.sleep(2)
+        print(self.interface.read())
 
     def reset(self)-> None:
-        self.interface.query("*RST\n")
-
+        self.interface.write("*RST\n")
+        time.sleep(2)
+        
     def clear_status(self)-> None:
-        self.interface.query("*CLS\n")
+        self.interface.write("*CLS\n")
+        time.sleep(2)
 
     def std_event(self)->None:
         pass
