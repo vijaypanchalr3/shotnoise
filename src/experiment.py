@@ -1,8 +1,7 @@
-from core import sr830
+import pyinstro import sr830
 
-new_instance = sr830.SR830()
-new_instance.ping()
 
+dev = sr830()
 
 # make partition loop
 # - [ ] things to do
