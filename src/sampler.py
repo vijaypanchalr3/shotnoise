@@ -1,39 +1,57 @@
 from pyinstro import SR830
-from pyinstro import coloroutput
+
+
 import numpy
+import sys
 import time
 
 
-class Basic_Sampler:
-    """
-    
-    """
+
+
+class sampler:
     def __init__(self) -> None:
         self.device = SR830()
-
+        time.sleep(2)
         self.device.ping()
-        time.sleep(1)
+        time.sleep(0.5)
         coloroutput.attentive(self.device.read())
-        time.sleep(1)
+        time.sleep(2)
+        self.device.longwriterow(["Frequency", "RinV"])
 
-    def loop(self, number)->None:
-        fmin = self.device.fmin()
-        fmax = self.device.fmax()
-        partitions = self.device.get_partitions()
-        freqrange = numpy.linspace(fmin,fmax,partitions)
-        for freq in freqrange:
-            coloroutput.attentive("frequency set to: "+"{:.4E}".format(freq))
+    def discrete_range(self,minimum,maximum):
+        # time.sleep(2)
+        count = 1
+        for freq in range(minimum,maximum+1):
             self.device.set_frequency(freq)
-            input()
-            for i in range(number):
+            time.sleep(.5)
+            for i in range(100):
+                data= self.device.get_data_explicitly(3)
+                self.device.longwriterow([freq,data])
+                # print(freq,data)
+                time.sleep(0.2)
+            if count==50:
+                input("check setup and press enter")
+                count=1
+            else:
+                count+=1
+    def partition_loop(self,minimum, maximum,partitions,timedelay=0.2):
+        # time.sleep(2)
+        frange = numpy.linspace(minimum, maximum,partitions)
+        count = 1
+        for freq in frange:
+            self.device.set_frequency(freq)
+            time.sleep(timedelay)
+            for i in range(100):
                 data = self.device.get_data_explicitly(3)
-                self.device.longwriterow([freq, data])
-                time.sleep(0.1)
+                self.device.longwriterow([freq,data])
+                time.sleep(timedelay)
+                if count==50:
+                    input("check setup and press enter")
+                    count = 1
+                else:
+                    count+=1
 
-    
-    
-    
-basicsampler = Basic_Sampler()
-basicsampler.loop(2)
 
-        
+x = sampler()
+x.discrete_range(1,10000)
+sys.exit()
