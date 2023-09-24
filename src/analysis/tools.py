@@ -76,7 +76,7 @@ def plot(filename,field=(1,2),savefile=None,arg="r-"):
         
     plt.plot(field1,field2,arg)
     if header!=None:
-        print("yes")
+        pass
 
     if savefile!=None:
         pass
