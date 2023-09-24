@@ -9,12 +9,17 @@ import time
 
 
 class sampler:
+    """
+    function:   very simpler data logger for SR830
+                write file, as what given from terminal or auto{number}.csv in present directory under data directory.
+    limitation: too much hard coded
+    """
     def __init__(self) -> None:
         self.device = SR830()
         time.sleep(2)
         self.device.ping()
         time.sleep(0.5)
-        coloroutput.attentive(self.device.read())
+        print(self.device.read())
         time.sleep(2)
         self.device.longwriterow(["Frequency", "RinV"])
 
@@ -51,7 +56,7 @@ class sampler:
                 else:
                     count+=1
 
-
-x = sampler()
-x.discrete_range(1,10000)
-sys.exit()
+if __name__=="__main__":
+    x = sampler()
+    x.discrete_range(1,10000)
+    sys.exit()

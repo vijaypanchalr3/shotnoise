@@ -1,5 +1,10 @@
 
 def getmean(filename)->str:
+    """
+    parameter: filenamegive relative path (as a string)
+    function: it will find mean for same freq data and write as file.
+    return: file name (in which we generated mean data) as string
+    """
     import csv
     import re
     _finalfile = re.split("\/",filename)
@@ -45,6 +50,15 @@ def getmean(filename)->str:
 
 
 def plot(filename,field=(1,2),savefile=None,arg="r-"):
+    """
+    parameter:  filename: relative filename(string)
+                field: field of data must be given two, order matter first: x axis, second: y axis
+                savefile: save png of graph (backed matplotlib's pyplot)
+                arg: (default "r-") refer plot type in matplotlib.pyplot params
+    function: cover for matplotlib pyplot
+    limitation: two field plots, x,y...very hard coded
+    return: nil
+    """
     import csv
     import matplotlib.pyplot as plt
     
