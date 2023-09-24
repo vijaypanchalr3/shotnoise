@@ -42,7 +42,7 @@ def getmean(filename)->str:
     if header!=None:
         freq.insert(0,header[0])
         vo.insert(0,header[1])
-    with open(finalfile, 'w') as cleandata:
+    with open(finalfile, 'w', newline="") as cleandata:
         writer = csv.writer(cleandata)
         for lines in range(len(freq)):
             writer.writerow([freq[lines],vo[lines]])
