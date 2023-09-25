@@ -5,7 +5,7 @@ import tools
 
 
 
-file = "../data/initial2.csv"
+file = "../data/final2.csv"
 finalfile = tools.getmean(file)
 tools.plot(finalfile)
 
