@@ -1,0 +1,10 @@
+#+TITLE: Study of noise in various diodes with lock in amplifier
+#+AUTHOR: Vijay Panchal
+#+AUTHOR: Ved Rudani
+
+
+
+
+* Abstract
+
+This is our semester project
