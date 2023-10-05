@@ -24,23 +24,24 @@ class sampler:
         self.device.longwriterow(["Frequency", "RinV"])
 
     def discrete_range(self,minimum,maximum,step):
-        # time.sleep(2)
         
         self.device.set_frequency(minimum)
-        input()
+        time.sleep(.8)
         self.device.autogain()
-        for freq in range(minimum,maximum+1,step):
+        input()
+        for freq in range(minimum,maximum,step):
             self.device.set_frequency(freq)
             print(freq)
+            time.sleep(.5)
             self.device.autogain()
             time.sleep(.8)
-            
-            for i in range(100):
-                # print(self.device.get_data_explicitly(3))
-                data= float(self.device.get_data_explicitly(3))
-                self.device.longwriterow([freq,data])
-                # print(freq,data)
-                time.sleep(0.02)
+            for j in range(2):
+                for i in range(100):
+                    data= float(self.device.get_data_explicitly(3))
+                    self.device.longwriterow([freq,data])
+                    # print(freq,data)
+                    time.sleep(0.2)
+
     def partition_loop(self,minimum, maximum,partitions,timedelay=0.2):
         # time.sleep(2)
         frange = numpy.linspace(minimum, maximum,partitions)
@@ -64,5 +65,5 @@ class sampler:
 
 if __name__=="__main__":
     x = sampler()
-    x.discrete_range(300,4000,2)
+    x.discrete_range(1018,10018,50)
     sys.exit()
