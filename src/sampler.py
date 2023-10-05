@@ -34,7 +34,7 @@ class sampler:
             print(freq)
             time.sleep(.5)
             self.device.autogain()
-            time.sleep(.8)
+            time.sleep(1)
             for j in range(1):
                 for i in range(50):
                     data= float(self.device.get_data_explicitly(3))
@@ -65,5 +65,5 @@ class sampler:
 
 if __name__=="__main__":
     x = sampler()
-    x.discrete_range(1018,10018,50)
+    x.discrete_range(1018,2018,10)
     sys.exit()
