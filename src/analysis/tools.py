@@ -98,6 +98,46 @@ class files:
                 for member in final_list:
                     filtered_data.append(member)
         return array(filtered_data)
+    
+    def shady_plot(self, color="Blues"):
+        """
+        
+        """
+        data = array(self.fobject,dtype=float)
+        
+        # [here] can be better memort handling !
+        common_array = [[]]
+        index = float(data[0][0])
+        count = 0
+        for datapoint in data:
+            if float(datapoint[0])==index:
+                try:
+                    common_array[count].append([float(datapoint[0]),float(datapoint[1])])
+                    count+=1
+                except IndexError:
+                    common_array.append([])
+                    common_array[count].append([float(datapoint[0]),float(datapoint[1])])
+                    count+=1
+            else:
+                count=0
+                index = float(datapoint[0])
+        
+        
+        
+
+        delete = []
+        common_array.pop()
+        for i in range(len(common_array)-1):    
+            if len(common_array[len(common_array)-1])<len(common_array[i]):
+                common_array[i].pop()
+        
+        common_array = array(common_array)
+        
+        from matplotlib import cm
+
+        colormap = cm.get_cmap(color, len(common_array))
+
+        return common_array,colormap
 
 
 
