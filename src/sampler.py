@@ -35,12 +35,12 @@ class sampler:
             time.sleep(.5)
             self.device.autogain()
             time.sleep(.8)
-            for j in range(2):
-                for i in range(100):
+            for j in range(1):
+                for i in range(50):
                     data= float(self.device.get_data_explicitly(3))
                     self.device.longwriterow([freq,data])
                     # print(freq,data)
-                    time.sleep(0.2)
+                    time.sleep(0.1)
 
     def partition_loop(self,minimum, maximum,partitions,timedelay=0.2):
         # time.sleep(2)
