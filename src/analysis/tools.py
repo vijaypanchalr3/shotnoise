@@ -39,12 +39,9 @@ class files:
             writer = csv.writer(cleandata)
             writer.writerow(data)
     
-    def get_mean(self,data:list=[]):
-        if data is []:
-            data = array(self.fobject,dtype=self.datatype)
-        else:
-            pass
-
+    def get_mean(self):
+    
+        data = array(self.fobject)
         try:
             first_array,second_array = split(data,2,axis=1)
         except IndexError:
