@@ -40,7 +40,6 @@ class files:
             writer.writerow(data)
     
     def get_mean(self):
-    
         data = array(self.fobject)
         try:
             first_array,second_array = split(data,2,axis=1)
@@ -52,16 +51,17 @@ class files:
         _first_array.append(first_array[count][0])
         for i in range(0,len(data)):
             if first_array[i][0]==_first_array[count]:
-                extra_array.append(second_array[i])
+                extra_array.append(second_array[i][0])
             else:
-                _second_array.append(mean(array(extra_array)))
+                _second_array.append(mean(array(extra_array,dtype=float)))
                 count+=1
                 _first_array.append(first_array[i][0])
+                extra_array=[]
 
             if i==len(first_array)-1:
-                _second_array.append(mean(array(extra_array)))
+                _second_array.append(mean(array(extra_array,dtype=float)))
 
-        return vstack((array(_first_array),array(_second_array))).T
+        return vstack((array(_first_array,dtype=float),array(_second_array,dtype=float))).T
         
     def sort_on_deviation(self, points=5):
         data = array(self.fobject, dtype=float)
