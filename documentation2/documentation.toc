@@ -1,0 +1,27 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{}%
+\contentsline {section}{\numberline {2}Theoretical compilation}{2}{}%
+\contentsline {subsection}{\numberline {2.1}Linear circuit analysis }{2}{}%
+\contentsline {subsection}{\numberline {2.2}Different noises in the circuit }{4}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}Flicker Noise }{4}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}Shot noise }{5}{}%
+\contentsline {subsubsection}{\numberline {2.2.3}Avalanche or zener noise }{7}{}%
+\contentsline {subsubsection}{\numberline {2.2.4}Thermal noise }{7}{}%
+\contentsline {section}{\numberline {3}Methodology}{9}{}%
+\contentsline {subsection}{\numberline {3.1}Our voltage regulation circuit}{9}{}%
+\contentsline {subsection}{\numberline {3.2}Measuring instrument: LOCK IN amplifier}{10}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}Phase sensitive detection}{10}{}%
+\contentsline {subsubsection}{\numberline {3.2.2}Time Constant }{12}{}%
+\contentsline {subsubsection}{\numberline {3.2.3}ENBW}{12}{}%
+\contentsline {subsubsection}{\numberline {3.2.4}Sensitivity}{12}{}%
+\contentsline {subsubsection}{\numberline {3.2.5}LOCK IN amplifier over traditional measuring device/system}{12}{}%
+\contentsline {subsection}{\numberline {3.3}SR830}{13}{}%
+\contentsline {subsubsection}{\numberline {3.3.1}Internal structure of SR830}{13}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Inputs}{13}{}%
+\contentsline {subsubsection}{\numberline {3.3.3}Outputs}{13}{}%
+\contentsline {subsubsection}{\numberline {3.3.4}Interfacing}{13}{}%
+\contentsline {section}{\numberline {4}Analysis and Results}{14}{}%
+\contentsline {subsection}{\numberline {4.1}Low frequency: upto 10k}{14}{}%
+\contentsline {subsection}{\numberline {4.2}Very low frequency: upto 1 hertz}{15}{}%
+\contentsline {section}{Appendix}{18}{}%
+\contentsline {subsection}{Code for data analysis}{18}{}%
+\contentsline {section}{References}{21}{}%

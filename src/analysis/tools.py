@@ -136,6 +136,26 @@ class files:
 
         return common_array,colormap
 
+    def point_mean(self,data):
+        freq = []
+        vo = []
+        freq.append(float(data[0][0]))
+        vo.append(float(data[0][1]))
+        count = 1
+        for i in range(1,len(data)):
+            lenth = len(freq)
+            if float(data[i][0])==freq[lenth-1]:
+                vo[lenth-1]+=float(data[i][1])
+                count+=1
+            else:
+                vo[lenth-1]=vo[lenth-1]/count
+                count=1
+                freq.append(float(data[i][0]))
+                vo.append(float(data[i][1]))
+        freq.pop()
+        vo.pop()
+        return array(freq,dtype=float),array(vo,dtype=float)
+
 
 
  

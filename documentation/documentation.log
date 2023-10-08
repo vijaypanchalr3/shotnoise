@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Debian)  (format=lualatex 2023.10.1)  6 OCT 2023 22:43
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Debian)  (format=lualatex 2023.10.1)  8 OCT 2023 21:17
  system commands enabled.
 **documentation.tex
 (./documentation.tex
@@ -161,9 +161,12 @@ Already applied: [0000/00/00] Make \] robust on input line 83.
 )
 \appnamewidth=\dimen154
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
+LaTeX Warning: \include should only be used after \begin{document} on input lin
+e 2.
+
+(./mypackages.tex (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks20
@@ -173,25 +176,148 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
-(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
-(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2023-01-16 L3 programming layer (loader) 
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip55
 
-(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
-File: l3backend-luatex.def 2023-01-16 L3 backend support: PDF output (LuaTeX)
-\l__color_backend_stack_int=\count267
-\l__pdf_internal_box=\box55
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks21
+\ex@=\dimen155
 ))
-Package: l3keys2e 2023-01-16 LaTeX2e option processing using LaTeX3 keys
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen156
 )
-Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count268
-\l__lipsum_a_int=\count269
-\l__lipsum_b_int=\count270
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count267
+LaTeX Info: Redefining \frac on input line 236.
+\uproot@=\count268
+\leftroot@=\count269
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count270
+\DOTSCASE@=\count271
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box55
+\strutbox@=\box56
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen157
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count272
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count273
+\dotsspace@=\muskip16
+\c@parentequation=\count274
+\dspbrk@lvl=\count275
+\tag@help=\toks22
+\row@=\count276
+\column@=\count277
+\maxfields@=\count278
+\andhelp@=\toks23
+\eqnshift@=\dimen158
+\alignsep@=\dimen159
+\tagshift@=\dimen160
+\tagwidth@=\dimen161
+\totwidth@=\dimen162
+\lineht@=\dimen163
+\@envbody=\toks24
+\multlinegap=\skip56
+\multlinetaggap=\skip57
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
+\c@tracingmulticols=\count279
 
-(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
-(/usr/share/texlive/texmf-dist/tex/latex/svg/svg.sty
+
+Package multicol Warning: May not work with the twocolumn option on input line 
+143.
+
+\mult@box=\box57
+\multicol@leftmargin=\dimen164
+\c@unbalance=\count280
+\c@collectmore=\count281
+\doublecol@number=\count282
+\multicoltolerance=\count283
+\multicolpretolerance=\count284
+\full@width=\dimen165
+\page@free=\dimen166
+\premulticols=\dimen167
+\postmulticols=\dimen168
+\multicolsep=\skip58
+\multicolbaselineskip=\skip59
+\partial@page=\box58
+\last@line=\box59
+\maxbalancingoverflow=\dimen169
+\mult@rightbox=\box60
+\mult@grightbox=\box61
+\mult@firstbox=\box62
+\mult@gfirstbox=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\c@minrows=\count285
+\c@columnbadness=\count286
+\c@finalcolumnbadness=\count287
+\last@try=\dimen170
+\multicolovershoot=\dimen171
+\multicolundershoot=\dimen172
+\mult@nat@firstbox=\box100
+\colbreak@box=\box101
+\mc@col@check@num=\count288
+) (/usr/share/texlive/texmf-dist/tex/latex/svg/svg.sty
 Package: svg 2020/11/26 v2.02k (include SVG pictures)
 
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbase.sty
@@ -225,7 +351,7 @@ Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-\pdftexcmds@toks=\toks21
+\pdftexcmds@toks=\toks26
 )
 (/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
@@ -251,9 +377,9 @@ runsystem(uname -s > "documentation.w18")...executed
 (./documentation.w18)
 runsystem(rm -- "documentation.w18")...executed
 )
-\c@svg@param@lastpage=\count271
-\svg@box=\box56
-\c@svg@param@currpage=\count272
+\c@svg@param@lastpage=\count289
+\svg@box=\box102
+\c@svg@param@currpage=\count290
 )
 (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
@@ -286,12 +412,12 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks22
-\pgfutil@tempdima=\dimen155
-\pgfutil@tempdimb=\dimen156
+\pgfutil@everybye=\toks27
+\pgfutil@tempdima=\dimen173
+\pgfutil@tempdimb=\dimen174
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box57
+\pgfutil@abb=\box103
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
@@ -301,33 +427,33 @@ Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks23
-\pgfkeys@temptoks=\toks24
+\pgfkeys@pathtoks=\toks28
+\pgfkeys@temptoks=\toks29
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered
 .code.tex
-\pgfkeys@tmptoks=\toks25
+\pgfkeys@tmptoks=\toks30
 ))
-\pgf@x=\dimen157
-\pgf@y=\dimen158
-\pgf@xa=\dimen159
-\pgf@ya=\dimen160
-\pgf@xb=\dimen161
-\pgf@yb=\dimen162
-\pgf@xc=\dimen163
-\pgf@yc=\dimen164
-\pgf@xd=\dimen165
-\pgf@yd=\dimen166
+\pgf@x=\dimen175
+\pgf@y=\dimen176
+\pgf@xa=\dimen177
+\pgf@ya=\dimen178
+\pgf@xb=\dimen179
+\pgf@yb=\dimen180
+\pgf@xc=\dimen181
+\pgf@yc=\dimen182
+\pgf@xd=\dimen183
+\pgf@yd=\dimen184
 \w@pgf@writea=\write4
 \r@pgf@reada=\read2
-\c@pgf@counta=\count273
-\c@pgf@countb=\count274
-\c@pgf@countc=\count275
-\c@pgf@countd=\count276
-\t@pgf@toka=\toks26
-\t@pgf@tokb=\toks27
-\t@pgf@tokc=\toks28
-\pgf@sys@id@count=\count277
+\c@pgf@counta=\count291
+\c@pgf@countb=\count292
+\c@pgf@countc=\count293
+\c@pgf@countd=\count294
+\t@pgf@toka=\toks31
+\t@pgf@tokb=\toks32
+\t@pgf@tokc=\toks33
+\pgf@sys@id@count=\count295
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
@@ -342,51 +468,97 @@ File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count278
-\pgfsyssoftpath@bigbuffer@items=\count279
+\pgfsyssoftpath@smallbuffer@items=\count296
+\pgfsyssoftpath@bigbuffer@items=\count297
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)) (./documentation.aux)
+)) (/usr/share/texlive/texmf-dist/tex/latex/blindtext/blindtext.sty
+Package: blindtext 2012/01/06 V2.0 blindtext-Package
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+\c@blindtext=\count298
+\c@Blindtext=\count299
+\c@blind@countparstart=\count300
+\blind@countxx=\count301
+\blindtext@numBlindtext=\count302
+\blind@countyy=\count303
+\c@blindlist=\count304
+\c@blindlistlevel=\count305
+\c@blindlist@level=\count306
+\blind@listitem=\count307
+\c@blind@listcount=\count308
+\c@blind@levelcount=\count309
+\blind@mathformula=\count310
+\blind@Mathformula=\count311
+\c@blind@randomcount=\count312
+\c@blind@randommax=\count313
+\c@blind@pangramcount=\count314
+\c@blind@pangrammax=\count315
+)
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2021/07/05 v2.14 Sectioning titles
+\ttl@box=\box104
+\beforetitleunit=\skip60
+\aftertitleunit=\skip61
+\ttl@plus=\dimen185
+\ttl@minus=\dimen186
+\ttl@toksa=\toks34
+\titlewidth=\dimen187
+\titlewidthlast=\dimen188
+\titlewidthfirst=\dimen189
+
+
+Package titlesec Warning: Non standard sectioning command \paragraph
+(titlesec)                detected. Using default spacing and no format.
+
+)) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
+File: l3backend-luatex.def 2023-01-16 L3 backend support: PDF output (LuaTeX)
+\l__color_backend_stack_int=\count316
+\l__pdf_internal_box=\box105
+)
+(./documentation.aux (./frontmatter.aux))
 \openout1 = documentation.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-3.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 4
+.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count280
-\scratchdimen=\dimen167
-\scratchbox=\box58
-\nofMPsegments=\count281
-\nofMParguments=\count282
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count283
-\MPscratchDim=\dimen168
-\MPnumerator=\count284
-\makeMPintoPDFobject=\count285
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count317
+\scratchdimen=\dimen190
+\scratchbox=\box106
+\nofMPsegments=\count318
+\nofMParguments=\count319
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count320
+\MPscratchDim=\dimen191
+\MPnumerator=\count321
+\makeMPintoPDFobject=\count322
+\everyMPtoPDFconversion=\toks36
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -439,167 +611,649 @@ Package svg Warning: No version of Inkscape was detected by invoking
 (svg)                so the Inkscape export will fail quite sure as the
 (svg)                command is probably unknown to your OS. You could set
 (svg)                `inkscapeversion=<version>' manually but this is very
-(svg)                unlikely to work on input line 13.
+(svg)                unlikely to work on input line 4.
 
-! Undefined control sequence.
-\abstract ...bold}\global \@abstract@providedtrue 
-                                                  \global \setbox \@abstract...
-l.20 \begin{abstract}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-\abstract ...edtrue \global \setbox \@abstractbox 
-                                                  \vbox \bgroup \hsize 33pc ...
-l.20 \begin{abstract}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-\vbox 
-l.20 \begin{abstract}
-                   
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
-
+\openout2 = frontmatter.aux
+(./frontmatter.tex
+warning  (file GUlogo.pdf) (pdf inclusion): PDF inclusion: found PDF version '1.
+7', but at most version '1.5' allowed
+<GUlogo.pdf, id=4, 1195.01576pt x 845.04689pt>
+File: GUlogo.pdf Graphic file (type pdf)
+<use GUlogo.pdf>
+Package luatex.def Info: GUlogo.pdf  used on input line 6.
+(luatex.def)             Requested size: 300.0pt x 212.13802pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 ! Undefined control sequence.
-<argument> ...ima \@parboxrestore \centering \ifvoid \absbox 
-                                                  \else \unvbox \absbox \par...
-l.24 \maketitle
-             
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-\relax 
-l.24 \maketitle
-             
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
-<argument> ...entering \ifvoid \absbox \else \unvbox \absbox 
-                                                  \par \vskip 18pt\fi \@@par 
-l.24 \maketitle
-             
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-\scan_stop: 
-l.24 \maketitle
-             
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Undefined control sequence.
 <argument> \undefinedpagestyle 
                     
-l.24 \maketitle
-             
+l.6 \maketitle
+            
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-]
-<./images//circuit-20231005-2243.png, id=15, 273.9836pt x 171.6814pt>
+
+
+<./GUlogo.pdf>] [2]
+(./documentation.toc)
+\tf@toc=\write5
+
+\openout5 = documentation.toc
+ [3])
+Underfull \hbox (badness 4316) in paragraph at lines 16--16
+|[]\TU/lmr/bx/n/20.74 The-o-ret-i-cal com-pi-la-
+ []
+
+<./images//circuit-20231005-2243.png, id=44, 273.9836pt x 171.6814pt>
 File: ./images//circuit-20231005-2243.png Graphic file (type png)
 <use ./images//circuit-20231005-2243.png>
 Package luatex.def Info: ./images//circuit-20231005-2243.png  used on input lin
-e 40.
+e 28.
 (luatex.def)             Requested size: 273.98293pt x 171.68097pt.
 
-Overfull \hbox (21.98293pt too wide) in paragraph at lines 40--43
+Overfull \hbox (21.98293pt too wide) in paragraph at lines 28--29
  [][] 
  []
 
-<./images//circuit-20231005-2244.png, id=16, 273.9836pt x 171.6814pt>
+[4
+
+
+
+
+
+<./images//circuit-20231005-2243.png>]
+<./images//thzenerIV.png, id=57, 1076.02pt x 671.50874pt>
+File: ./images//thzenerIV.png Graphic file (type png)
+<use ./images//thzenerIV.png>
+Package luatex.def Info: ./images//thzenerIV.png  used on input line 50.
+(luatex.def)             Requested size: 350.0pt x 218.4222pt.
+
+Overfull \hbox (98.0pt too wide) in paragraph at lines 50--51
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `thecir1' on page 5 undefined on input line 55.
+
+
+LaTeX Warning: Reference `thcir' on page 5 undefined on input line 55.
+
+<./images//circuit-20231005-2244.png, id=58, 273.9836pt x 171.6814pt>
 File: ./images//circuit-20231005-2244.png Graphic file (type png)
 <use ./images//circuit-20231005-2244.png>
 Package luatex.def Info: ./images//circuit-20231005-2244.png  used on input lin
-e 47.
+e 58.
 (luatex.def)             Requested size: 273.98293pt x 171.68097pt.
 
-Overfull \hbox (21.98293pt too wide) in paragraph at lines 47--50
+Overfull \hbox (21.98293pt too wide) in paragraph at lines 58--59
  [][] 
  []
 
-<./images//circuit-20231005-2245.png, id=17, 273.9836pt x 195.7714pt>
+<./images//circuit-20231005-2245.png, id=59, 273.9836pt x 195.7714pt>
 File: ./images//circuit-20231005-2245.png Graphic file (type png)
 <use ./images//circuit-20231005-2245.png>
 Package luatex.def Info: ./images//circuit-20231005-2245.png  used on input lin
-e 54.
+e 65.
 (luatex.def)             Requested size: 273.98293pt x 195.7709pt.
 
-Overfull \hbox (21.98293pt too wide) in paragraph at lines 54--57
+Overfull \hbox (21.98293pt too wide) in paragraph at lines 65--66
  [][] 
  []
 
-(./documentation.bbl) [2<./images//circuit-20231005-2243.png><./images//circuit-
-20231005-2244.png><./images//circuit-20231005-2245.png>] (./documentation.aux))
+! Undefined control sequence.
+l.87 So, we can conclude that here as $V_o \propo
+                                                V_n$.  This will be the main...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 1681) in paragraph at lines 89--89
+|[]\TU/lmr/bx/n/17.28 Dif-fer-ent noises in the
+ []
+
+File: ./images//circuit-20231005-2245.png Graphic file (type png)
+<use ./images//circuit-20231005-2245.png>
+Package luatex.def Info: ./images//circuit-20231005-2245.png  used on input lin
+e 94.
+(luatex.def)             Requested size: 273.98293pt x 195.7709pt.
+
+Overfull \hbox (21.98293pt too wide) in paragraph at lines 94--95
+ [][] 
+ []
+
+[5<./images//thzenerIV.png><./images//circuit-20231005-2244.png><./images//circu
+it-20231005-2245.png>]
+
+Package natbib Warning: Citation `j b johnson' on page 6 undefined on input lin
+e 101.
+
+
+Package natbib Warning: Citation `beck and spruit' on page 6 undefined on input
+ line 101.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+[]\TU/lmr/m/n/12 Here, $\OML/cmm/m/it/12 C$ \TU/lmr/m/n/12 and $\OML/cmm/m/it/1
+2 $ \TU/lmr/m/n/12 de-ter-mine
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+\TU/lmr/m/n/12 the na-ture of flicker noise.
+ []
+
+
+LaTeX Warning: Reference `thnoise' on page 6 undefined on input line 115.
+
+
+LaTeX Warning: Reference `thN0' on page 6 undefined on input line 139.
+
+
+LaTeX Warning: Reference `thgen' on page 6 undefined on input line 156.
+
+
+Package natbib Warning: Citation `campbell' on page 6 undefined on input line 1
+56.
+
+[6]
+! Undefined control sequence.
+<argument>  \langle V_{avalanche}^2\rangle & = M \langel 
+                                              V_{shot}^2\rangle 
+l.183 \end{align*}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument>  \langle V_{avalanche}^2\rangle & = M \langel 
+                                              V_{shot}^2\rangle 
+l.183 \end{align*}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.193 \langleV
+            _{s}^2\rangle & = \langleV_{shot}^2\rangle+\langleV_{avalanche}^...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.193 \langleV_
+             {s}^2\rangle & = \langleV_{shot}^2\rangle+\langleV_{avalanche}^...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Misplaced alignment tab character &.
+l.193 \langleV_{s}^2\rangle &
+                            = \langleV_{shot}^2\rangle+\langleV_{avalanche}^...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.193 \langleV_{s}^2\rangle & = \langleV
+                                      _{shot}^2\rangle+\langleV_{avalanche}^...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.193 ...angle & = \langleV_{shot}^2\rangle+\langleV
+                                                  _{avalanche}^2\rangle\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Misplaced alignment tab character &.
+<recently read> &
+ 
+l.194 &
+      = 2 e I_0 df + 2 e M I_0 df
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.195 &
+      = (M+1) 2 e I_0 df
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\math@cr@@@ ->\cr 
+                  
+l.196 \end{align*}
+                
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
+                                                  {\vskip #1\relax }
+l.196 \end{align*}
+                
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.196 \end{align*}
+                
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+}
+l.196 \end{align*}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Too many }'s.
+\math@cr@@ ...th@cr@@@ \noalign {\vskip #1\relax }
+                                                  
+l.196 \end{align*}
+                
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+! Misplaced \noalign.
+\black@ #1->\noalign 
+                     {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
+l.196 \end{align*}
+                
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+
+Overfull \hbox (115.86537pt too wide) detected at line 196
+[]
+ []
+
+! Too many }'s.
+\endalign ->\math@cr \black@ \totwidth@ \egroup 
+                                                \ifingather@ \restorealignst...
+l.196 \end{align*}
+                
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+! LaTeX Error: \begin{document} ended by \end{align*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.196 \end{align*}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.196 \end{align*}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+\endgroup 
+l.196 \end{align*}
+                
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+          
+l.196 \end{align*}
+                
+Things are pretty mixed up, but I think the worst is over.
+
+
+Package natbib Warning: Citation `johnson' on page 7 undefined on input line 20
+3.
+
+
+Underfull \hbox (badness 3199) in paragraph at lines 231--231
+|[]\TU/lmr/bx/n/17.28 Our volt-age reg-u-la-tion
+ []
+
+[7]
+<./images//zener.png, id=75, 1186.4325pt x 638.385pt>
+File: ./images//zener.png Graphic file (type png)
+<use ./images//zener.png>
+Package luatex.def Info: ./images//zener.png  used on input line 239.
+(luatex.def)             Requested size: 261.0pt x 140.43538pt.
+
+Overfull \hbox (9.0pt too wide) in paragraph at lines 239--240
+ [][] 
+ []
+
+<./images//zenerIV.png, id=76, 462.528pt x 346.896pt>
+File: ./images//zenerIV.png Graphic file (type png)
+<use ./images//zenerIV.png>
+Package luatex.def Info: ./images//zenerIV.png  used on input line 246.
+(luatex.def)             Requested size: 261.0pt x 195.7584pt.
+
+Overfull \hbox (9.0pt too wide) in paragraph at lines 246--247
+ [][] 
+ []
+
+[8<./images//zener.png><./images//zenerIV.png>]
+
+LaTeX Warning: Reference `psd' on page 9 undefined on input line 259.
+
+! Argument of \align* has an extra }.
+<inserted text> 
+\par 
+l.278  = B (e^{i(-w_rt)}}
+                       
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+ = B (e^{i(-w_rt)}
+! Paragraph ended before \align* was complete.
+<to be read again> 
+\par 
+l.278  = B (e^{i(-w_rt)}}
+                       
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.278  = B (e^{i(-w_rt)}}
+                       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing \endgroup inserted.
+<inserted text> 
+\endgroup 
+l.278  = B (e^{i(-w_rt)}}
+                       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+\tex_par:D 
+l.278  = B (e^{i(-w_rt)}}
+                       
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Extra }, or forgotten \endgroup.
+<recently read> }
+ 
+l.278  = B (e^{i(-w_rt)}}
+                       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Misplaced \cr.
+\math@cr@@@ ->\cr 
+                  
+l.279 \end{align*}
+                
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
+                                                  {\vskip #1\relax }
+l.279 \end{align*}
+                
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \noalign.
+\black@ #1->\noalign 
+                     {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
+l.279 \end{align*}
+                
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+
+Overfull \hbox (78.21164pt too wide) detected at line 279
+[]
+ []
+
+! Extra }, or forgotten \endgroup.
+\endalign ->\math@cr \black@ \totwidth@ \egroup 
+                                                \ifingather@ \restorealignst...
+l.279 \end{align*}
+                
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.279 \end{align*}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+\endgroup 
+l.279 \end{align*}
+                
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Undefined control sequence.
+<argument>  Z(t) & = V_s(t)\timesV 
+                        _r(t)\\ \\ & = \frac {A}{2}(e^{i\left [ (w_s-w_r)t+\the
+l.289 \end{align*}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument>  Z(t) & = V_s(t)\timesV 
+                        _r(t)\\ \\ & = \frac {A}{2}(e^{i\left [ (w_s-w_r)t+\the
+l.289 \end{align*}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[9] [10
+Missing character: There is no ω (U+03C9) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no θ (U+03B8) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no ω (U+03C9) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no θ (U+03B8) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no ω (U+03C9) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no ω (U+03C9) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no θ (U+03B8) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no θ (U+03B8) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no ω (U+03C9) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no ω (U+03C9) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no θ (U+03B8) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no θ (U+03B8) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no ω (U+03C9) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no ω (U+03C9) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no ω (U+03C9) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no ω (U+03C9) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no ω (U+03C9) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no ω (U+03C9) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no θ (U+03B8) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no θ (U+03B8) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no ω (U+03C9) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no ω (U+03C9) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no θ (U+03B8) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no θ (U+03B8) in font [lmroman12-regular]:+tlig;!
+]
+Underfull \hbox (badness 7291) in paragraph at lines 414--415
+[]\TU/lmr/m/n/12 THE PHASE SEN-SI-TIVE DE-TEC-TORS
+ []
+
+[11
+Missing character: There is no ω (U+03C9) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no θ (U+03B8) in font [lmroman12-regular]:+tlig;!
+Missing character: There is no π (U+03C0) in font [lmroman12-regular]:+tlig;!
+]
+Underfull \hbox (badness 1102) in paragraph at lines 454--456
+\TU/lmr/m/n/12 width of the per-fect rect-an-gu-lar fil-ter which
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 498--499
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--501
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 502--503
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 504--505
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 506--507
+
+ []
+
+(./documentation.bbl
+
+Package natbib Warning: Empty `thebibliography' environment on input line 3.
+
+)
+
+Package natbib Warning: There were undefined citations.
+
+[13] (./documentation.aux (./frontmatter.aux))
+
+LaTeX Warning: There were undefined references.
+
+)
 
 Here is how much of LuaTeX's memory you used:
- 6900 strings out of 478382
+ 8013 strings out of 478382
  100000,1977958 words of node,token memory allocated
- 443 words of node memory still in use:
-   3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 5 attribute, 54 glue_spec,
- 5 attribute_list, 2 write nodes
-   avail lists: 2:211,3:96,4:30,5:366,6:28,7:6333,8:2,9:226,10:22,11:442
- 26552 multiletter control sequences out of 65536+600000
- 46 fonts using 3431911 bytes
- 94i,8n,87p,984b,251s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf/fonts/opentype/public/lm/lmroman12-italic.otf></usr/share/texm
-f/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentyp
-e/public/lm/lmroman10-bolditalic.otf></usr/share/texmf/fonts/opentype/public/lm/
-lmroman10-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-italic.o
-tf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/
-texmf/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf/fonts/openty
-pe/public/lm/lmroman17-regular.otf></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi8.pfb>
-Output written on documentation.pdf (2 pages, 142802 bytes).
+ 615 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 6 glue, 4 kern, 1 glyph, 15 attribute, 63 glue_spec
+, 15 attribute_list, 2 write nodes
+   avail lists: 2:663,3:228,4:44,5:488,6:63,7:10256,8:46,9:974,10:20,11:741
+ 27551 multiletter control sequences out of 65536+600000
+ 78 fonts using 5556143 bytes
+ 101i,10n,92p,967b,299s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf/fonts/opentype/public/lm/lmroman7-regular.otf></usr/share/texm
+f/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf/fonts/opentype
+/public/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmro
+man10-bolditalic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-regula
+r.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/
+texmf/fonts/opentype/public/lm/lmroman17-regular.otf></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on documentation.pdf (13 pages, 2188434 bytes).
 
-PDF statistics: 84 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+PDF statistics: 175 PDF objects out of 1000 (max. 8388607)
+ 107 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

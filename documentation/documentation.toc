@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}Introduction}{4}{}%
+\contentsline {section}{\numberline {2}Theoretical compilation}{4}{}%
+\contentsline {subsection}{\numberline {2.1}Linear circuit analysis }{4}{}%
+\contentsline {subsection}{\numberline {2.2}Different noises in the circuit }{5}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}Flicker Noise }{6}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}Shot noise }{6}{}%
+\contentsline {subsubsection}{\numberline {2.2.3}Avalanche or zener noise }{7}{}%
+\contentsline {subsubsection}{\numberline {2.2.4}Thermal noise }{7}{}%
+\contentsline {section}{\numberline {3}Methodology}{8}{}%
+\contentsline {subsection}{\numberline {3.1}Our voltage regulation circuit}{8}{}%
+\contentsline {section}{References}{13}{}%

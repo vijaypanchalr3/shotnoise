@@ -1,0 +1,64 @@
+\usepackage{minted}
+\usepackage{fancyvrb}
+\usepackage{amssymb}
+\usepackage[a4paper]{geometry}
+ \geometry{twoside,
+  paperwidth=210mm,
+  paperheight=297mm,
+  textheight=700pt,
+  textwidth=474pt,
+  centering,
+  headheight=50pt,
+  headsep=12pt,
+  footskip=12pt,
+  footnotesep=24pt plus 2pt minus 12pt,
+ }
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{svg}
+\newcommand{\kms}{km\,s$^{-1}$}
+\newcommand{\msun}{$M_\odot}
+\usepackage{blindtext}
+\usepackage{titlesec}
+\graphicspath{ {./images/} }
+\usepackage[skip=10pt plus1pt, indent=40pt]{parskip}
+\usepackage{pdfpages}
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+  {\normalfont\LARGE\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\Large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\normalfont\large\bfseries}{\thesubsubsection}{1em}{}
+
+%% \usepackage{xpatch}
+%% \xapptocmd{\appendix}{%
+%%   \addsec{Appendix}%
+%%   \refstepcounter{section}%
+%%   \addtocontents{toc}{\protect\value{tocdepth}=\parttocdepth}%
+%% }{}{}
+
+%% \def\appendixname{Appendix }
+%% \renewcommand\appendix{\par
+%%   \setcounter{section}{0}%
+%%   \setcounter{subsection}{0}%
+%%   \setcounter{equation}{0}
+%%   \gdef\thefigure{\@Alph\c@section.\arabic{figure}}%
+%%   \gdef\thetable{\@Alph\c@section.\arabic{table}}%
+%%   \gdef\thesection{\appendixname~\@Alph\c@section}%
+%%   \@addtoreset{equation}{section}%
+%%   \gdef\theequation{\@Alph\c@section.\arabic{equation}}%
+%%   \addtocontents{toc}{\string\let\string\numberline\string\tmptocnumberline}{}{}
+%% }
+%% %%%% \numberline width calculation for appendix.
+%% \newdimen\appnamewidth
+%% \def\tmptocnumberline#1{%
+%%    \setbox0=\hbox{\appendixname}
+%%    \appnamewidth=\wd0
+%%    \addtolength\appnamewidth{2.5pc}
+%%    \hb@xt@\appnamewidth{#1\hfill}
+%% }

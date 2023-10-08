@@ -368,17 +368,29 @@
   \def\baselinestretch{1}%
   \begin{center}%
     \def\baselinestretch{1}%
-    \parbox[b]{.75\textwidth}{\centering\Large Project Report \par}\vskip10pt
-   \hrule\@height1pt\vskip18pt \parbox[b]{.75\textwidth}{\centering\Huge\textbf\@title\par}\vskip18pt
-   \parbox[b]{.75\textwidth}{\centering\normalsize\elsauthors\par}\vskip10pt
-    \parbox[b]{.75\textwidth}{\centering\footnotesize\itshape\elsaddress\par}
-    \parbox[b]{.75\textwidth}{\centering\ifvoid\absbox\else\unvbox\absbox\par\vskip18pt\fi}
-    \parbox[b]{.75\textwidth}{\centering\ifvoid\keybox\else\unvbox\keybox\par\vskip10pt\fi}
-    \parbox[b]{.75\textwidth}{\centering\hrule\@height2pt\vskip10pt}
-    \hrule\@height1pt
+    \vskip-50pt \parbox[h]{.75\textwidth}{\centering\includegraphics[width=300pt]{GUlogo.pdf}}
+%%     \vskip50pt
+    \parbox[b]{.75\textwidth}{\centering\Huge Project Report \par}\vskip10pt
+    \parbox[b]{.75\textwidth}{\centering\hrule\@height2pt\vskip50pt\Huge\textbf\@title\par}\vskip50pt
+   \parbox[b]{.75\textwidth}{\centering \LARGE MSc Semester $3$}\vskip7pt
+    \parbox[b]{.75\textwidth}{\centering \large Unit 505:  Project Work}\vskip30pt 
+%%    \parbox[b]{.75\textwidth}{\centering\normalsize\elsauthors\par}\vskip10pt
+
+    \parbox[b]{.75\textwidth}{\centering\normalsize \textbf{\emph{Ved Rudani}}   Roll number: \textbf{54}\par}\vskip2pt
+    \parbox[b]{.75\textwidth}{\centering\normalsize \textbf{\emph{Vijay Panchal}}  Roll number: \textbf{55}\par \vskip50pt\hrule\@height2pt}\vskip10pt
+%%     \parbox[b]{.75\textwidth}{\centering\footnotesize\itshape\elsaddress\par }
+   
+
+%%    \parbox[b]{.75\textwidth}{\centering \Large Abstract} \parbox[b]{.75\textwidth}{\centering\ifvoid\absbox\else\unvbox\absbox\par\vskip18pt\fi
+
+%%    \hrule\@height2pt\vskip10pt}
+
+   
+    \parbox[b]{.75\textwidth}{\centering\ifvoid\keybox\else\unvbox\keybox\par\fi}
+    \parbox[b]{.75\textwidth}{\centering\hrule\@height2pt}
   \end{center}%
-  \vskip36pt
-  }
+}
+
 
 \def\FNtext#1{\par\bgroup\footnotesize#1\egroup}
 \newdimen\space@left
@@ -463,19 +475,18 @@
 
 \def\@seccntDot{.}
 \def\@seccntformat#1{\csname the#1\endcsname\@seccntDot\hskip 0.5em}
-
 \renewcommand\section{\@startsection {section}{1}{\z@}%
            {18\p@ \@plus 6\p@ \@minus 3\p@}%
            {9\p@ \@plus 6\p@ \@minus 3\p@}%
-           {\Large\bfseries\boldmath}}
+           {\LARGE\bfseries}}
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
            {12\p@ \@plus 6\p@ \@minus 3\p@}%
            {3\p@ \@plus 6\p@ \@minus 3\p@}%
-           {\large\normalsize\boldmath}}
+           {\bfseries\Large}}
 \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
            {12\p@ \@plus 6\p@ \@minus 3\p@}%
            {\p@}%
-           {\normalfont\normalsize\boldmath}}
+           {\bfseries\large}}
 
 \def\paragraph{\secdef{\els@aparagraph}{\els@bparagraph}}
 \def\els@aparagraph[#1]#2{\elsparagraph[#1]{#2.}}
