@@ -65,5 +65,5 @@ class sampler:
 
 if __name__=="__main__":
     x = sampler()
-    x.discrete_range(1018,2018,10)
+    x.discrete_range(1018,2018,50)
     sys.exit()
