@@ -2,11 +2,11 @@ This is BibTeX, Version 0.99d (TeX Live 2022/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: documentation.aux
 A level-1 auxiliary file: frontmatter.aux
-White space in argument---line 16 of file documentation.aux
+White space in argument---line 30 of file documentation.aux
  : \citation{j
  :             b johnson}
 I'm skipping whatever remains of this command
-White space in argument---line 17 of file documentation.aux
+White space in argument---line 31 of file documentation.aux
  : \citation{beck
  :                and spruit}
 I'm skipping whatever remains of this command

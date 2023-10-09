@@ -1,0 +1,95 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{pyinstro.utils} \PYG{k+kn}{import} \PYG{n}{getpath}
+
+\PYG{k+kn}{import} \PYG{n+nn}{os}
+\PYG{k+kn}{import} \PYG{n+nn}{configparser}
+
+\PYG{k}{class} \PYG{n+nc}{DefaultParams}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+sd}{    specify default parameters}
+
+\PYG{l+s+sd}{    for more info:}
+\PYG{l+s+sd}{    refer to SR830 manual for more info.}
+\PYG{l+s+sd}{    \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+    \PYG{n}{time\PYGZus{}constant} \PYG{o}{=} \PYG{l+m+mi}{5}
+    \PYG{n}{sensitivity} \PYG{o}{=} \PYG{l+m+mi}{5}
+    \PYG{c+c1}{\PYGZsh{} filter\PYGZus{}slope =}
+
+    \PYG{n}{baud\PYGZus{}rate} \PYG{o}{=} \PYG{l+m+mi}{9600}
+    \PYG{n}{sample\PYGZus{}rate} \PYG{o}{=} \PYG{l+m+mi}{10}
+    \PYG{n}{gpib\PYGZus{}address} \PYG{o}{=} \PYG{l+m+mi}{1}
+    \PYG{n}{time\PYGZus{}delay} \PYG{o}{=} \PYG{l+m+mi}{1}
+
+    \PYG{n}{connection} \PYG{o}{=} \PYG{l+m+mi}{1}          \PYG{c+c1}{\PYGZsh{} means GPIB, 1: GPIB, 2: RS232, 3: USB, 4: LAN}
+    \PYG{n}{connections} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{1}\PYG{p}{:}\PYG{l+s+s2}{\PYGZdq{}GPIB\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{:}\PYG{l+s+s2}{\PYGZdq{}RS232\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{:}\PYG{l+s+s2}{\PYGZdq{}USB\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{:}\PYG{l+s+s2}{\PYGZdq{}LAN\PYGZdq{}}\PYG{p}{\PYGZcb{}}
+
+    \PYG{n}{fmin} \PYG{o}{=} \PYG{l+m+mf}{01E+3}
+    \PYG{n}{fmax} \PYG{o}{=} \PYG{l+m+mf}{01E+5}
+
+    \PYG{n}{partitions} \PYG{o}{=} \PYG{l+m+mi}{4}
+    \PYG{n}{levels} \PYG{o}{=} \PYG{l+m+mi}{4}
+
+    \PYG{n}{data}\PYG{o}{=} \PYG{l+m+mi}{3}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{k+kc}{None}\PYG{p}{:}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{defaults\PYGZus{}params\PYGZus{}list}\PYG{o}{=} \PYG{p}{[}\PYG{n}{attr} \PYG{k}{for} \PYG{n}{attr} \PYG{o+ow}{in} \PYG{n+nb}{dir}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)} \PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{callable}\PYG{p}{(}\PYG{n+nb}{getattr}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{attr}\PYG{p}{))} \PYG{o+ow}{and} \PYG{o+ow}{not} \PYG{n}{attr}\PYG{o}{.}\PYG{n}{startswith}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZus{}\PYGZus{}\PYGZdq{}}\PYG{p}{)]}
+        \PYG{c+c1}{\PYGZsh{}defaults\PYGZus{}params= dict(zip(defaults\PYGZus{}params\PYGZus{}list,list(\PYGZdq{} \PYGZdq{}*len(defaults\PYGZus{}params\PYGZus{}list))))}
+
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{target\PYGZus{}path} \PYG{o}{=} \PYG{n}{getpath}\PYG{o}{.}\PYG{n}{getpath}\PYG{p}{()}
+        \PYG{n}{config\PYGZus{}file} \PYG{o}{=} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{target\PYGZus{}path}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}config.ini\PYGZdq{}}\PYG{p}{)}
+
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}checking config.ini file\PYGZdq{}}\PYG{p}{)}
+
+        \PYG{k}{if} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{exists}\PYG{p}{(}\PYG{n}{config\PYGZus{}file}\PYG{p}{):}
+            \PYG{n}{config} \PYG{o}{=} \PYG{n}{configparser}\PYG{o}{.}\PYG{n}{ConfigParser}\PYG{p}{()}
+            \PYG{n}{config}\PYG{o}{.}\PYG{n}{read}\PYG{p}{(}\PYG{n}{config\PYGZus{}file}\PYG{p}{)}
+            \PYG{n}{config\PYGZus{}file\PYGZus{}dict} \PYG{o}{=} \PYG{n}{config}\PYG{o}{.}\PYG{n}{defaults}\PYG{p}{()}
+            \PYG{k}{if} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{config\PYGZus{}file\PYGZus{}dict}\PYG{p}{)}\PYG{o}{==}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{defaults\PYGZus{}params\PYGZus{}list}\PYG{p}{):}
+                \PYG{k}{for} \PYG{n}{keys} \PYG{o+ow}{in} \PYG{n}{config\PYGZus{}file\PYGZus{}dict}\PYG{p}{:}
+                    \PYG{k}{if} \PYG{p}{(}\PYG{n}{config\PYGZus{}file\PYGZus{}dict}\PYG{p}{[}\PYG{n}{keys}\PYG{p}{]}\PYG{o}{.}\PYG{n}{isspace}\PYG{p}{()} \PYG{o+ow}{or} \PYG{o+ow}{not} \PYG{n}{config\PYGZus{}file\PYGZus{}dict}\PYG{p}{[}\PYG{n}{keys}\PYG{p}{]):}
+                        \PYG{k}{pass}
+                    \PYG{k}{else}\PYG{p}{:}
+                        \PYG{n+nb}{setattr}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{keys}\PYG{p}{,} \PYG{n}{config\PYGZus{}file\PYGZus{}dict}\PYG{p}{[}\PYG{n}{keys}\PYG{p}{])}
+                        \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{keys}\PYG{o}{+}\PYG{l+s+s2}{\PYGZdq{}:  \PYGZdq{}}\PYG{o}{+}\PYG{n}{config\PYGZus{}file\PYGZus{}dict}\PYG{p}{[}\PYG{n}{keys}\PYG{p}{])}
+            \PYG{k}{else}\PYG{p}{:}
+                \PYG{k}{for} \PYG{n}{keys} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{defaults\PYGZus{}params\PYGZus{}list}\PYG{p}{:}
+                    \PYG{k}{if} \PYG{o+ow}{not} \PYG{p}{(}\PYG{n}{keys} \PYG{o+ow}{in} \PYG{n}{config\PYGZus{}file\PYGZus{}dict}\PYG{p}{):}
+                        \PYG{k}{with} \PYG{n+nb}{open}\PYG{p}{(}\PYG{n}{config\PYGZus{}file}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}w\PYGZdq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{\PYGZus{}conf\PYGZus{}file}\PYG{p}{:}
+                            \PYG{n}{config}\PYG{o}{.}\PYG{n}{set}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}DEFAULT\PYGZdq{}}\PYG{p}{,}\PYG{n}{keys}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{} \PYGZdq{}}\PYG{p}{)}
+                            \PYG{n}{config}\PYG{o}{.}\PYG{n}{write}\PYG{p}{(}\PYG{n}{\PYGZus{}conf\PYGZus{}file}\PYG{p}{)}
+                    \PYG{k}{else}\PYG{p}{:}
+                        \PYG{k}{if} \PYG{p}{(}\PYG{n}{config\PYGZus{}file\PYGZus{}dict}\PYG{p}{[}\PYG{n}{keys}\PYG{p}{]}\PYG{o}{.}\PYG{n}{isspace}\PYG{p}{()} \PYG{o+ow}{or} \PYG{n}{config\PYGZus{}file\PYGZus{}dict}\PYG{p}{[}\PYG{n}{keys}\PYG{p}{]} \PYG{o}{==}\PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{p}{):}
+                            \PYG{k}{pass}
+                        \PYG{k}{else}\PYG{p}{:}
+                            \PYG{n+nb}{setattr}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{keys}\PYG{p}{,} \PYG{n}{config\PYGZus{}file\PYGZus{}dict}\PYG{p}{[}\PYG{n}{keys}\PYG{p}{])}
+                            \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{keys}\PYG{o}{+}\PYG{l+s+s2}{\PYGZdq{}:  \PYGZdq{}}\PYG{o}{+}\PYG{n}{config\PYGZus{}file\PYGZus{}dict}\PYG{p}{[}\PYG{n}{keys}\PYG{p}{])}
+
+        \PYG{k}{else}\PYG{p}{:}
+            \PYG{k}{pass}
+
+    \PYG{k}{def} \PYG{n+nf}{makeconfig}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n}{config\PYGZus{}file} \PYG{o}{=}\PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{target\PYGZus{}path}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}config.ini\PYGZdq{}}\PYG{p}{)}
+        \PYG{n}{config} \PYG{o}{=} \PYG{n}{configparser}\PYG{o}{.}\PYG{n}{ConfigParser}\PYG{p}{()}
+        \PYG{k}{if} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{exists}\PYG{p}{(}\PYG{n}{config\PYGZus{}file}\PYG{p}{):}
+            \PYG{n}{config}\PYG{o}{.}\PYG{n}{read}\PYG{p}{(}\PYG{n}{config\PYGZus{}file}\PYG{p}{)}
+            \PYG{n}{config\PYGZus{}file\PYGZus{}dict} \PYG{o}{=} \PYG{n}{config}\PYG{o}{.}\PYG{n}{defaults}\PYG{p}{()}
+            \PYG{k}{if} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{config\PYGZus{}file\PYGZus{}dict}\PYG{p}{)}\PYG{o}{==}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{defaults\PYGZus{}params\PYGZus{}list}\PYG{p}{):}
+                \PYG{k}{pass}
+            \PYG{k}{else}\PYG{p}{:}
+                \PYG{k}{for} \PYG{n}{keys} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{defaults\PYGZus{}params\PYGZus{}list}\PYG{p}{:}
+                    \PYG{k}{if} \PYG{o+ow}{not} \PYG{p}{(}\PYG{n}{keys} \PYG{o+ow}{in} \PYG{n}{config\PYGZus{}file\PYGZus{}dict}\PYG{p}{):}
+                        \PYG{k}{with} \PYG{n+nb}{open}\PYG{p}{(}\PYG{n}{config\PYGZus{}file}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}w\PYGZdq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{\PYGZus{}conf\PYGZus{}file}\PYG{p}{:}
+                            \PYG{n}{config}\PYG{o}{.}\PYG{n}{set}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}DEFAULT\PYGZdq{}}\PYG{p}{,}\PYG{n}{keys}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{} \PYGZdq{}}\PYG{p}{)}
+                            \PYG{n}{config}\PYG{o}{.}\PYG{n}{write}\PYG{p}{(}\PYG{n}{\PYGZus{}conf\PYGZus{}file}\PYG{p}{)}
+
+                    \PYG{k}{else}\PYG{p}{:}
+                        \PYG{k}{pass}
+                \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}I had appened to full option to config file!\PYGZdq{}}\PYG{p}{)}
+        \PYG{k}{else}\PYG{p}{:}
+            \PYG{k}{with} \PYG{n+nb}{open}\PYG{p}{(}\PYG{n}{config\PYGZus{}file}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}w\PYGZsq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{config\PYGZus{}file}\PYG{p}{:}
+                \PYG{n}{config\PYGZus{}file}\PYG{o}{.}\PYG{n}{write}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}[DEFAULT]}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+                \PYG{k}{for} \PYG{n}{params} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{defaults\PYGZus{}params\PYGZus{}list}\PYG{p}{:}
+                    \PYG{n}{config\PYGZus{}file}\PYG{o}{.}\PYG{n}{write}\PYG{p}{(}\PYG{n}{params}\PYG{o}{+}\PYG{l+s+s2}{\PYGZdq{} = }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+            \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}I had made config file in present directory !\PYGZdq{}}\PYG{p}{)}
+
+\end{Verbatim}
