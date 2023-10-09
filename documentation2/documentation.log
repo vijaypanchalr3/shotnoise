@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Debian)  (format=lualatex 2023.10.1)  9 OCT 2023 02:30
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Debian)  (format=lualatex 2023.10.1)  9 OCT 2023 08:34
  system commands enabled.
 **documentation.tex
 (./documentation.tex
@@ -739,32 +739,16 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 21.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-! You can't use `\spacefactor' in internal vertical mode.
-<recently read> \spacefactor 
-             
-l.21    }
-       
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
+) [1
 
 
-Overfull \hbox (16.29855pt too wide) in paragraph at lines 21--22
-[]$[]$ 
- []
-
-[1
-
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-Missing character: There is no è (U+00E8) in font cmex10!
-<./GUlogo.pdf>] [2] (./documentation.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}<./GUlogo.pdf>] [2] (./docum
+entation.toc)
 \tf@toc=\write6
 
 \openout6 = documentation.toc
- [3
+
+[3
 
 ]) [1
 
@@ -825,12 +809,6 @@ LaTeX Warning: Citation `beck and spruit' on page 4 undefined on input line 105
 .
 
 [4<./images//circuit-20231005-2245.png>]
-Overfull \hbox (64.65474pt too wide) in paragraph at lines 111--112
-[]\TU/lmr/m/n/12 Here, $\OML/cmm/m/it/12 C$ \TU/lmr/m/n/12 and $\OML/cmm/m/it/1
-2 $ \TU/lmr/m/n/12 de-ter-mine the na-ture of flicker noise. $\OML/cmm/m/it/12
- determinerelationswithothernoiseelements$\TU/lmr/m/n/12 . 
- []
-
 
 LaTeX Warning: Reference `thnoise' on page 5 undefined on input line 119.
 
@@ -845,231 +823,36 @@ LaTeX Warning: Reference `thgen' on page 6 undefined on input line 160.
 LaTeX Warning: Citation `campbell' on page 6 undefined on input line 160.
 
 [6]
-! Undefined control sequence.
-<argument>  \langle V_{avalanche}^2\rangle & = M \langel 
-                                              V_{shot}^2\rangle 
-l.187 \end{align*}
-                
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-<argument>  \langle V_{avalanche}^2\rangle & = M \langel 
-                                              V_{shot}^2\rangle 
-l.187 \end{align*}
-                
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.197 \langleV
-            _{s}^2\rangle & = \langleV_{shot}^2\rangle+\langleV_{avalanche}^...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing $ inserted.
-<inserted text> 
-$
-l.197 \langleV_
-             {s}^2\rangle & = \langleV_{shot}^2\rangle+\langleV_{avalanche}^...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Misplaced alignment tab character &.
-l.197 \langleV_{s}^2\rangle &
-                            = \langleV_{shot}^2\rangle+\langleV_{avalanche}^...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Undefined control sequence.
-l.197 \langleV_{s}^2\rangle & = \langleV
-                                      _{shot}^2\rangle+\langleV_{avalanche}^...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.197 ...angle & = \langleV_{shot}^2\rangle+\langleV
-                                                  _{avalanche}^2\rangle\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Misplaced alignment tab character &.
-<recently read> &
- 
-l.198 &
-      = 2 e I_0 df + 2 e M I_0 df
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.199 &
-      = (M+1) 2 e I_0 df
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced \cr.
-\math@cr@@@ ->\cr 
-                  
-l.200 \end{align*}
-                
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced \noalign.
-\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
-                                                  {\vskip #1\relax }
-l.200 \end{align*}
-                
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Missing $ inserted.
-<inserted text> 
-$
-l.200 \end{align*}
-                
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-}
-l.200 \end{align*}
-                
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Too many }'s.
-\math@cr@@ ...th@cr@@@ \noalign {\vskip #1\relax }
-                                                  
-l.200 \end{align*}
-                
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
-! Misplaced \noalign.
-\black@ #1->\noalign 
-                     {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
-l.200 \end{align*}
-                
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-
-Overfull \hbox (115.86537pt too wide) detected at line 200
-[]
- []
-
-! Too many }'s.
-\endalign ->\math@cr \black@ \totwidth@ \egroup 
-                                                \ifingather@ \restorealignst...
-l.200 \end{align*}
-                
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
-
-! LaTeX Error: \begin{document} ended by \end{align*}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.200 \end{align*}
-                
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing $ inserted.
-<inserted text> 
-$
-l.200 \end{align*}
-                
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Display math should end with $$.
-<to be read again> 
-\endgroup 
-l.200 \end{align*}
-                
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-! Extra \endgroup.
-<recently read> \endgroup 
-          
-l.200 \end{align*}
-                
-Things are pretty mixed up, but I think the worst is over.
-
-
-LaTeX Warning: Citation `johnson' on page 7 undefined on input line 207.
+LaTeX Warning: Citation `johnson' on page 7 undefined on input line 210.
 
 [7] [8]
 <./images//zener.png, id=88, 1186.4325pt x 638.385pt>
 File: ./images//zener.png Graphic file (type png)
 <use ./images//zener.png>
-Package luatex.def Info: ./images//zener.png  used on input line 243.
+Package luatex.def Info: ./images//zener.png  used on input line 257.
 (luatex.def)             Requested size: 237.0pt x 127.51888pt.
 <./images//zenerIV.png, id=89, 462.528pt x 346.896pt>
 File: ./images//zenerIV.png Graphic file (type png)
 <use ./images//zenerIV.png>
-Package luatex.def Info: ./images//zenerIV.png  used on input line 250.
+Package luatex.def Info: ./images//zenerIV.png  used on input line 264.
 (luatex.def)             Requested size: 474.0pt x 355.51776pt.
  [9
 
 <./images//zener.png>]
 
-LaTeX Warning: Reference `psd' on page 10 undefined on input line 263.
+LaTeX Warning: Reference `psd' on page 10 undefined on input line 277.
 
 <./images//PSD.png, id=94, 340.82532pt x 194.83992pt>
 File: ./images//PSD.png Graphic file (type png)
 <use ./images//PSD.png>
-Package luatex.def Info: ./images//PSD.png  used on input line 267.
+Package luatex.def Info: ./images//PSD.png  used on input line 281.
 (luatex.def)             Requested size: 331.79855pt x 189.68422pt.
 [10<./images//zenerIV.png>]
 ! Undefined control sequence.
 <argument>  Z(t) & = V_s(t)\timesV 
                         _r(t)\\ \\ & = \frac {A}{2}(e^{i\left [ (w_s-w_r)t+\the
-l.299 \end{align*}
+l.313 \end{align*}
                 
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1080,7 +863,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument>  Z(t) & = V_s(t)\timesV 
                         _r(t)\\ \\ & = \frac {A}{2}(e^{i\left [ (w_s-w_r)t+\the
-l.299 \end{align*}
+l.313 \end{align*}
                 
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1089,7 +872,52 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [11<./images//PSD.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 344--348
+! Undefined control sequence.
+<argument>  X(t) & =\re 
+             (Z(t))\\ \\ & = \frac {A}{2}\cos (\theta ) 
+l.328 \end{align*}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument>  X(t) & =\re 
+             (Z(t))\\ \\ & = \frac {A}{2}\cos (\theta ) 
+l.328 \end{align*}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument>  Y(t) & = \im 
+              (Z(t))\\ \\ & = \frac {A}{2}\sin (\theta ) 
+l.336 \end{align*}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument>  Y(t) & = \im 
+              (Z(t))\\ \\ & = \frac {A}{2}\sin (\theta ) 
+l.336 \end{align*}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 358--362
 
  []
 
@@ -1101,7 +929,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.353 \\
+l.367 \\
       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1114,7 +942,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.354 \emph
+l.368 \emph
           {\large Cons of LOCK IN amplifier:}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1124,7 +952,7 @@ or  <return>  to continue without it.
 <./images//raw_1000_100us.png, id=111, 462.528pt x 346.896pt>
 File: ./images//raw_1000_100us.png Graphic file (type png)
 <use ./images//raw_1000_100us.png>
-Package luatex.def Info: ./images//raw_1000_100us.png  used on input line 394.
+Package luatex.def Info: ./images//raw_1000_100us.png  used on input line 408.
 (luatex.def)             Requested size: 379.20145pt x 284.4142pt.
 
 
@@ -1134,31 +962,11 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.397 
+l.411 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
-
-! You can't use `macro parameter character #' in math mode.
-<argument> ...-1} X^(i)(f)\\ \\ Y_n(f) & = max(t such that ##
-                                                   \{ s = \lvert X(f)- \lang...
-l.406 \end{align*}
-                
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! You can't use `macro parameter character #' in math mode.
-<argument> ...-1} X^(i)(f)\\ \\ Y_n(f) & = max(t such that ##
-                                                   \{ s = \lvert X(f)- \lang...
-l.406 \end{align*}
-                
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
 
 [14
 
@@ -1173,7 +981,7 @@ LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
 ! Undefined control sequence.
 <recently read> \mus 
      
-l.425 ...erms with ENBW. Time constant (T)= 100$\mus
+l.439 ...erms with ENBW. Time constant (T)= 100$\mus
                                                   $ and roll-off =12 $dB/oct$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1184,7 +992,7 @@ and I'll forget about whatever was undefined.
 <./images//final_1000_100us.png, id=116, 462.528pt x 346.896pt>
 File: ./images//final_1000_100us.png Graphic file (type png)
 <use ./images//final_1000_100us.png>
-Package luatex.def Info: ./images//final_1000_100us.png  used on input line 434
+Package luatex.def Info: ./images//final_1000_100us.png  used on input line 448
 .
 (luatex.def)             Requested size: 379.20145pt x 284.4142pt.
 
@@ -1194,7 +1002,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.437 
+l.451 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1203,7 +1011,7 @@ or  <return>  to continue without it.
 <./images//raw_1_100us.png, id=117, 462.528pt x 346.896pt>
 File: ./images//raw_1_100us.png Graphic file (type png)
 <use ./images//raw_1_100us.png>
-Package luatex.def Info: ./images//raw_1_100us.png  used on input line 453.
+Package luatex.def Info: ./images//raw_1_100us.png  used on input line 467.
 (luatex.def)             Requested size: 379.20145pt x 284.4142pt.
 
 ! LaTeX Error: There's no line here to end.
@@ -1212,14 +1020,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.457 
+l.471 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Too many }'s.
-l.459 ...NT = $100ms$ and roll of factor $12db/oct$}
+l.473 ...NT = $100ms$ and roll of factor $12dB/oct$}
                                                   ,
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -1231,7 +1039,7 @@ LaTeX Warning: Text page 16 contains only floats.
 [16<./images//final_1000_100us.png><./images//raw_1_100us.png>]
 File: ./images//raw_1_100us.png Graphic file (type png)
 <use ./images//raw_1_100us.png>
-Package luatex.def Info: ./images//raw_1_100us.png  used on input line 469.
+Package luatex.def Info: ./images//raw_1_100us.png  used on input line 483.
 (luatex.def)             Requested size: 379.20145pt x 284.4142pt.
 
 
@@ -1241,7 +1049,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.472 
+l.486 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1261,20 +1069,23 @@ LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 runsystem(rm documentation.pyg)...executed
 )
 
 Here is how much of LuaTeX's memory you used:
- 11839 strings out of 478382
+ 11841 strings out of 478382
  125086,1977958 words of node,token memory allocated
- 605 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 6 glue, 4 kern, 1 glyph, 15 attribute, 61 glue_spec
-, 15 attribute_list, 2 write nodes
-   avail lists: 1:1,2:1394,3:231,4:502,5:342,6:58,7:5797,8:46,9:570,10:18,11:412
+ 601 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 6 glue, 4 kern, 1 glyph, 14 attribute, 61 glue_spec
+, 14 attribute_list, 2 write nodes
+   avail lists: 1:1,2:1394,3:231,4:502,5:342,6:58,7:5797,8:41,9:570,10:19,11:412
 
- 31141 multiletter control sequences out of 65536+600000
+ 31143 multiletter control sequences out of 65536+600000
  81 fonts using 6054807 bytes
- 101i,10n,92p,1201b,429s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,10n,92p,1275b,429s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/opentype/public/lm/lmmono10-italic.otf></usr/share/texmf
 /fonts/opentype/public/lm/lmmono12-regular.otf></usr/share/texmf/fonts/opentype/
 public/lm/lmmonolt10-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman
@@ -1293,7 +1104,7 @@ msfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on documentation.pdf (24 pages, 4143863 bytes).
+Output written on documentation.pdf (24 pages, 4145554 bytes).
 
 PDF statistics: 245 PDF objects out of 1000 (max. 8388607)
  146 compressed objects within 2 object streams

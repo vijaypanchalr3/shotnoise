@@ -20,7 +20,7 @@
 \contentsline {subsubsection}{\numberline {3.3.3}Outputs}{13}{}%
 \contentsline {subsubsection}{\numberline {3.3.4}Interfacing}{13}{}%
 \contentsline {section}{\numberline {4}Analysis and Results}{14}{}%
-\contentsline {subsection}{\numberline {4.1}Low frequency: upto 10k}{14}{}%
+\contentsline {subsection}{\numberline {4.1}Low frequency: up to 10k hertz}{14}{}%
 \contentsline {subsection}{\numberline {4.2}Very low frequency: upto 1 hertz}{15}{}%
 \contentsline {section}{Appendix}{18}{}%
 \contentsline {subsection}{Code for data analysis}{18}{}%

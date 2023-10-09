@@ -6,25 +6,26 @@
 
 
 
-\parbox[h]{.95\textwidth}{\centering
+\parbox[h]{.8\textwidth}{\centering
 \parbox[h]{.75\textwidth}{\centering\includegraphics[width=300pt]{GUlogo.pdf}}
 %%     \vskip50pt
     \parbox[b]{.75\textwidth}{\centering\Huge Project Report \par}\vskip10pt
-    \parbox[b]{.75\textwidth}{\centering\hrule\vskip50pt\Huge\textbf{Comprehensive analysis of electronic noise and their noise spectra of zener diode}\par}\vskip50pt
+    \parbox[b]{.75\textwidth}{\centering\hrule height 2pt \vskip50pt\Huge\textbf{Comprehensive analysis of electronic noise and their noise spectra of voltage regulator circuit from zener diode at low frequency}\par}\vskip50pt
    \parbox[b]{.75\textwidth}{\centering \LARGE MSc Semester $3$}\vskip7pt
     \parbox[b]{.75\textwidth}{\centering \large Unit 505:  Project Work}\vskip30pt 
 %%    \parbox[b]{.75\textwidth}{\centering\normalsize\elsauthors\par}\vskip10pt
 
     \parbox[b]{.75\textwidth}{\centering\normalsize \textbf{\emph{Ved Rudani}}   Roll number: \textbf{54}\par}\vskip2pt
-    \parbox[b]{.75\textwidth}{\centering\normalsize \textbf{\emph{Vijay Panchal}}  Roll number: \textbf{55}\par \vskip50pt\hrule\@height2pt}\vskip10pt
+    \parbox[b]{.75\textwidth}{\centering\normalsize \textbf{\emph{Vijay Panchal}}  Roll number: \textbf{55}\par \vskip50pt\hrule height 2pt}\vskip10pt
 %%     \parbox[b]{.75\textwidth}{\centering\footnotesize\itshape\elsaddress\par }
    }
 
 \begin{table*}[hbt!]\centering
   %% \vskip0pt
-  \parbox[h]{.75\textwidth}{\centering \hrule \vskip10pt\Large \textbf{Abstract} \vskip10pt \hrule \vskip10pt}
+  \parbox[h]{.75\textwidth}{\centering \hrule height 2pt \vskip10pt\Large \textbf{Abstract} \vskip10pt \hrule height 2pt \vskip10pt}
   \parbox[h]{.75\textwidth}{\normalsize \textbf{
-       This is our semester project in which we studied noise from source \emph{zener diode} specifically BZX55C5V1. We looked for low frequency flicker noise, johnson noise and shot noise traces. In this project we used a lock-in amplifier specifically SR830 which is relatively accurate and low noise. We used the relative capability of SR830 that of minimum detection around 10nV/Hz signal. We made open source community with making python library \emph{pyinstro} for controlling and interfacing instruments like SR830. This program is made to be very flexible and highly extensible for use in every SCPI supported interface like GPIB, RS232, USB, LAN with capabilities like built-in file writer (.csv) and some CLI argument parsing.} \vskip10pt \hrule \vskip10pt}
+       We present a noise analysis of regulated power supplies. Basic zener diode regulated power supply is employed. We studied noise characteristics at very low frequency (sub hertz), low frequency(up to 10k) and relatively high frequency (up to 100k). All this analysis is made from the LOCK IN amplifier which gives us direct frequency domain information about the device. For our purpose we used SR830 which is relatively low noise compared to our noise signal and can measure up to 10nV/Hz. We looked for traces of frequency dependent noise like flicker noise and  white noise like shot noise, avalanche noise and thermal noise. We used a specific \emph{zener diode} specifically BZX55C5V1 in the voltage regulator, which means exact results can be varied to different zener diodes but it should follow a similar trend. Our work in interfacing with the LOCK IN amplifier led to a new python package called \emph{pyinstro}, which was intended as stream lined for laboratory instrument controlling and handling. We tried to make it as flexible and extensible as possible. This library is made as open source and supports every SCPI supported interface like GPIB, RS232, USB and LAN.  This project is done as our semester project. 
+} \vskip10pt \hrule height 2pt \vskip10pt}
 \end{table*}
 \clearpage
 \begin{table*}[hbt!]\centering
