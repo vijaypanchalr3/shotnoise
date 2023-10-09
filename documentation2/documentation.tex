@@ -108,7 +108,7 @@ This type of noise is found  almost in any electronic device which is able to op
 S(f) & = \frac{\gamma}{f^{\alpha}}
 \end{align}
 
-Here, $C$ and $\alpha$ determine the nature of flicker noise. $\alpha$ determine relations with other noise elements.
+Here, $\gamma$ and $\alpha$ determine the nature of flicker noise. $\alpha$ determine relations with other noise elements.
 
 \begin{enumerate}
 \item ($\alpha > 0$): This means that white noise is dominating the flicker noise as frequency increases.
@@ -234,14 +234,16 @@ By equation \ref{thths} we can see that thermal noise in an ideal resistor is ap
 Total noise in the circuit will bre frequency dependent noise and white noise,
 
 
-\begin{align}\label{theoryvn}
+\begin{align*}
 V_n & = V_{n}(f)+ V_{white}\\
 \\
 S(f) & = \frac{\gamma}{f^{\alpha}}+(2e(M+1)I_0+4K_bR)+\mathcal{O}(other)\\
-\\
+
+\end{align*}
+
+\begin{align}\label{theoryvn}
 S(f) & \approx \frac{\gamma}{f^{\alpha}}+(2e(M+1)I_0+4K_bR)
 \end{align}
-
 
 which is main derivation of our project.
 
@@ -406,7 +408,7 @@ Now , on the basis of frequencies/ frequency levels and its origin, there are di
 
 
 \clearpage
-\section{Analysis and Results}
+\section{Results and Analysis}
 
 We have surveyed voltage regulated circuits we made with zener diodes and found some satisfactory results. We take different results for different bandwidths. For context this is row data from different bandwidth. Here, for each set of frequencies in bandwidth we took almost 50 to 100 readings.
 
@@ -462,6 +464,12 @@ With all this in we got following results,
  
 Here we can see some traces of flicker noise. Parameterized as follows,
 
+
+\begin{align*}
+S(f) & = \frac{\gamma}{f^{\alpha}}
+\end{align*}
+
+Here, $\gamma$ and $\alpha$ determine the nature of flicker noise. Results are from theoritical section.
 
 \begin{align}\label{eq1}
 S_{flicker}(f) & = 5.90923491 \frac{1}{f^{1.34677368}}\\
@@ -535,15 +543,33 @@ Here this parameters are similar to that of first data set aka low frequency dat
 \clearpage
 \section{Conclutions}
 
+In 1k to 10k data, we have specified flicker noise power AKA $(\frac{1}{f})^{\alpha}$ as $\alpha = 1.34677368$, which is close to flicker noise theoretical values for maximum flicker noise which is equal to 1. white noise level in $\mu V$ region, which is expected (at $2.0644381e-05$). 
+
+
+The most mysterious results came from second data sets, very low frequency data sets. Here  $\alpha= -0.64836618$ which is negative. This means that noise increases as frequency increases, this case already discussed in theoritical part. Our assumtion here is that as frequency increases the white noise gets saturated to it’s related power. This means that white noise is not quite white as it seems. Assumption is also be made that frequency dependence of flicker noise is not quite like that of distrubution as theory discussed. Well, we have to dig deep into that.
+
+Last data set is quite normal, it satisfy first data sets and closely correlate with the theoritical model. We have white noise level is similar to that of first data sets with different is of $2.0644381e-05-1.20525914e-05 = 0.85917896e-05$. which is very small. 
+
+Further studies can be conducted to anamolous behaviour at very low frequency noise $\approx 1Hz$. This can be important in regulated power supply usage since 1Hz is very near to DC level. 
+
+We hope that our contribution to Open source community is well recevied and gets more contribution to our package \textbf{PyInstro}.
+
+\clearpage
+
+
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{plain}
+\bibliography{documentation}
+
 
 \clearpage
 
 \addcontentsline{toc}{section}{Appendix}
 \addcontentsline{toc}{subsection}{Code for data analysis}
-
+\addcontentsline{toc}{subsection}{PyInstro}
 \section*{Appendix}
 
-\subsection{PyInstro}
+\subsection*{PyInstro}
 
 PyInstro is a package we made to communicate, control and data logging to any scientific instrument easily. The main work of it is giving utility for data logging and ease SCPI. Also, it does streamline instruments after extending it. It is just a cover for the PYVISA backend but it gives instrument specific tools. whole package in the following link
 
@@ -1033,12 +1059,6 @@ if __name__=="__main__":
 
 
 
-\clearpage
-
-
-\addcontentsline{toc}{section}{References}
-\bibliographystyle{plain}
-\bibliography{documentation}
 
 \end{document}
 

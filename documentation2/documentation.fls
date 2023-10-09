@@ -486,6 +486,8 @@ INPUT ./images//raw10000100ms.png
 INPUT ./images//final_10000_100ms.png
 INPUT ./images//final_10000_100ms.png
 INPUT ./images//final_10000_100ms.png
+INPUT ./documentation.bbl
+INPUT ./documentation.bbl
 OUTPUT documentation.pyg
 INPUT ./documentation.pyg
 INPUT ./_minted-documentation/3913FD2E1D462B2F9C18E0DA287496315E620CAA758430E5E8F729407B2BB55F.pygtex
@@ -517,8 +519,6 @@ INPUT ./_minted-documentation/BCEE1ED7C84BC283148E338224FE45395E620CAA758430E5E8
 INPUT ./_minted-documentation/BCEE1ED7C84BC283148E338224FE45395E620CAA758430E5E8F729407B2BB55F.pygtex
 INPUT ./_minted-documentation/BCEE1ED7C84BC283148E338224FE45395E620CAA758430E5E8F729407B2BB55F.pygtex
 INPUT ./_minted-documentation/BCEE1ED7C84BC283148E338224FE45395E620CAA758430E5E8F729407B2BB55F.pygtex
-INPUT ./documentation.bbl
-INPUT ./documentation.bbl
 INPUT ./documentation.aux
 INPUT ./frontmatter.aux
 INPUT ./frontmatter.aux
