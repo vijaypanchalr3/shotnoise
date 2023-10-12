@@ -4,49 +4,47 @@ The top-level auxiliary file: documentation.aux
 A level-1 auxiliary file: frontmatter.aux
 The style file: plain.bst
 Database file #1: documentation.bib
-Warning--I didn't find a database entry for "vasilescu2005electronic"
-Warning--I didn't find a database entry for "johnson1925schottky"
-Warning--I didn't find a database entry for "beck19781"
 Warning--I didn't find a database entry for "campbell"
-You've used 1 entry,
+Warning--can't use both volume and number fields in campbell1909study
+You've used 5 entries,
             2118 wiz_defined-function locations,
-            509 strings with 4185 characters,
-and the built_in function-call counts, 259 in all, are:
-= -- 23
-> -- 7
-< -- 0
-+ -- 3
-- -- 2
-* -- 18
-:= -- 52
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 4
+            534 strings with 4647 characters,
+and the built_in function-call counts, 1400 in all, are:
+= -- 133
+> -- 41
+< -- 2
++ -- 19
+- -- 12
+* -- 88
+:= -- 236
+add.period$ -- 15
+call.type$ -- 5
+change.case$ -- 20
 chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 11
-empty$ -- 23
-format.name$ -- 2
-if$ -- 50
+cite$ -- 6
+duplicate$ -- 66
+empty$ -- 128
+format.name$ -- 12
+if$ -- 295
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 1
-newline$ -- 8
-num.names$ -- 2
-pop$ -- 2
+int.to.str$ -- 5
+missing$ -- 6
+newline$ -- 28
+num.names$ -- 10
+pop$ -- 21
 preamble$ -- 1
-purify$ -- 3
+purify$ -- 16
 quote$ -- 0
-skip$ -- 7
+skip$ -- 45
 stack$ -- 0
-substring$ -- 11
-swap$ -- 1
-text.length$ -- 0
+substring$ -- 76
+swap$ -- 15
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 4
-warning$ -- 0
-while$ -- 3
-width$ -- 2
-write$ -- 13
-(There were 4 warnings)
+type$ -- 18
+warning$ -- 1
+while$ -- 15
+width$ -- 6
+write$ -- 57
+(There were 2 warnings)

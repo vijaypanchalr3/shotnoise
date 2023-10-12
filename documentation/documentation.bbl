@@ -1,8 +1,30 @@
 \begin{thebibliography}{1}
 
+\bibitem{beck19781}
+HGE Beck and WP~Spruit.
+\newblock 1/f noise in the variance of johnson noise.
+\newblock {\em Journal of applied physics}, 49(6):3384--3385, 1978.
+
+\bibitem{campbell1909study}
+Norman Campbell.
+\newblock The study of discontinuous phenomena.
+\newblock In {\em Proceedings of the Cambridge Philosophical Society},
+  volume~15, page 250, 1909.
+
+\bibitem{johnson1925schottky}
+John~B Johnson.
+\newblock The schottky effect in low frequency circuits.
+\newblock {\em Physical review}, 26(1):71, 1925.
+
 \bibitem{johnson1928thermal}
 John~Bertrand Johnson.
 \newblock Thermal agitation of electricity in conductors.
 \newblock {\em Physical review}, 32(1):97, 1928.
+
+\bibitem{vasilescu2005electronic}
+Gabriel Vasilescu.
+\newblock {\em Electronic noise and interfering signals: principles and
+  applications}.
+\newblock Springer Science \& Business Media, 2005.
 
 \end{thebibliography}

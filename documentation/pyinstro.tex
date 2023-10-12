@@ -1,0 +1,323 @@
+
+PyInstro is a package we made to communicate, control and data logging to any scientific instrument easily. The main work of it is giving utility for data logging and ease SCPI. Also, it does streamline instruments after extending it. It is just a cover for the PYVISA backend but it gives instrument specific tools. whole package in the following link,
+This is code for just the GPIB connection which we used. (it is also extensible to the RS232, LAN and USB )
+
+%% \begin{table*}[hbt!]
+\emph{GPIB.py}
+\begin{minted}{python}
+import pyvisa
+import sys
+from termcolor import cprint
+
+class GPIB:
+    def __init__(self) -> None:                                 
+        try:                        # GPIB connection check
+            cprint("-----------checking GPIB connections--------",color="yellow")
+            resources = pyvisa.ResourceManager()
+            interface = None
+            resourceslist = resources.list_resources()
+            cprint(resourceslist,'blue',attrs=['bold'])
+            if resourceslist==():
+                cprint("ERROR: please check GPIB connection", "red")
+                sys.exit()
+            else:
+                while True:
+                    try:
+                        choise = int(input("please, choose your device from this list: "))-1
+                        if choise>len(resourceslist):
+                            TypeError
+                        interface = resourceslist[choise]
+                        cprint("-------------chose resource-----------------",color="green",attrs=["bold"])
+                        cprint("-------following device is connected--------",color="green",attrs=["bold"])
+                        cprint(interface)
+                        break
+                    except:
+                        cprint("choose with interger and from following...","red")
+
+            self.interface =  resources.open_resource(interface)
+        except:
+            cprint("ERROR in detecting GPIB, there must be problem with setup of pyvisa or there is no connection of gpib\n you should look either in pyvisa documentation or try for RS232 interface","red",attrs=['bold'])
+            sys.exit()
+
+    def ping(self)-> None:
+        self.interface.write("*IDN?\n")
+
+    def read(self)-> None:
+        self.interface.read()
+
+    def reset(self)-> None:
+        self.interface.write("*RST\n")
+
+    def clear_status(self)-> None:
+        self.interface.write("*CLS\n")
+
+    def close(self)->None:
+        self.interface.close()
+
+    def std_event(self)->None:
+        pass
+
+\end{minted}
+%% \end{table*}
+
+This is SR830 device commands,
+
+\emph{SR830.py}
+\begin{minted}{python}
+from pyinstro.utils import sysarg
+from pyinstro.utils import datafile
+
+new_instance = sysarg.CLI()
+
+if new_instance.get_connection()=="GPIB":
+    from pyinstro.interfaces import gpib
+    
+    class SR830(gpib.GPIB):
+        def __init__(self) -> None:
+            super().__init__()
+
+            file_init = datafile.Get_File(new_instance.get_file())
+            
+            self.get_levels = new_instance.get_levels
+            self.get_partitions = new_instance.get_partitions
+            self.writerow = file_init.writerow
+            self.longwriterow = file_init.longwriterow
+            self.fmin = new_instance.get_fmin
+            self.fmax = new_instance.get_fmax
+            self.freq = new_instance.get_freq
+
+        def local_defaults(self)-> None:
+            pass
+
+        def local_arguments(self)-> None:
+            new_instance.argparser.add_argument('-fl','--fmin', metavar='', type=float, default=4545, help="give lower limit for reference frequency")
+            new_instance.argparser.add_argument('-fr','--freq', metavar='', type=float, default=7888, help="give reference frequency")
+            new_instance.argparser.add_argument('-fh','--fmax', metavar='', type=float, default=1, help="give upper limit for reference frequency")
+    
+        def set_frequency(self, value, errdelay = 3) -> None:
+            """change reference frequency"""
+            self.interface.write("FREQ "+"{:.4E}".format(value))
+            pass
+
+        def autogain(self)->None:
+            self.interface.write("AGAN")
+
+        def set_phase(self,value) -> None:
+            self.interface.write("PHAS "+str(value))
+            pass
+
+        def time_constant(self,choise) -> None:
+            self.interface.write("OFLT "+str(choise))
+            pass
+
+        def sensitivity(self,choise) -> None:
+            self.interface.write("SENS "+str(choise))
+            pass
+
+        def set_sample_rate(self, choise)->None:
+            self.interface.write("SRAT "+str(choise))
+
+        def start_data_acquision(self) -> None:
+            self.interface.write("STRT")
+            pass
+
+        def pause_data_acquision(self) -> None:
+            self.interface.write("PAUS")
+            pass
+
+        def reset_data_acquision(self) -> None:
+            self.interface.write("REST")
+            pass
+
+        def get_data(self) -> None:
+            pass
+
+        def get_data_explicitly(self, data_variable=3, errdelay=3):
+            """
+            two params, give resource object and the second params is parameter to variable read,
+            default to data_variable = 3 which is equievalent to reading R.
+            as SR830manual, 
+            data_variable = 1 => X,
+            data_variable = 2 => Y,
+            data_variable = 3 => R,
+            data_variable = 4 => phase
+            """
+            return self.interface.query("OUTP? "+str(data_variable))
+
+        
+else:
+
+    from pyinstro.interfaces import rs232
+    
+    class SR830(rs232.RS232):
+\end{minted}
+
+This is some utilities to ease control of scientific instruments,
+
+FIlewrite \ simple data logger: \emph{getfile.py}
+
+\begin{minted}{python}
+from pyinstro.utils import getpath
+
+
+
+import csv
+import os
+
+
+
+class Get_File:
+    """
+    INFO: just to write file, must be CSV 
+    """
+    def __init__(self,file) -> None:
+        _project_dir_path_abs = getpath.getpath()
+
+        if os.path.exists(os.path.join(_project_dir_path_abs,"data")):
+            _data_dir_path_abs = os.path.join(_project_dir_path_abs,"data")
+        else:
+            os.mkdir(os.path.join(_project_dir_path_abs,"data"))
+            _data_dir_path_abs = os.path.join(_project_dir_path_abs,"data")
+        
+        if file=='default':
+            file = "auto0.csv"
+            count = 0
+            while os.path.exists(os.path.join(_data_dir_path_abs,f"auto{count}.csv")):
+                count+=1
+                file = f"auto{count}.csv"
+
+        file = os.path.join(_data_dir_path_abs,file)
+        
+        # i did not used re module down here
+        if not ((file[len(file)-1]=='v')and(file[len(file)-2]=='s')and(file[len(file)-3]=='c')and(file[len(file)-4]=='.')):
+            file = file+".csv"
+        else:
+            pass
+        
+        self.filepath = file
+        self.firsttime = True
+
+    def writerow(self, data)-> None:
+        """
+        open file one time ad write it
+        """
+        if self.firsttime:
+            self.file = open(self.filepath,'w',newline='')
+            self.writer = csv.writer(self.file)
+            self.writer.writerow(data)
+            self.firsttime = False
+            print(self.filepath)
+        else:
+            self.writer.writerow(data)
+
+
+    def longwriterow(self,data)->None:
+        """
+        for long data, i think it is suitable to write file each time open and close
+        """
+        with open(self.filepath,'a',newline="") as datafile:
+            self.writer = csv.writer(datafile)
+            self.writer.writerow(data)
+
+\end{minted}
+
+
+DEFAULT setting: \emph{defaults.py}
+
+\begin{minted}{python}
+from pyinstro.utils import getpath
+
+import os
+import configparser
+
+class DefaultParams:
+    """
+    specify default parameters
+    
+    for more info:
+    refer to SR830 manual for more info.
+    """
+    time_constant = 5
+    sensitivity = 5
+    # filter_slope = 
+
+    baud_rate = 9600
+    sample_rate = 10
+    gpib_address = 1
+    time_delay = 1
+
+    connection = 1          # means GPIB, 1: GPIB, 2: RS232, 3: USB, 4: LAN
+    connections = {1:"GPIB", 2:"RS232", 3:"USB", 4:"LAN"}
+
+    fmin = 01E+3
+    fmax = 01E+5
+    
+    partitions = 4
+    levels = 4
+
+    data= 3
+
+    def __init__(self) -> None:
+        self.defaults_params_list= [attr for attr in dir(self) if not callable(getattr(self, attr)) and not attr.startswith("__")]
+        #defaults_params= dict(zip(defaults_params_list,list(" "*len(defaults_params_list))))
+        
+        self.target_path = getpath.getpath()
+        config_file = os.path.join(self.target_path,"config.ini")
+
+        print("checking config.ini file")
+        
+        if os.path.exists(config_file):
+            config = configparser.ConfigParser()
+            config.read(config_file)
+            config_file_dict = config.defaults()
+            if len(config_file_dict)==len(self.defaults_params_list):
+                for keys in config_file_dict:
+                    if (config_file_dict[keys].isspace() or not config_file_dict[keys]):
+                        pass
+                    else:
+                        setattr(self, keys, config_file_dict[keys])
+                        print(keys+":  "+config_file_dict[keys])
+            else:
+                for keys in self.defaults_params_list:
+                    if not (keys in config_file_dict):
+                        with open(config_file, "w") as _conf_file: 
+                            config.set("DEFAULT",keys," ")
+                            config.write(_conf_file) 
+                    else:
+                        if (config_file_dict[keys].isspace() or config_file_dict[keys] ==""):
+                            pass
+                        else:
+                            setattr(self, keys, config_file_dict[keys])
+                            print(keys+":  "+config_file_dict[keys])
+                            
+        else:
+            pass
+
+    def makeconfig(self):
+        config_file =os.path.join(self.target_path,"config.ini")
+        config = configparser.ConfigParser()
+        if os.path.exists(config_file):
+            config.read(config_file)
+            config_file_dict = config.defaults()
+            if len(config_file_dict)==len(self.defaults_params_list):
+                pass
+            else:
+                for keys in self.defaults_params_list:
+                    if not (keys in config_file_dict):
+                        with open(config_file, "w") as _conf_file: 
+                            config.set("DEFAULT",keys," ")
+                            config.write(_conf_file)
+                            
+                    else:
+                        pass
+                print("I had appened to full option to config file!")
+        else:
+            with open(config_file,'w') as config_file:
+                config_file.write("[DEFAULT]\n")
+                for params in self.defaults_params_list:
+                    config_file.write(params+" = \n")
+            print("I had made config file in present directory !")
+
+\end{minted}
+
+            

@@ -368,26 +368,28 @@
   \def\baselinestretch{1}%
   \begin{center}%
     \def\baselinestretch{1}%
-    \vskip-50pt \parbox[h]{.75\textwidth}{\centering\includegraphics[width=300pt]{GUlogo.pdf}}
+    \vskip-50pt
+  \parbox[h]{.9\textwidth}{\centering \vskip-20pt
+\parbox[h]{.75\textwidth}{\centering\includegraphics[width=300pt]{GUlogo.pdf}}
 %%     \vskip50pt
     \parbox[b]{.75\textwidth}{\centering\Huge Project Report \par}\vskip10pt
-    \parbox[b]{.75\textwidth}{\centering\hrule\@height2pt\vskip50pt\Huge\textbf\@title\par}\vskip50pt
+    \parbox[b]{.75\textwidth}{\centering\hrule height 2pt \vskip30pt\Huge\textbf{Comprehensive analysis of electronic noise and their noise spectra of voltage regulator circuit with zener diode at low frequency}\par}\vskip20pt
    \parbox[b]{.75\textwidth}{\centering \LARGE MSc Semester $3$}\vskip7pt
-    \parbox[b]{.75\textwidth}{\centering \large Unit 505:  Project Work}\vskip30pt 
+    \parbox[b]{.75\textwidth}{\centering \large Unit 505:  Project Work}\vskip20pt 
 %%    \parbox[b]{.75\textwidth}{\centering\normalsize\elsauthors\par}\vskip10pt
 
     \parbox[b]{.75\textwidth}{\centering\normalsize \textbf{\emph{Ved Rudani}}   Roll number: \textbf{54}\par}\vskip2pt
-    \parbox[b]{.75\textwidth}{\centering\normalsize \textbf{\emph{Vijay Panchal}}  Roll number: \textbf{55}\par \vskip50pt\hrule\@height2pt}\vskip10pt
+    \parbox[b]{.75\textwidth}{\centering\normalsize \textbf{\emph{Vijay Panchal}}  Roll number: \textbf{55}\par}\vskip25pt
 %%     \parbox[b]{.75\textwidth}{\centering\footnotesize\itshape\elsaddress\par }
-   
 
-%%    \parbox[b]{.75\textwidth}{\centering \Large Abstract} \parbox[b]{.75\textwidth}{\centering\ifvoid\absbox\else\unvbox\absbox\par\vskip18pt\fi
+ \parbox[b]{.75\textwidth}{\centering\normalsize Under the the guidance of: }\vskip10pt
 
-%%    \hrule\@height2pt\vskip10pt}
+ \parbox[b]{.75\textwidth}{\centering\normalsize \Large \textbf{D. B. Patel}}\vskip10pt
+ \parbox[b]{.75\textwidth}{\centering\normalsize \Large \textbf{U. S. Joshi}}\vskip10pt
+ \parbox[b]{.75\textwidth}{\centering\normalsize Department of Physics, Electronics and Space Sciences, Gujarat University, Ahmedabad,380009}\vskip10pt
+ \vskip20pt\hrule height 2pt
+}
 
-   
-    \parbox[b]{.75\textwidth}{\centering\ifvoid\keybox\else\unvbox\keybox\par\fi}
-    \parbox[b]{.75\textwidth}{\centering\hrule\@height2pt}
   \end{center}%
 }
 
