@@ -22,9 +22,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.8953849"
-     inkscape:cx="122.29378"
-     inkscape:cy="140.7216"
+     inkscape:zoom="1.458382"
+     inkscape:cx="198.50766"
+     inkscape:cy="136.45259"
      inkscape:window-width="1366"
      inkscape:window-height="736"
      inkscape:window-x="0"
@@ -101,6 +101,17 @@
      id="rect6"
      style="fill:#ffffff"
      sodipodi:insensitive="true" />
+  <path
+     fill="none"
+     stroke="#02fc02"
+     paint-order="fill stroke markers"
+     d="m 166,50 h 64"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path6"
+     style="stroke:#000000;fill:#000000" />
   <text
      fill="#ffffff"
      stroke="none"
@@ -114,6 +125,132 @@
      text-anchor="start"
      dominant-baseline="alphabetic"
      id="text6" />
+  <path
+     fill="none"
+     stroke="#02fc02"
+     paint-order="fill stroke markers"
+     d="M 230,50 V 98"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path7"
+     style="stroke:#000000" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="m 230,130 v 48"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path8"
+     style="stroke:#000000" />
+  <rect
+     fill="none"
+     stroke="url(#OZzwSrZklhIw)"
+     x="98"
+     y="-236"
+     width="32"
+     height="12"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="rect8"
+     style="stroke:#000000"
+     transform="rotate(90)" />
+  <path
+     fill="none"
+     stroke="#01fd01"
+     paint-order="fill stroke markers"
+     d="m 70,50 h 32"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path9"
+     style="stroke:#000000" />
+  <path
+     fill="none"
+     stroke="#02fc02"
+     paint-order="fill stroke markers"
+     d="m 134,50 h 32"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path10"
+     style="stroke:#000000" />
+  <rect
+     fill="none"
+     stroke="url(#ShCWowPogkQp)"
+     x="102"
+     y="44"
+     width="32"
+     height="12"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="rect10"
+     style="stroke:#000000" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="M 70,178 V 118"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path11"
+     style="stroke:#000000" />
+  <path
+     fill="none"
+     stroke="#01fd01"
+     paint-order="fill stroke markers"
+     d="M 70,110 V 50"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path12"
+     style="stroke:#000000" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="M 60,118 H 80"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path13"
+     style="stroke:#000000" />
+  <path
+     fill="none"
+     stroke="#01fd01"
+     paint-order="fill stroke markers"
+     d="M 54,110 H 86"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path14"
+     style="stroke:#000000" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="m 70,178 h 96"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path15"
+     style="stroke:#000000" />
   <text
      fill="#ffffff"
      stroke="none"
@@ -127,6 +264,17 @@
      text-anchor="start"
      dominant-baseline="alphabetic"
      id="text15" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="m 166,178 h 64"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path16"
+     style="stroke:#000000;fill:#000000" />
   <text
      fill="#ffffff"
      stroke="none"
@@ -140,6 +288,17 @@
      text-anchor="start"
      dominant-baseline="alphabetic"
      id="text16" />
+  <path
+     fill="none"
+     stroke="#02fc02"
+     paint-order="fill stroke markers"
+     d="m 230,50 h 64"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path17"
+     style="stroke:#000000;fill:#000000" />
   <text
      fill="#ffffff"
      stroke="none"
@@ -153,6 +312,17 @@
      text-anchor="start"
      dominant-baseline="alphabetic"
      id="text17" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="m 230,178 h 64"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path18"
+     style="stroke:#000000;fill:#000000" />
   <text
      fill="#ffffff"
      stroke="none"
@@ -168,176 +338,6 @@
      id="text18" />
   <path
      fill="none"
-     stroke="#02fc02"
-     paint-order="fill stroke markers"
-     d="m 166,50 h 64"
-     stroke-linecap="round"
-     stroke-miterlimit="10"
-     stroke-width="3"
-     stroke-dasharray="none"
-     id="path6"
-     style="fill:#000000;stroke:#000000;stroke-width:1.46667;stroke-dasharray:none" />
-  <path
-     fill="none"
-     stroke="#02fc02"
-     paint-order="fill stroke markers"
-     d="M 230,50 V 98"
-     stroke-linecap="round"
-     stroke-miterlimit="10"
-     stroke-width="3"
-     stroke-dasharray="none"
-     id="path7"
-     style="stroke:#000000;stroke-width:1.46667;stroke-dasharray:none" />
-  <path
-     fill="none"
-     stroke="#807f7f"
-     paint-order="fill stroke markers"
-     d="m 230,130 v 48"
-     stroke-linecap="round"
-     stroke-miterlimit="10"
-     stroke-width="3"
-     stroke-dasharray="none"
-     id="path8"
-     style="stroke:#000000;stroke-width:1.46667;stroke-dasharray:none" />
-  <rect
-     fill="none"
-     stroke="url(#OZzwSrZklhIw)"
-     x="98"
-     y="-236"
-     width="32"
-     height="12"
-     stroke-linecap="round"
-     stroke-miterlimit="10"
-     stroke-width="3"
-     stroke-dasharray="none"
-     id="rect8"
-     style="stroke:#000000;stroke-width:1.46667;stroke-dasharray:none;fill:#e6e6e6"
-     transform="rotate(90)" />
-  <path
-     fill="none"
-     stroke="#01fd01"
-     paint-order="fill stroke markers"
-     d="m 70,50 h 32"
-     stroke-linecap="round"
-     stroke-miterlimit="10"
-     stroke-width="3"
-     stroke-dasharray="none"
-     id="path9"
-     style="stroke:#000000;stroke-width:1.46667;stroke-dasharray:none" />
-  <path
-     fill="none"
-     stroke="#02fc02"
-     paint-order="fill stroke markers"
-     d="m 134,50 h 32"
-     stroke-linecap="round"
-     stroke-miterlimit="10"
-     stroke-width="3"
-     stroke-dasharray="none"
-     id="path10"
-     style="stroke:#000000;stroke-width:1.46667;stroke-dasharray:none" />
-  <rect
-     fill="none"
-     stroke="url(#ShCWowPogkQp)"
-     x="102"
-     y="44"
-     width="32"
-     height="12"
-     stroke-linecap="round"
-     stroke-miterlimit="10"
-     stroke-width="3"
-     stroke-dasharray="none"
-     id="rect10"
-     style="stroke:#000000;stroke-width:1.46667;stroke-dasharray:none;fill:#e6e6e6" />
-  <path
-     fill="none"
-     stroke="#807f7f"
-     paint-order="fill stroke markers"
-     d="M 70,178 V 118"
-     stroke-linecap="round"
-     stroke-miterlimit="10"
-     stroke-width="3"
-     stroke-dasharray="none"
-     id="path11"
-     style="stroke:#000000;stroke-width:1.46667;stroke-dasharray:none" />
-  <path
-     fill="none"
-     stroke="#01fd01"
-     paint-order="fill stroke markers"
-     d="M 70,110 V 50"
-     stroke-linecap="round"
-     stroke-miterlimit="10"
-     stroke-width="3"
-     stroke-dasharray="none"
-     id="path12"
-     style="stroke:#000000;stroke-width:1.46667;stroke-dasharray:none" />
-  <path
-     fill="none"
-     stroke="#807f7f"
-     paint-order="fill stroke markers"
-     d="M 60,118 H 80"
-     stroke-linecap="round"
-     stroke-miterlimit="10"
-     stroke-width="3"
-     stroke-dasharray="none"
-     id="path13"
-     style="stroke:#000000;stroke-width:1.46667;stroke-dasharray:none" />
-  <path
-     fill="none"
-     stroke="#01fd01"
-     paint-order="fill stroke markers"
-     d="M 54,110 H 86"
-     stroke-linecap="round"
-     stroke-miterlimit="10"
-     stroke-width="3"
-     stroke-dasharray="none"
-     id="path14"
-     style="stroke:#000000;stroke-width:1.46667;stroke-dasharray:none" />
-  <path
-     fill="none"
-     stroke="#807f7f"
-     paint-order="fill stroke markers"
-     d="m 70,178 h 96"
-     stroke-linecap="round"
-     stroke-miterlimit="10"
-     stroke-width="3"
-     stroke-dasharray="none"
-     id="path15"
-     style="stroke:#000000;stroke-width:1.46667;stroke-dasharray:none" />
-  <path
-     fill="none"
-     stroke="#807f7f"
-     paint-order="fill stroke markers"
-     d="m 166,178 h 64"
-     stroke-linecap="round"
-     stroke-miterlimit="10"
-     stroke-width="3"
-     stroke-dasharray="none"
-     id="path16"
-     style="fill:#000000;stroke:#000000;stroke-width:1.46667;stroke-dasharray:none" />
-  <path
-     fill="none"
-     stroke="#02fc02"
-     paint-order="fill stroke markers"
-     d="m 230,50 h 64"
-     stroke-linecap="round"
-     stroke-miterlimit="10"
-     stroke-width="3"
-     stroke-dasharray="none"
-     id="path17"
-     style="fill:#000000;stroke:#000000;stroke-width:1.46667;stroke-dasharray:none" />
-  <path
-     fill="none"
-     stroke="#807f7f"
-     paint-order="fill stroke markers"
-     d="m 230,178 h 64"
-     stroke-linecap="round"
-     stroke-miterlimit="10"
-     stroke-width="3"
-     stroke-dasharray="none"
-     id="path18"
-     style="fill:#000000;stroke:#000000;stroke-width:1.46667;stroke-dasharray:none" />
-  <path
-     fill="none"
      stroke="#817e7e"
      paint-order="fill stroke markers"
      d="M 166,114 V 86"
@@ -346,7 +346,7 @@
      stroke-width="3"
      stroke-dasharray="none"
      id="path19"
-     style="stroke:#000000;stroke-width:1.46667;stroke-dasharray:none" />
+     style="stroke:#000000" />
   <path
      fill="none"
      stroke="#02fc02"
@@ -357,7 +357,7 @@
      stroke-width="3"
      stroke-dasharray="none"
      id="path20"
-     style="stroke:#000000;stroke-width:1.46667;stroke-dasharray:none" />
+     style="stroke:#000000" />
   <path
      fill="none"
      stroke="#817e7e"
@@ -368,7 +368,7 @@
      stroke-width="3"
      stroke-dasharray="none"
      id="path21"
-     style="stroke:#000000;stroke-width:1.46667;stroke-dasharray:none" />
+     style="stroke:#000000" />
   <path
      fill="none"
      stroke="#02fc02"
@@ -379,7 +379,7 @@
      stroke-width="3"
      stroke-dasharray="none"
      id="path22"
-     style="stroke:#000000;stroke-width:1.46667;stroke-dasharray:none" />
+     style="stroke:#000000" />
   <path
      fill="none"
      stroke="#817e7e"
@@ -390,7 +390,7 @@
      stroke-width="3"
      stroke-dasharray="none"
      id="path23"
-     style="stroke:#000000;stroke-width:1.46667;stroke-dasharray:none" />
+     style="stroke:#000000" />
   <path
      fill="none"
      stroke="#807f7f"
@@ -401,7 +401,7 @@
      stroke-width="3"
      stroke-dasharray="none"
      id="path24"
-     style="stroke:#000000;stroke-width:1.46667;stroke-dasharray:none" />
+     style="stroke:#000000" />
   <rect
      fill="none"
      stroke="url(#qIiVfPmpCInw)"
@@ -414,7 +414,7 @@
      stroke-width="3"
      stroke-dasharray="none"
      id="rect24"
-     style="stroke:#000000;stroke-width:1.46667;stroke-dasharray:none;fill:#e6e6e6"
+     style="stroke:#000000"
      transform="rotate(90)" />
   <path
      fill="#ffffff"
@@ -422,56 +422,55 @@
      paint-order="stroke fill markers"
      d="m 169,50 a 3,3 0 1 1 0,-2e-5 z"
      id="path25"
-     style="fill:#000000;stroke:#000000;stroke-width:1.46667;stroke-dasharray:none" />
+     style="stroke:#000000;fill:#000000" />
   <path
      fill="#ffffff"
      stroke="none"
      paint-order="stroke fill markers"
      d="m 233,50 a 3,3 0 1 1 0,-2e-5 z"
      id="path26"
-     style="fill:#000000;stroke:#000000;stroke-width:1.46667;stroke-dasharray:none" />
+     style="stroke:#000000;fill:#000000" />
   <path
      fill="#ffffff"
      stroke="none"
      paint-order="stroke fill markers"
      d="m 233,178 a 3,3 0 1 1 0,-2e-5 z"
      id="path27"
-     style="fill:#000000;stroke:#000000;stroke-width:1.46667;stroke-dasharray:none" />
+     style="stroke:#000000;fill:#000000" />
   <path
      fill="#ffffff"
      stroke="none"
      paint-order="stroke fill markers"
      d="m 169,178 a 3,3 0 1 1 0,-2e-5 z"
      id="path28"
-     style="fill:#000000;stroke:#000000;stroke-width:1.46667;stroke-dasharray:none" />
+     style="stroke:#000000;fill:#000000" />
   <path
      fill="#ffffff"
      stroke="none"
      paint-order="stroke fill markers"
      d="m 297,50 a 3,3 0 1 1 0,-2e-5 z"
      id="path29"
-     style="fill:#000000;stroke:#000000;stroke-width:1.46667;stroke-dasharray:none" />
+     style="stroke:#000000;fill:#000000" />
   <path
      fill="#ffffff"
      stroke="none"
      paint-order="stroke fill markers"
      d="m 297,178 a 3,3 0 1 1 0,-2e-5 z"
      id="path30"
-     style="fill:#000000;stroke:#000000;stroke-width:1.46667;stroke-dasharray:none" />
+     style="stroke:#000000;fill:#000000" />
   <g
      id="g40"
-     transform="translate(86.956593,-3.8785678)"
-     style="stroke-width:1.46667;stroke-dasharray:none">
+     transform="translate(86.956593,-3.8785678)">
     <text
        xml:space="preserve"
        id="text31"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.6667px;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect31);display:inline;fill:#000000;stroke:none;stroke-width:1.46667;stroke-dasharray:none"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.6667px;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect31);fill:#000000;stroke:none"><tspan
          x="-55.142578"
          y="119.93375"
          id="tspan2">V</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.1067px;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none;stroke-width:1.46667;stroke-dasharray:none"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.1067px;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none"
        x="-45.58168"
        y="122.81614"
        id="text36"><tspan
@@ -482,11 +481,10 @@
   </g>
   <g
      id="g43"
-     transform="translate(253.11646,41.881347)"
-     style="stroke-width:1.46667;stroke-dasharray:none">
+     transform="translate(253.11646,41.881347)">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.6667px;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none;stroke-width:1.46667;stroke-dasharray:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.6667px;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none"
        x="-144.36655"
        y="31.57896"
        id="text35"><tspan
@@ -496,7 +494,7 @@
          y="31.57896">R</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.1067px;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none;stroke-width:1.46667;stroke-dasharray:none"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.1067px;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none"
        x="-130.93671"
        y="34.46138"
        id="text37"><tspan
@@ -507,11 +505,10 @@
   </g>
   <g
      id="g45"
-     transform="translate(290.53162,92.992796)"
-     style="stroke-width:1.46667;stroke-dasharray:none">
+     transform="translate(290.53162,92.992796)">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.6667px;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none;stroke-width:1.46667;stroke-dasharray:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.6667px;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none"
        x="-112.05562"
        y="57.5"
        id="text33"><tspan
@@ -521,7 +518,7 @@
          y="57.5">R</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.1067px;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none;stroke-width:1.46667;stroke-dasharray:none"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.1067px;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none"
        x="-97.358276"
        y="60.382427"
        id="text39"><tspan
@@ -532,11 +529,10 @@
   </g>
   <g
      id="g44"
-     transform="translate(316.22357,86.701809)"
-     style="stroke-width:1.46667;stroke-dasharray:none">
+     transform="translate(316.22357,86.701809)">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.6667px;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none;stroke-width:1.46667;stroke-dasharray:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.6667px;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none"
        x="-71.572845"
        y="31.07896"
        id="text34"><tspan
@@ -546,7 +542,7 @@
          y="31.07896">R</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.1067px;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none;stroke-width:1.46667;stroke-dasharray:none"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.1067px;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none"
        x="-57.320213"
        y="35.298191"
        id="text40"><tspan
@@ -557,14 +553,12 @@
   </g>
   <g
      id="g42"
-     transform="translate(321.55343,-50.384373)"
-     style="stroke-width:1.46667;stroke-dasharray:none">
+     transform="translate(321.55343,-50.384373)">
     <g
-       id="g41"
-       style="stroke-width:1.46667;stroke-dasharray:none">
+       id="g41">
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.6667px;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none;stroke-width:1.46667;stroke-dasharray:none"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.6667px;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none"
          x="-134.16051"
          y="140.50633"
          id="text32"><tspan
@@ -574,7 +568,7 @@
            y="140.50633">V</tspan></text>
       <text
          xml:space="preserve"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.1067px;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none;stroke-width:1.46667;stroke-dasharray:none"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.1067px;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none"
          x="-124.77586"
          y="143.38875"
          id="text38"><tspan
@@ -585,7 +579,7 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.6667px;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none;stroke-width:1.46667;stroke-dasharray:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.6667px;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none"
        x="-121.15334"
        y="138.24802"
        id="text41"><tspan

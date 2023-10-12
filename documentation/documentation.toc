@@ -1,11 +1,29 @@
-\contentsline {section}{\numberline {1}Introduction}{4}{}%
-\contentsline {section}{\numberline {2}Theoretical compilation}{4}{}%
-\contentsline {subsection}{\numberline {2.1}Linear circuit analysis }{4}{}%
-\contentsline {subsection}{\numberline {2.2}Different noises in the circuit }{5}{}%
-\contentsline {subsubsection}{\numberline {2.2.1}Flicker Noise }{6}{}%
-\contentsline {subsubsection}{\numberline {2.2.2}Shot noise }{6}{}%
-\contentsline {subsubsection}{\numberline {2.2.3}Avalanche or zener noise }{7}{}%
-\contentsline {subsubsection}{\numberline {2.2.4}Thermal noise }{7}{}%
-\contentsline {section}{\numberline {3}Methodology}{8}{}%
-\contentsline {subsection}{\numberline {3.1}Our voltage regulation circuit}{8}{}%
-\contentsline {section}{References}{13}{}%
+\contentsline {section}{\numberline {1}Introduction}{5}{}%
+\contentsline {section}{\numberline {2}Theoretical compilation}{5}{}%
+\contentsline {subsection}{\numberline {2.1}Linear circuit analysis }{5}{}%
+\contentsline {subsection}{\numberline {2.2}Different noises in the circuit }{6}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}Flicker Noise }{7}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}Shot noise }{7}{}%
+\contentsline {subsubsection}{\numberline {2.2.3}Avalanche or zener noise }{8}{}%
+\contentsline {subsubsection}{\numberline {2.2.4}Thermal noise }{8}{}%
+\contentsline {section}{\numberline {3}Methodology}{9}{}%
+\contentsline {subsection}{\numberline {3.1}Our voltage regulation circuit}{9}{}%
+\contentsline {subsection}{\numberline {3.2}Measuring instrument: LOCK IN amplifier}{9}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}Phase sensitive detection}{10}{}%
+\contentsline {subsubsection}{\numberline {3.2.2}Time Constant }{11}{}%
+\contentsline {subsubsection}{\numberline {3.2.3}ENBW}{11}{}%
+\contentsline {subsubsection}{\numberline {3.2.4}Sensitivity}{11}{}%
+\contentsline {subsubsection}{\numberline {3.2.5}LOCK IN amplifier over traditional measuring device/system}{11}{}%
+\contentsline {subsection}{\numberline {3.3}SR830}{12}{}%
+\contentsline {subsubsection}{\numberline {3.3.1}Inputs}{12}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Outputs}{12}{}%
+\contentsline {subsubsection}{\numberline {3.3.3}Interfacing}{12}{}%
+\contentsline {section}{\numberline {4}Results and Analysis}{12}{}%
+\contentsline {subsection}{\numberline {4.1}Low frequency: up to 10k hertz}{12}{}%
+\contentsline {subsection}{\numberline {4.2}Very low frequency: upto 1 hertz}{13}{}%
+\contentsline {subsection}{\numberline {4.3}High frequency data: up to 100k hertz}{14}{}%
+\contentsline {section}{\numberline {5}Conclutions}{14}{}%
+\contentsline {section}{References}{15}{}%
+\contentsline {section}{Appendix}{16}{}%
+\contentsline {subsection}{PyInstro}{16}{}%
+\contentsline {subsection}{Code for data analysis}{16}{}%

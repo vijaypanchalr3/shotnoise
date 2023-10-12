@@ -1,15 +1,17 @@
-\documentclass[final,5p,12pt,twocolumn]{elsaarticle}
+\documentclass[draft,5p,12pt,twocolumn]{elsaarticle}
 \include{mypackages}
-
+\begin{document}
+%% \include{frontmatter}
+\pagenumbering{roman}
+\pagenumbering{arabic}
+\maketitle
+\clearpage
 \begin{document}
 \include{frontmatter}
-
 \section{Introduction}\label{introduction}
-
 Regulated power sources are extremely important in day to day lab work. Zener diodes and passive elements share an integral part of the overall circuit of regulated power supply.  When we are dealing with precision measurement and study we need the most precise power sources to work with but because of 'Noise' of components of zener diodes and passive elements it inherits noise internally. Since, this noise will be infested in precision work we are doing in the lab. It is better to study the known structure of noise in these devices to address methodic treatment to our data and circuits. With all this in mind we are doing noise measurement and studying the noise spectrum of the zener diode.
 
-For this semester we had radical plans to try but it evolved into more mature or downgraded in a way. First tried as shot noise to generate a random number generator which could possibly be a true random generator with little transformations. Then we eyed the more on general idea of studying noise theoretically and doing analysis experimentally. Which is exactly what we are doing right now but change is that at start we are working with photodiode and now with zener diode. Thanks to Dr. U S Joshi sir who guided us to try different diodes against photodiode. In this report we are having the following parts in order. First we are studying theoretically components, then we will discuss methods and tools that we used included all instrumentation, data acquisition, data analysis etc., we will conclude with our results and discuss it. The foundational work in thermal noise was done by J B johnson in his paper [site it]. 
-
+For this semester we had radical plans to try but it evolved into more mature or downgraded in a way. First tried as shot noise to generate a random number generator which could possibly be a true random generator with little transformations. Then we eyed the more on general idea of studying noise theoretically and doing analysis experimentally. Which is exactly what we are doing right now but change is that at start we are working with photodiode and now with zener diode. Thanks to Dr. U S Joshi sir who guided us to try different diodes against photodiode. In this report we are having the following parts in order. First we are studying theoretically components, then we will discuss methods and tools that we used included all instrumentation, data acquisition, data analysis etc., we will conclude with our results and discuss it. we took help from Electronic noise and interfering signals: principles and applications.\cite{vasilescu2005electronic} The foundational work in thermal noise was done by J B johnson in his paper \cote{johnson1928thermal}. Johanson also gave first experimental evidence of frequency dependent noise.\cite{johnson1925schottky}
 
 
 
@@ -25,7 +27,7 @@ We have a voltage regulator circuit from a zener diode which regulates voltages 
 Let’s take a basic voltage regulator circuit as shown in figure \ref{thcir1}.
 
 \begin{figure}[hbt!]
-\centering{\includegraphics{circuit-20231005-2243.png}}
+\centering{\includegraphics[width=.48\textwidth]{circuit-20231005-2243.png}}
 \caption{Simple voltage regulator circuit made from zener diode \label{thcir1}}
 \end{figure}
 
@@ -37,17 +39,16 @@ Applying kirchhoff current low in the figure \ref{thcir1},
 \begin{align*}
 I_{z} & = I_{R_s} -I_{L}\\
 & = \frac{V_s-V_o}{R_s}-\frac{V_o}{R_L}\\
-& = -V_o(\frac{1}{R_s}+\frac{1}{R_L})+ \frac{V_s}{R_s}
+& = -V_o(\frac{1}{R_s}+\frac{1}{R_L})+ \frac{V_s}{R_s}\\
 & = -V_oA^{\prime}+B^{\prime}
 \end{align*}
 
-Here, $A^{\prime} = \frac{1}{R_s}+\frac{1}{R_L})$ and $B^{\prime} = \frac{V_s}{R_s}
-$.  
+Here, $A^{\prime} = (\frac{1}{R_s}+\frac{1}{R_L})$ and $B^{\prime} = \frac{V_s}{R_s}$.  
 
 We can write $I_z = \frac{V_z}{R_z}$, where $V_z$ and $R_z$ are respectively zener voltages and impedance.  This relation is quite linear in the breakdown region as you can see in the figure \ref{thiv}. \footnote{Image is taken from Electronics Devices and Circuit Theory by Robert Boylsted}
 
 \begin{figure}[hbt!]
-\centering{\includegraphics[width=350pt]{thzenerIV.png}}
+\centering{\includegraphics[width=.48\textwidth]{thzenerIV.png}}
 \caption{theoretical current and voltage relation for zener diode \label{thiv}}
 \end{figure}
 
@@ -55,14 +56,14 @@ We can write $I_z = \frac{V_z}{R_z}$, where $V_z$ and $R_z$ are respectively zen
 Here we can assume equivalent circuit of \ref{thecir1} as figure \ref{thcir} 
 
 \begin{figure}[hbt!]
-\centering{\includegraphics{circuit-20231005-2244.png}}
+\centering{\includegraphics[width=.48\textwidth]{circuit-20231005-2244.png}}
 \caption{Equivalent circuit of figure \ref{thcir1} \label{thcir2}}
 \end{figure}
 
 Further, simplifying the circuit,
 
 \begin{figure}[hbt!]
-\centering{\includegraphics{circuit-20231005-2245.png}}
+\centering{\includegraphics[width=.48\textwidth]{circuit-20231005-2245.png}}
 \caption{Equivalent circuit of figure \ref{thcir2} \label{thcir3}}
 \end{figure}
 
@@ -91,20 +92,20 @@ So, we can conclude that here as $V_o \propo V_n$.  This will be the main focus 
 The noise voltage $V_n$ is made from different types of noise source which can act as a symbol voltage source. So, $V_n$ can be broken into sub noise sources such as $V_n = V_{flicker}+V_{thermal} + V_{shot} +\cdots$. We will see this noise source and its origin then we will derive its respective distribution and equations.
 
 \begin{figure}[hbt!]
-\centering{\includegraphics{circuit-20231005-2245.png}}
-\caption{Equivalent noise sources \ref{thcir2} \label{thcir4}}
+\centering{\includegraphics{noiseeq.png}}
+\caption{Equivalent noise sources}
 \end{figure}
 
 \subsubsection{Flicker Noise \label{thflicker}}
 
 Flicker noise is also known as 1/f noise in view of the fact that power density decreases with increasing frequency. This implies that at lower frequencies, the flicker noise dominates.
-This type of noise is found  almost in any electronic device which is able to operate at lower frequencies.The main source of this type of noise is D.C supply. Its first evidence was given by J. B. Johnson \cite{j b johnson}. Its first 1/f form is derived by beck and spruit \cite{beck and spruit}. Now the form is given as 
+This type of noise is found  almost in any electronic device which is able to operate at lower frequencies.The main source of this type of noise is D.C supply. Its first evidence was given by J. B. Johnson \cite{johnson1925schottky}. Its first 1/f form is derived by beck and spruit \cite{beck19781}. Now the form is given as 
 
 \begin{align}
-S(f) & = \frac{C}{f^{\alpha}}
+S(f) & = \frac{\gamma}{f^{\alpha}}
 \end{align}
 
-Here, $C$ and $\alpha$ determine the nature of flicker noise. $\alpha determine relations with other noise elements$.
+Here, $\gamma$ and $\alpha$ determine the nature of flicker noise. $\alpha$ determine relations with other noise elements.
 
 \begin{enumerate}
 \item ($\alpha > 0$): This means that white noise is dominating the flicker noise as frequency increases.
@@ -116,7 +117,7 @@ We can see noise levels as from figure \ref{thnoise}.
 
 \subsubsection{Shot noise \label{thshot}}
 
-Shot noise is a form of noise that arises because of the discrete nature of the charges carried by charge carriers, electrons or holes or photons hitting the surface. Shot noise is analogous to the rainfall in which raindrop hitting the surface can be considered as discrete. The sound of rainfall is very similar to noise we hear from speakers when we are considering shot noise. 
+Shot noise is a form of noise that arises because of the discrete nature of the charges carried by charge carriers, electrons or holes or photons hitting the surface. Shot noise is analogous to the rainfall in which raindrop hitting the surface can be considered as discrete. The sound of rainfall is very similar to noise we hear from speakers when we are considering shot noise. Foundational studies in shot noise done my campbell.cite{campbell1909study}
 
 Since, shot noise is a phenomenon for discrete charge passing through a junction, it can be modelled by poisson distribution. Suppose that In the time interval the $\tau$ Q charge passes through a junction in a semiconductor device (in present context zener diode). This gives rise to discrete probability distribution,
 
@@ -156,7 +157,7 @@ Where S is the spectral density of noise.
 Here we can write specific form for shot noise in equation \ref{thgen} \cite{campbell}.
 
 \begin{align}\label{thshotvo}
-<V_{shot}^2> & = 2 e I_0 df
+\langle V_{shot}^2\rangle & = 2 e I_0 df
 \end{align}
 
 Here, $e$ is electron charge,
@@ -169,9 +170,13 @@ $df$ is ENBW = Equivalent Noise Bandwidth
 S(f) & = 2 e I_0
 \end{align}
 
+\begin{figure}[hbt!]
+\centering{\includegraphics[width=.48\textwidth]{thnoise.png}}
+\caption{Equivalent noise sources}
+\end{figure}
+
 This spectral density gives independence to frequency, which is called white noise. 
 
-[Graphs]
 
 \subsubsection{Avalanche or zener noise \label{than}}
 
@@ -179,7 +184,7 @@ avalanche noise often considers the device's operating characteristics in the av
 
 
 \begin{align*}
-\langle V_{avalanche}^2\rangle & = M \langel V_{shot}^2\rangle
+\langle V_{avalanche}^2\rangle & = M \langle V_{shot}^2\rangle
 \end{align*}
 
 \begin{align}\label{thavvo}
@@ -189,10 +194,13 @@ avalanche noise often considers the device's operating characteristics in the av
 So, the spectral density $S(f)$ of this noise will be nearly white.
  
 Here, we can combine this both avalanche and shot noise to make one noise source,
-begin{align*}
-\langleV_{s}^2\rangle & = \langleV_{shot}^2\rangle+\langleV_{avalanche}^2\rangle\\
-& = 2 e I_0 df + 2 e M I_0 df
-& = (M+1) 2 e I_0 df
+
+\begin{align*}
+\langle V_{s}^2\rangle & = \langle V_{shot}^2\rangle+\langle V_{avalanche}^2\rangle\\
+\\
+& = 2 e I_0 df + 2 e M I_0 df\\
+\\
+& = (M+1) 2 e I_0 df\\
 \end{align*}
 
 And spectral density will be $S(f) = (M+1) 2 e I_0$
@@ -200,12 +208,12 @@ And spectral density will be $S(f) = (M+1) 2 e I_0$
 Since this noise is white noise we can measure at every frequency. This is what we are going to do in the next chapter. 
 \subsubsection{Thermal noise \label{thth}}
 
-Thermal noise, also called Johnson–Nyquist noise is the electronic noise generated by random motion of charge carriers. This charge carrier is generated by the thermal agitation inside an electrical conductor at equilibrium, which happens regardless of any applied voltage. Because of their random motion it can be said that they have a mean value at zero. This reason says that we can't model this noise by poisson distribution but have to model with normal or gaussian distribution. In 1936, J B Johnson first gave an idea about thermal noise in thermionic valves. \cite{johnson}
+Thermal noise, also called Johnson–Nyquist noise is the electronic noise generated by random motion of charge carriers. This charge carrier is generated by the thermal agitation inside an electrical conductor at equilibrium, which happens regardless of any applied voltage. Because of their random motion it can be said that they have a mean value at zero. This reason says that we can't model this noise by poisson distribution but have to model with normal or gaussian distribution. In 1936, J B Johnson first gave an idea about thermal noise in thermionic valves. \cite{johnson1928thermal}
 
 The noise amplitude is very similar to that of shot noise and given as,
 
 \begin{align}\label{ththvo}
-\langle V_shot^2\rangle & = 4 K_B R df
+\langle V_{thermal}^2\rangle & = 4 K_B R df
 \end{align}
 
 Here, $K_B$ is boltzmann constant,
@@ -217,12 +225,25 @@ $df$ is ENBW.
 \begin{align}\label{thths}
 S(f) & = 4 K_B R
 \end{align}
+
 By equation \ref{thths} we can see that thermal noise in an ideal resistor is approximately white, meaning that the power spectral density is nearly constant throughout the frequency spectrum. But practically it does decay to zero at extremely high frequencies (terahertz for room temperature). Also, we are neglecting quantum effects. 
 
 
-Total noise in the circuit
+Total noise in the circuit will bre frequency dependent noise and white noise,
 
 
+\begin{align*}
+V_n & = V_{n}(f)+ V_{white}\\
+\\
+S(f) & = \frac{\gamma}{f^{\alpha}}+(2e(M+1)I_0+4K_bR)+\mathcal{O}(other)\\
+
+\end{align*}
+
+\begin{align}\label{theoryvn}
+S(f) & \approx \frac{\gamma}{f^{\alpha}}+(2e(M+1)I_0+4K_bR)
+\end{align}
+
+which is main derivation of our project.
 
 
 \section{Methodology}\label{methodology}
@@ -236,46 +257,52 @@ The noise in the circuit will be relatively higher at the zener breakdown region
 For our purpose we utilised a general purpose zener diode with breakdown region between 4.8V to 5.4V with current of $\mu A$ order. We first did the Current and voltage characteristics of zener diodes. The useful information we got from there is source voltages, zener voltages and current that we particularly needed in our project. Our aim was to never exceed the LOCK IN amplifier’s input limits. Current and voltage characteristics are down in figure \ref{exiv}. The zener diode we used had its datasheets, which you can see from Appendix. Its power rating is … 
 
 \begin{figure}[hbt!]
-\centering{\centering\includegraphics[width=.5\textwidth]{zener.png}}
+\centering{\centering\includegraphics[width=.48\textwidth]{zener.png}}
 \caption{Our zener diode}
 \end{figure}
 
 The zener diode was given proper voltages to work in reverse bias, specifically in the breakdown region. The overall circuit was identical to that of voltage regulator by zener diode. We gave particularly 5.0 V, 5.5V in two different runs from the powersource. The Zener diode regulated around 4.9 V. 
 
-\begin{figure}[hbt!]
-\centering{\centering\includegraphics[width=.5\textwidth]{zenerIV.png}}
+\begin{figure*}[hbt!]
+\centering{\centering\includegraphics[width=1\textwidth]{zenerIV.png}}
 \caption{current and voltage characterists of zener diode \label{exiv}}
-\end{figure}
+\end{figure*}
 
 Now, what we need is that fluctuation over the regulated DC voltage. These fluctuations have to be some function in the frequency domain as we assumed. This function must be made of different harmonics of sinusoidal waves with different phases and frequencies as thought by Fourier and his analysis. So basically we needed a system to measure different amplitudes of these harmonics at different frequencies to model our fluctuations. We needed a complete frequency spectrum at the particular bandwidth we are looking for in this analysis. The LOCK IN amplifier gives exactly that. 
 
 
-** Measuring instrument: LOCK IN amplifier 
+\subsection{Measuring instrument: LOCK IN amplifier}
 
 LOCK IN amplifiers came in the 1930s and became very important in signal extraction from given frequency and phase. It is very helpful in measuring signals in a very noisy environment. It takes two inputs, one which is being measured and one which is given as a reference mono frequency signal. Reference signal gets multiplied with input signal and gives output through a process called Phase sensitive detection in which it uses homodyne detection scheme and filters out signal as DC component. We will see in a bit.
 
-*** Phase sensitive detection
+\subsubsection{Phase sensitive detection}
 
-In nutshell it uses frequency multiplication and generates double side bands which then pass through a low pass filter to extract signal. In figure \ref{psd} you can see a signal first goes into a low noise differential amplifier which strengthens the signal. Signal Gets multiplied by another reference signal. This gives rise to two bands which pass through a low pass filter which cancels higher degree signal and only left is low frequency signal. 
+In nutshell it uses frequency multiplication and generates double side bands which then pass through a low pass filter to extract signal. In figure \ref{psd} you can see a signal first goes into a low noise differential amplifier which strengthens the signal. Signal Gets multiplied by another reference signal. This gives rise to two bands which pass through a low pass filter which cancels higher degree signal and only left is low frequency signal.
+
+
+\begin{figure}[hbt!]
+\centering{\centering\includegraphics[width=.48\textwidth]{PSD.png}}
+\caption{basic phase sensitive detector}
+\end{figure}
 
 If we take signal $V_s(t)$ with frequency $w_s$, amplitude $A$ and phase $\theta$. 
 
 \begin{align*}
-V_{s} & = A \cos(w_st+\theta)\\
+V_{s}(t) & = A \cos(w_st+\theta)\\
 \\
-& = \frac{A}{2} (e^{i(w_st+\theta)}+e^{-i(w_st+\theta)}\\
+& = \frac{A}{2} (e^{i(w_st+\theta)}+e^{-i(w_st+\theta)})\\
 \end{align*}
 
 Reference signal can be taken as following,
 
 \begin{align*}
- = B (e^{-i(w_rt+\phi)})
+V_r(t) & = B (e^{-i(w_rt+\phi)})
 \end{align*}
 
 In common settings, $\phi = 0$ and $B=1$,
 
 \begin{align*}
- = B (e^{i(-w_rt)}}
+V_r(t) & = e^{i(-w_rt)}
 \end{align*}
 
 Together after mixing the signals we have,
@@ -298,7 +325,7 @@ Z(t) & = \frac{A}{2}(e^{i \theta})
 Two component $X(t)$ and $Y(t)$ becomes,
 
 \begin{align*}
-X(t) & =Re(Z(t))\\
+X(t) & =\re(Z(t))\\
 \\
 & =  \frac{A}{2}\cos(\theta)
 \end{align*}
@@ -306,7 +333,7 @@ X(t) & =Re(Z(t))\\
 And,
 
 \begin{align*}
-Y(t) & = Im(Z(t))\\
+Y(t) & = \im(Z(t))\\
 \\
 & =  \frac{A}{2}\sin(\theta)
 \end{align*}
@@ -316,45 +343,59 @@ So, Amplitude and Phase becomes,
 \begin{align*}
 R & = \sqrt{X(t)^2+Y(t)^2}\\
 \\
-& =  \sqrt{(\frac{A}{2}\cos(\theta))^2+(\frac{A}{2}\sin(\theta))^2}
-\end{align*}
-
-\begin{align*}
+& =  \sqrt{(\frac{A}{2}\cos(\theta))^2+(\frac{A}{2}\sin(\theta))^2}\\
+\\
+& = \frac{A}{2}\\
+\\
 \Theta & = \arctan(\frac{Y}{X})
 \end{align*}
 
 So, the final product in PSD is the absolute amplitude of the signal and its phase. 
 
-*** TIME constant 
+\subsubsection{Time Constant }
 
-*** ENBW
+\subsubsection{ENBW}
 
-*** sensitivity 
+\subsubsection{Sensitivity} 
 
-*** sampling rate
-
-*** dynamic reserve
-
-*** LOCK IN amplifier over traditional measuring device/system 
+\subsubsection{LOCK IN amplifier over traditional measuring device/system}
 
 For noise analysis LOCK IN amplifiers are the optimal choice. Traditional approaches deal with the first measurement of a small signal in the time domain. This signal gets amplified with additional noise from the amplifier. Also, amplifiers attenuates signals with its limited bandwidth which is a measure of concern for certain use case scenarios. This attenuated signal gets into some detector. For signal analysis, this signal must go into other  processes like analog to digital conversion then Fourier transformation. This whole process gives too much concerned noise which is not related to devices being analysed in our case the voltage regulator circuit. Alternative approach is to go with a LOCK IN amplifier. Which cancels out most burdens of traditional measurement steps. This whole combined help in reducing internal noise and increasing S/N ratio.
+\\
+\\
+\emph{\large Pros of LOCK IN amplifier:}
+\begin{itemize}
+\item LOCK In amplifiers reduces attenuation of signal with increasing frequency since it does not measure signal in the whole frequency spectrum.
+\item Increase S/N ratio over traditional amplifier circuit
+\item Gives direct data into frequency domain
+\end{itemize}\\
+\\
+\emph {\large Cons of LOCK IN amplifier:}
+\begin{itemize}
+\item Relatively expensive
+\item Does not give information in time domain
+\item Relatively slow for whole analysis of frequency domain (low but accurate resolution of frequency domain)
+\end{itemize}
 
-Pros of LOCK IN amplifier: 
+\subsection{SR830}
 
-LOCK In amplifiers reduces attenuation of signal with increasing frequency since it does not measure signal in the whole frequency spectrum.
-Increase S/N ratio over traditional amplifier circuit
-Gives direct data into frequency domain
-
-Cons of LOCK IN amplifier:
-
-Relatively expensive
-Does not give information in time domain
-Relatively slow for whole analysis of frequency domain (low but accurate resolution of frequency domain)
+We used a LOCK IN amplifier from Stanford Research Systems. It is used to detect low amplitude signals as low as $10\frac{nV}{Hz}$ and frequency as low as $100mV$.  and measure very small AC signals - upto few nanovolts. Accurate measurements may be made even when the small signal is obscured by noise sources many thousands of times larger.
 
 
-*** SR830 
+Internal block diagram of SR830,
 
-We used a LOCK IN amplifier from Stanford Research Systems. It is used to detect low amplitude signals as low as $10\frac{nV}{Hz}$ and frequency as low as $100mV$.  and measure very small AC signals -upto few nanovolts. Accurate measurements may be made even when the small signal is obscured by noise sources many thousands of times larger.
+%% \begin{figure*}[hbt!]
+%% \centering{\centering\includegraphics[width=.55\textwidth,page=33,trim={5cm 5cm 5cm 10cm, clip}]{sr830m.pdf}}
+%% \end{figure*}
+
+\subsubsection{Inputs}
+
+\subsubsection{Outputs}
+
+\subsubsection{Interfacing}
+
+
+
 Lock-in amplifiers use a technique known as
 phase-sensitive detection to single out the component of the signal at a specific reference frequency and phase. Noise signals at frequencies other than the reference frequency are rejected and do not affect the measurements.
 
@@ -362,168 +403,156 @@ phase-sensitive detection to single out the component of the signal at a specifi
 Now , on the basis of frequencies/ frequency levels and its origin, there are different types of noises are present in our environment. Some of them are discussed below:
 
 
-* Methodology
 
-the I-V characteristic of the zener diode and its datasheet which the reader can go through in the appendix. 
+\section{Results and Analysis}
 
-
-
-** method of data filtering and analysis
+We have surveyed voltage regulated circuits we made with zener diodes and found some satisfactory results. We take different results for different bandwidths. For context this is row data from different bandwidth. Here, for each set of frequencies in bandwidth we took almost 50 to 100 readings.
 
 
+\subsection{Low frequency: up to 10k hertz}
 
-What is Lock- in amplifier? and its application in our project
+We are mainly focused low frequency results since we are only intrested in regulated power supply applications. We had original assumption that in low frequency flicker noise is higly dominating.
+
+\begin{figure}[hbt!]
+\centering{\includegraphics[width=.5\textwidth,trim={.5cm 0cm 1cm 0cm}, clip]{raw_1000_100us.png}}
+\caption{This is row data for 1k to 10k frequency band TIME CONSTANT = $100\mu s$ and $12dB/oct$}
+\end{figure}\\
+
+Here initial results were quite random, which means we have to filter our data a bit. For this reason we used a basic filtering method. In this method the data are sorted out as minimum deviation from their minimum then we took the upper 5 to 10 results and took the mean of it. The basic implementation is as following,
+
+Let, $X(f)$ as data point for specific $f$ and $Y(f)$ be sorted data with $n$ number of results,
+\begin{align*}
+\langle X(f) \rangle & = \sum_{i=0}^{N-1} X^{(i)}(f)\\
+Y_n(f) & = min(t\: such\: that\: \# \{ s =\\
+&   \lvert X(f)- \langle X(f)\rangle \rvert \;| s \geq t \} =n)\\
+\langle Y(f) \rangle & = \sum_{i=0}^{n} Y^{(i)}(f)
+\end{align*}
+
+This is how we implemented it with python. If you wanna checkout whole code then it is in the appendix.
+
+\begin{minted}[%
+breaklines,    
+breakanywhere,
+mathescape,
+xleftmargin=20pt,
+linenos]{python}
+for datapoint in data:
+    count+=1
+    if datapoint[0]==index:
+        temp_erray.append(float(datapoint[1]))
+    else:
+        nlist = array(temp_erray,dtype=float)
+        m = mean(nlist)
+        sorted_deviation = argsort(abs(nlist - m))
+        filtered_nlist = nlist[sorted_deviation[:points]]
+        indexonelist = array([index]*points)
+        final_list= column_stack((indexonelist,filtered_nlist))
+
+\end{minted}
+
+Also, as discussed from the previous section we have to correct these terms with ENBW. Time constant (T)= 100$\mus$ and roll-off =12 $dB/oct$
+       
+\[
+ENBW = \frac{1}{8T} = 1250 Hz 
+\]
 
 
-What is phase-sensitive detection?
 
-Lock-in measurements require a frequency reference. Typically an experiment is excited at a fixed frequency (from an oscillator or function generator) and the lock-in detects the response from the experiment at the reference frequency. 
-(Figure…. )
-
-In our project we have used the lock-in amplifier to measure the root mean values of different noise voltages( Vrms) at different frequencies. So, in general this instrument detects the phase and frequency of our input signal and compare its phase and frequency with the phase and frequency of our reference signal.If the phase and frequency of both the signals are same then we get Vrms values for different frequencies.If the phase of our reference and input signal are not found to be same then , we cannot able to get the output noise voltages (Vrms).Here in our project, we have used SR830 lock-in amplifier.
-
-The SR830 amplifies the signal and then multiplies it by the lock-in reference using a phase-sensitive detector or multiplier. The output of the PSD issimply the product of two sine waves.
-
-Vpsd = VsigVLsin(ωrt + θsig)sin(ωLt + θref)
-= 1/2 VsigVLcos([ωr - ωL]t + θsig - θref) -
-1/2 VsigVLcos([ωr + ωL]t + θsig + θref)
-
-The PSD output is two AC signals, one at the difference frequency (ωr - ωL) and the other at the sum frequency (ωr + ωL). 
-If the PSD output is passed through a low pass filter, the AC signals are removed. What will be left? In the general case, nothing. However, if ωr equals ωL, the difference frequency component will be a DC signal. In this case, the filtered PSD output will be
-Vpsd = 1/2 VsigVLcos(θsig - θref).
-
-Where does the 
-lock-in reference come from?
-
-We need to make the lock-in reference the same as the signal frequency, i.e. ωr = ωL. Not only do the frequencies have to be the same, the phase between the signals can not change with time, otherwise cos(θsig - θref) will change and Vpsd will not be a DC signal. In other words, the lock-in reference needs to be phase-locked to the signal reference. 
-Lock-in amplifiers use a phase-locked-loop (PLL) to generate the reference signal. An external reference signal (in this case, the reference square wave) is provided to the lock-in. The PLL in the lock-in locks the internal reference oscillator to this external reference, resulting in a reference sine wave at ωr with a fixed phase shift of θref. Sincethe PLL actively tracks the external reference, changes in the external reference frequency do not affect the measurement.
-
-What does the SR830 measure? 
-
-The SR830 multiplies the signal by a pure sine wave at the reference frequency. All components of the input signal are multiplied by the reference simultaneously. Mathematically speaking, sine waves of differing frequencies are orthogonal, i.e. the average of the product of two sine waves is zero unless the frequencies are EXACTLY the same. In the SR830, the product of this multiplication yields a DC output signal proportional to the component of the signal whose frequency is exactly locked to the reference frequency. The low pass filter which follows the multiplier provides the averaging which removes the products of the reference with components at all other frequencies.
-
-RMS or Peak?
-
-Lock-in amplifiers as a general rule display the input signal in Volts RMS. When the SR830 displays a magnitude of 1V (rms), the component of the input signal at the reference frequency is a sine wave with an amplitude of 1 Vrms or 2.8 V pk-pk.
-
-THE FUNCTIONAL SR830
-
-The functional block diagram of the SR830 DSP Lock-In Amplifier is shown below. The functions in the gray area are handled by the digital signal processor (DSP). We'll discuss the DSP aspects of the SR830 as they come up in each functional block description.
-(Draw figure….)
-
-THE PHASE SENSITIVE DETECTORS (PSD's)
-
-The SR830 multiplies the signal with the reference sine waves digitally. The amplified signal is converted to digital form using a 16 bit A/D converter sampling at 256 kHz. The A/D converter is preceded by a 102 kHz anti-aliasing filter to prevent higher frequency inputs from aliasing below 102 kHz. The signal amplifier and filters will be discussed later.
-
-This input data stream is multiplied, a point at a time, with the computed reference sine
-waves described previously. Every 4 µs, the input signal is sampled and the result is multiplied by the two reference sine waves (90° apart).
-
-The phase sensitive detectors (PSD's) in the
-SR830 act as linear multipliers, that is, they multiply the signal with a reference sine wave. Analog PSD's (both square wave and linear) have many problems associated with them. The main problems are harmonic rejection, output offsets, limited dynamic reserve and gain error.
-
-The overall performance of a lock-in amplifier is largely determined by the performance of its phase sensitive detectors. In virtually all respects, the digital PSD outperforms its analog counterparts. 
-
-TIME CONSTANTS and DC GAIN
-
-Remember, the output of the PSD contains many signals. Most of the output signals have frequencies which are either the sum or difference between an input signal frequency and the reference frequency. Only the component of the input signal whose frequency is exactly equal to the reference frequency will result in a DC output.
-
-The low pass filter at the PSD output removes all of the unwanted AC signals, both the 2F (sum of the signal and the reference) and the noise components. This filter is what makes the lock-in such a narrow band detector.
-
-Lock-in amplifiers have traditionally set the low pass filter bandwidth by setting the time constant.The time constant is simply 1/2πf where f is the -3 dB frequency of the filter. The low pass filters are simple 6 dB/oct roll off, RC type filters. A 1 second time constant referred to a filter whose -3 dB point occurred at 0.16 Hz and rolled off at 6 dB/oct beyond 0.16 Hz. Typically, there are two successive filters so that the overall filter can roll off at either 6 dB or 12 dB per octave. The time constant referred to the -3 dB point of each filter alone (not the combined filter).
-
-How big is the DC output from the PSD? It
-depends on the dynamic reserve. With 60 dB of dynamic reserve, a noise signal can be 1000 times (60 dB) greater than a full scale signal. At the PSD, the noise can not exceed the PSD's input range. In an analog lock-in, the PSD input range might be 5V. With 60 dB of dynamic reserve, the signal will be only 5 mV at the PSD input. The PSD typically has no gain so the DC output from the PSD will only be a few millivolts! Even if the PSD had no DC output errors, amplifying this milli-volt signal up to 10 V is error prone. The DC output gain needs to be about the same as the dynamic reserve (1000 in this case) to provide a 10 V output for a full scale input signal. An offset as small as 1 mV will appear as 1 V at the output! In fact, the PSD output offset plus the input offset of the DC amplifier needs to be on the order of 10 µV in order to not affect the measurement.
-
-Dynamic reserve in the SR830
-
-The SR830, with its digital phase sensitive detectors, does not suffer from DC output errors caused by large noise signals. The dynamic reserve can be increased to above 100 dB without measurement error. Large noise signals do not cause output errors from the PSD. The large DC gain does not result in increased output drift. 
-In fact, the only drawback to using ultra high
-dynamic reserves (>60 dB) is the increased output noise due to the noise of the A/D
-converter. This increase in output noise is only present when the dynamic reserve is above 60 dB AND set to High Reserve or Normal. However, the Low Noise reserve can be very high as we'll see shortly.
-
-Anti-aliasing filter
-
-After all of the signal filtering and amplification,there is an anti-aliasing filter. This filter is required by the signal digitization process. According to the Nyquist criterion, signals must be sampled at a frequency at least twice the highest signal frequency. In this case, the highest signal frequency is 100 kHz and the sampling frequency is 256 kHz so things are ok. However, no signals above 128 kHz can be allowed to reach the A/D converter. These signals would violate the Nyquist criterion and be undersampled. The result of this under sampling is to make these higher frequency signals appear as lower frequencies in the digital data stream. Thus a signal at 175 kHz would appear below 100 kHz in the digital data stream and be detectable by the digital PSD. 
-
-To avoid this undersampling, the analog signal is filtered to remove any signals above 154 kHz(when sampling at 256 kHz, signals above 154 kHz will appear below 102 kHz). This filter has a flat pass band from DC to 102 kHz so as not to affect measurements in the operating range of the lock-in. The filter rolls off from 102 kHz to 154 kHz and achieves an attenuation above 154 kHz of at least 100 dB. Amplitude variations and phase shifts due to this filter are calibrated out at the factory and do not affect measurements. This filter is transparent to the user.
-
-How does a lock-in measure noise?
-
-Remember that the lock-in detects signals close to the reference frequency. How close? Input signals within the detection bandwidth set by the low pass filter time constant and roll-off appear at the output at a frequency f=fsig-fref. Input noise near fref appears as noise at the output with a bandwidth of DC to the detection bandwidth.
-
-For Gaussian noise, the equivalent noise bandwidth (ENBW) of a low pass filter is the bandwidth of the perfect rectangular filter which passes the same amount of noise as the real filter. The ENBW is determined by the time constant and slope as shown below. Wait time is the time required to reach 99% of its final value.
-T= Time Constant
-
- Slope                 ENBW                Wait Time
-6 dB/oct              1/(4T)                       5T
-
-12 dB/oct            1/(8T)                       7T
-
-18 dB/oct            3/(32T)                     9T
-
-24 dB/oct            5/(64T)                     10T
-
-Equivalent Noise Bandwidth ( ENBW )
-
-It is defined as the bandwidth of a perfect rectangular filter that allows the same amount of power to pass as the cumulative bandwidth of the channel selective filters.
-
-Amplifier input noise and Johnson noise of resistors are Gaussian in nature. That is, the amount of noise is proportional to the square root of the bandwidth in which the noise is measured. A single stage RC filter has an equivalent noise bandwidth (ENBW) of 1/4T where T is the time constant (RxC). This means that Gaussian noise at the filter input is filtered with an effective bandwidth equal to the ENBW. In this example, the filter sees 5 µVrms/√Hz of noise at its input. It has an ENBW of 1/(4x100ms) or 2.5 Hz. The voltage noise at the filter output will be 5 µVrms/√Hz x √2.5Hz or 7.9 µVrms.
-
-The amount of noise at the output is determined by the ENBW of the low pass filter.See the discussion of noise later in this section for more information on ENBW. The ENBW depends upon the time constant and filter roll off.
-
-Calculation of ENBW for our data / project work
+\begin{figure}[hbt!]
+\centering{\includegraphics[width=.5\textwidth]{final_1000_100us.png}}
+\caption{final analysed data for 1k to 10k hertz frequency with TIME CONSTANT = $100\mu s$ and $12dB/oct$}
+\end{figure}\\
  
-For Sub - 10kHz frequency with time constant (T)= 100 micro-seconds and roll-off =12db/oct :
-       ENBW = 1/8T = 1250 Hz 
-
-For Sub - 1Hz frequency with time constant       (T)= 100 milli-second and roll-off =12db/oct :
-
-        ENBW = 1/8T = 1.25 Hz
+Here we can see some traces of flicker noise. Parameterized as follows,
 
 
+\begin{align*}
+S(f) & = \frac{\gamma}{f^{\alpha}}
+\end{align*}
+
+Here, $\gamma$ and $\alpha$ determine the nature of flicker noise. Results are from theoritical section.
+
+\begin{align}\label{eq1}
+S_{flicker}(f) & = 5.90923491 \frac{1}{f^{1.34677368}}\\
+S_{white}(f) & =2.0644381e-05
+\end{align}
 
 
-We have done the noise analysis of noises present in zener diode using lock-in amplifier.
-We have obtained the data i.e. the noise voltages (Vrms) corresponding to the different frequencies.With these data we have done the analysis of various noises present in zener diode at various frequencies.
+\subsection{Very low frequency: upto 1 hertz}
+
+Let's take a second data set where we have sub hertz frequency data. This data set have each frequency with corresponding 50 values. Raw data looks like figure \ref{rawsubhz}.
 
 
-** Interfacing
-
-Results and discussion
-
-
-We have surveyed voltage regulated circuits we made with zener diodes and found some satisfactory results. We take different results for different bandwidths. For context this is row data from different bandwidth. Here, for each set of frequencies in bandwidth we took almost 50 to 100 readings. 
-
-\begin{enumerate}
-\item This is row data for very low frequencies at TIME CONSTANT = $100ms$ and $12db$ \textbf{check unit}\\
-
-[figure]\\
-
-\item This is row data for very low frequencies at TIME CONSTANT = $100ms$ and $12db$ \textbf{check unit}\\
-
-[figure]\\
-
-\item This is row data for very low frequencies at TIME CONSTANT = $100ms$ and $12db$ \textbf{check unit}\\
-
-[figure]
-
-\end{enumerate}
+\begin{figure}[hbt!]
+\centering{\includegraphics[width=.5\textwidth]{raw_1_100us.png}}
+\caption{This is row data for sub one hertz band with TIME CONSTANT = $100ms$ and roll of factor $12dB/oct$} 
+\label{rawsubhz}
+\end{figure}\\
 
 
+For analysing data ENBW is calculated for TIME CONSTANT = $100ms$ and roll of factor $12dB/oct$},
+
+       
+\[
+ENBW = \frac{1}{8T} = 1.25 Hz 
+\]
+
+Final data will be look like this,
+
+\begin{figure}[hbt!]
+\centering{\includegraphics[width=.5\textwidth]{final_1_100ms.png}}
+\caption{final analysed data for sub one hertz band with TIME CONSTANT = $100ms$ and roll of factor $12dB/oct$}
+\end{figure}\\
 
 
+Here data feeted at negative $-alpha$,
+
+\begin{align}\label{eq2}
+S_{flicker}(f) & =  \frac{-0.64836618}{f^{-0.64836618}}
+\end{align}
+
+Here two things is important $\alpha < 0$ and $\gamma$ is small.
+
+\subsection{High frequency data: up to 100k hertz}
+
+Same as we discussed previously raw data is given here, we have up to 50khz frequency domaoin data,
 
 
+\begin{figure}[hbt!]
+\centering{\includegraphics[width=.5\textwidth]{raw10000100ms.png}}
+\caption{This is row data for high frequency band with TIME CONSTANT = $100ms$ and roll of factor $12dB/oct$} 
+\label{raw100k}
+\end{figure}\\
+
+same as previous sections, we sorted data and take ENBW calculations at here.
+
+\begin{figure}[hbt!]
+\centering{\includegraphics[width=.5\textwidth]{final_10000_100ms.png}}
+\caption{final analysed data for high frequency band with TIME CONSTANT = $100ms$ and roll of factor $12dB/oct$}
+\end{figure}\\
+
+the noise spectral density is as following.
+
+\begin{align}\label{eq3}
+S_{flicker}(f) & = \frac{0.13707877}{f^{0.92287006}}\\
+S_{white}(f) & = 1.20525914e-05
+\end{align}
 
 
+Here this parameters are similar to that of first data set aka low frequency data.
+
+\section{Conclutions}
+
+In 1k to 10k data, we have specified flicker noise power AKA $(\frac{1}{f})^{\alpha}$ as $\alpha = 1.34677368$, which is close to flicker noise theoretical values for maximum flicker noise which is equal to 1. white noise level in $\mu V$ region, which is expected (at $2.0644381e-05$). 
 
 
+The most mysterious results came from second data sets, very low frequency data sets. Here  $\alpha= -0.64836618$ which is negative. This means that noise increases as frequency increases, this case already discussed in theoritical part. Our assumtion here is that as frequency increases the white noise gets saturated to it’s related power. This means that white noise is not quite white as it seems. Assumption is also be made that frequency dependence of flicker noise is not quite like that of distrubution as theory discussed. Well, we have to dig deep into that.
 
+Last data set is quite normal, it satisfy first data sets and closely correlate with the theoritical model. We have white noise level is similar to that of first data sets with different is of $2.0644381e-05-1.20525914e-05 = 0.85917896e-05$. which is very small. 
 
+Further studies can be conducted to anamolous behaviour at very low frequency noise $\approx 1Hz$. This can be important in regulated power supply usage since 1Hz is very near to DC level. 
 
-
-
-
+We hope that our contribution to Open source community is well recevied and gets more contribution to our package \textbf{PyInstro}.
 
 
 
@@ -531,6 +560,508 @@ We have surveyed voltage regulated circuits we made with zener diodes and found 
 \addcontentsline{toc}{section}{References}
 \bibliographystyle{plain}
 \bibliography{documentation}
+
+\onecolumn
+
+
+\addcontentsline{toc}{section}{Appendix}
+\addcontentsline{toc}{subsection}{PyInstro}
+\addcontentsline{toc}{subsection}{Code for data analysis}
+\section*{Appendix}
+
+
+
+\subsection*{PyInstro}
+
+PyInstro is a package we made to communicate, control and data logging to any scientific instrument easily. The main work of it is giving utility for data logging and ease SCPI. Also, it does streamline instruments after extending it. It is just a cover for the PYVISA backend but it gives instrument specific tools. whole package in the following link
+
+This is code for just the GPIB connection which we used. (it is also extensible to the RS232, LAN and USB )
+
+%% \begin{table*}[hbt!]
+\emph{GPIB.py}
+\begin{minted}{python}
+import pyvisa
+import sys
+from termcolor import cprint
+
+class GPIB:
+    def __init__(self) -> None:                                 
+        try:                        # GPIB connection check
+            cprint("-----------checking GPIB connections--------",color="yellow")
+            resources = pyvisa.ResourceManager()
+            interface = None
+            resourceslist = resources.list_resources()
+            cprint(resourceslist,'blue',attrs=['bold'])
+            if resourceslist==():
+                cprint("ERROR: please check GPIB connection", "red")
+                sys.exit()
+            else:
+                while True:
+                    try:
+                        choise = int(input("please, choose your device from this list: "))-1
+                        if choise>len(resourceslist):
+                            TypeError
+                        interface = resourceslist[choise]
+                        cprint("-------------chose resource-----------------",color="green",attrs=["bold"])
+                        cprint("-------following device is connected--------",color="green",attrs=["bold"])
+                        cprint(interface)
+                        break
+                    except:
+                        cprint("choose with interger and from following...","red")
+
+            self.interface =  resources.open_resource(interface)
+        except:
+            cprint("ERROR in detecting GPIB, there must be problem with setup of pyvisa or there is no connection of gpib\n you should look either in pyvisa documentation or try for RS232 interface","red",attrs=['bold'])
+            sys.exit()
+
+    def ping(self)-> None:
+        self.interface.write("*IDN?\n")
+
+    def read(self)-> None:
+        self.interface.read()
+
+    def reset(self)-> None:
+        self.interface.write("*RST\n")
+
+    def clear_status(self)-> None:
+        self.interface.write("*CLS\n")
+
+    def close(self)->None:
+        self.interface.close()
+
+    def std_event(self)->None:
+        pass
+
+\end{minted}
+%% \end{table*}
+
+This is SR830 device commands,
+
+\emph{SR830.py}
+\begin{minted}{python}
+from pyinstro.utils import sysarg
+from pyinstro.utils import datafile
+
+new_instance = sysarg.CLI()
+
+if new_instance.get_connection()=="GPIB":
+    from pyinstro.interfaces import gpib
+    
+    class SR830(gpib.GPIB):
+        def __init__(self) -> None:
+            super().__init__()
+
+            file_init = datafile.Get_File(new_instance.get_file())
+            
+            self.get_levels = new_instance.get_levels
+            self.get_partitions = new_instance.get_partitions
+            self.writerow = file_init.writerow
+            self.longwriterow = file_init.longwriterow
+            self.fmin = new_instance.get_fmin
+            self.fmax = new_instance.get_fmax
+            self.freq = new_instance.get_freq
+
+        def local_defaults(self)-> None:
+            pass
+
+        def local_arguments(self)-> None:
+            new_instance.argparser.add_argument('-fl','--fmin', metavar='', type=float, default=4545, help="give lower limit for reference frequency")
+            new_instance.argparser.add_argument('-fr','--freq', metavar='', type=float, default=7888, help="give reference frequency")
+            new_instance.argparser.add_argument('-fh','--fmax', metavar='', type=float, default=1, help="give upper limit for reference frequency")
+    
+        def set_frequency(self, value, errdelay = 3) -> None:
+            """change reference frequency"""
+            self.interface.write("FREQ "+"{:.4E}".format(value))
+            pass
+
+        def autogain(self)->None:
+            self.interface.write("AGAN")
+
+        def set_phase(self,value) -> None:
+            self.interface.write("PHAS "+str(value))
+            pass
+
+        def time_constant(self,choise) -> None:
+            self.interface.write("OFLT "+str(choise))
+            pass
+
+        def sensitivity(self,choise) -> None:
+            self.interface.write("SENS "+str(choise))
+            pass
+
+        def set_sample_rate(self, choise)->None:
+            self.interface.write("SRAT "+str(choise))
+
+        def start_data_acquision(self) -> None:
+            self.interface.write("STRT")
+            pass
+
+        def pause_data_acquision(self) -> None:
+            self.interface.write("PAUS")
+            pass
+
+        def reset_data_acquision(self) -> None:
+            self.interface.write("REST")
+            pass
+
+        def get_data(self) -> None:
+            pass
+
+        def get_data_explicitly(self, data_variable=3, errdelay=3):
+            """
+            two params, give resource object and the second params is parameter to variable read,
+            default to data_variable = 3 which is equievalent to reading R.
+            as SR830manual, 
+            data_variable = 1 => X,
+            data_variable = 2 => Y,
+            data_variable = 3 => R,
+            data_variable = 4 => phase
+            """
+            return self.interface.query("OUTP? "+str(data_variable))
+
+        
+else:
+
+    from pyinstro.interfaces import rs232
+    
+    class SR830(rs232.RS232):
+\end{minted}
+
+This is some utilities to ease control of scientific instruments,
+
+FIlewrite \ simple data logger: \emph{getfile.py}
+
+\begin{minted}{python}
+from pyinstro.utils import getpath
+
+
+
+import csv
+import os
+
+
+
+class Get_File:
+    """
+    INFO: just to write file, must be CSV 
+    """
+    def __init__(self,file) -> None:
+        _project_dir_path_abs = getpath.getpath()
+
+        if os.path.exists(os.path.join(_project_dir_path_abs,"data")):
+            _data_dir_path_abs = os.path.join(_project_dir_path_abs,"data")
+        else:
+            os.mkdir(os.path.join(_project_dir_path_abs,"data"))
+            _data_dir_path_abs = os.path.join(_project_dir_path_abs,"data")
+        
+        if file=='default':
+            file = "auto0.csv"
+            count = 0
+            while os.path.exists(os.path.join(_data_dir_path_abs,f"auto{count}.csv")):
+                count+=1
+                file = f"auto{count}.csv"
+
+        file = os.path.join(_data_dir_path_abs,file)
+        
+        # i did not used re module down here
+        if not ((file[len(file)-1]=='v')and(file[len(file)-2]=='s')and(file[len(file)-3]=='c')and(file[len(file)-4]=='.')):
+            file = file+".csv"
+        else:
+            pass
+        
+        self.filepath = file
+        self.firsttime = True
+
+    def writerow(self, data)-> None:
+        """
+        open file one time ad write it
+        """
+        if self.firsttime:
+            self.file = open(self.filepath,'w',newline='')
+            self.writer = csv.writer(self.file)
+            self.writer.writerow(data)
+            self.firsttime = False
+            print(self.filepath)
+        else:
+            self.writer.writerow(data)
+
+
+    def longwriterow(self,data)->None:
+        """
+        for long data, i think it is suitable to write file each time open and close
+        """
+        with open(self.filepath,'a',newline="") as datafile:
+            self.writer = csv.writer(datafile)
+            self.writer.writerow(data)
+
+\end{minted}
+
+
+DEFAULT setting: \emph{defaults.py}
+
+\begin{minted}{python}
+from pyinstro.utils import getpath
+
+import os
+import configparser
+
+class DefaultParams:
+    """
+    specify default parameters
+    
+    for more info:
+    refer to SR830 manual for more info.
+    """
+    time_constant = 5
+    sensitivity = 5
+    # filter_slope = 
+
+    baud_rate = 9600
+    sample_rate = 10
+    gpib_address = 1
+    time_delay = 1
+
+    connection = 1          # means GPIB, 1: GPIB, 2: RS232, 3: USB, 4: LAN
+    connections = {1:"GPIB", 2:"RS232", 3:"USB", 4:"LAN"}
+
+    fmin = 01E+3
+    fmax = 01E+5
+    
+    partitions = 4
+    levels = 4
+
+    data= 3
+
+    def __init__(self) -> None:
+        self.defaults_params_list= [attr for attr in dir(self) if not callable(getattr(self, attr)) and not attr.startswith("__")]
+        #defaults_params= dict(zip(defaults_params_list,list(" "*len(defaults_params_list))))
+        
+        self.target_path = getpath.getpath()
+        config_file = os.path.join(self.target_path,"config.ini")
+
+        print("checking config.ini file")
+        
+        if os.path.exists(config_file):
+            config = configparser.ConfigParser()
+            config.read(config_file)
+            config_file_dict = config.defaults()
+            if len(config_file_dict)==len(self.defaults_params_list):
+                for keys in config_file_dict:
+                    if (config_file_dict[keys].isspace() or not config_file_dict[keys]):
+                        pass
+                    else:
+                        setattr(self, keys, config_file_dict[keys])
+                        print(keys+":  "+config_file_dict[keys])
+            else:
+                for keys in self.defaults_params_list:
+                    if not (keys in config_file_dict):
+                        with open(config_file, "w") as _conf_file: 
+                            config.set("DEFAULT",keys," ")
+                            config.write(_conf_file) 
+                    else:
+                        if (config_file_dict[keys].isspace() or config_file_dict[keys] ==""):
+                            pass
+                        else:
+                            setattr(self, keys, config_file_dict[keys])
+                            print(keys+":  "+config_file_dict[keys])
+                            
+        else:
+            pass
+
+    def makeconfig(self):
+        config_file =os.path.join(self.target_path,"config.ini")
+        config = configparser.ConfigParser()
+        if os.path.exists(config_file):
+            config.read(config_file)
+            config_file_dict = config.defaults()
+            if len(config_file_dict)==len(self.defaults_params_list):
+                pass
+            else:
+                for keys in self.defaults_params_list:
+                    if not (keys in config_file_dict):
+                        with open(config_file, "w") as _conf_file: 
+                            config.set("DEFAULT",keys," ")
+                            config.write(_conf_file)
+                            
+                    else:
+                        pass
+                print("I had appened to full option to config file!")
+        else:
+            with open(config_file,'w') as config_file:
+                config_file.write("[DEFAULT]\n")
+                for params in self.defaults_params_list:
+                    config_file.write(params+" = \n")
+            print("I had made config file in present directory !")
+
+\end{minted}
+
+            
+\subsection*{Code for data analysis}
+
+This is code for where I made my tools for data analysis. This tools presents with me file opening, file reading, taking mean over single frequency data, sorting my data with deviation method, plotting single data points form points etc. all the data and code is at following github link href{https://github.com/vijaypanchalr3/shotnoise}{https://github.com/vijaypanchalr3/shotnoise}. 
+
+\emph{tools.py}
+
+\begin{minted}{python}
+import csv
+import re
+from numpy import array,mean,abs,split,vstack,argsort,column_stack
+
+__all__=[
+    "files"
+    ]
+
+class files:
+    """
+    PARAMETER: filename as Relative path to __file__
+    RETURN: nil
+    FUNCTION: read files named filename, write other files with data
+    """
+    def __init__(self,filename:str,datatype=float) -> None:
+        self.datatype = datatype
+        self.filename = filename
+
+        with open(filename, 'r',) as newfile:
+            
+            self.fobject = list(csv.reader(newfile))
+            
+            # omit first member
+            try:
+                datatype(self.fobject[0][0])
+                self.header = None
+            except ValueError:
+                self.header = self.fobject.pop(0)
+                
+            self.length = sum(1 for row in self.fobject)
+            
+    def file_add(self,nameaddition:str="extra"):
+        _finalfile = re.split("\/",self.filename)
+        finalfile = re.split("\.", _finalfile[len(_finalfile)-1])
+        self.finalfile = "/".join(str(_finalfile[i]) for i in range(len(_finalfile)-1))+"/"+finalfile[0]+nameaddition+finalfile[1]
+    
+    def write_another(self,data:list)-> None:
+        with open(self.finalfile, 'wxs', newline="") as cleandata:
+            writer = csv.writer(cleandata)
+            writer.writerow(data)
+    
+    def get_mean(self):
+        data = array(self.fobject)
+        try:
+            first_array,second_array = split(data,2,axis=1)
+        except IndexError:
+            print("from get_mean()::empty array from data")
+            
+        extra_array,_first_array,_second_array = [],[],[]
+        count = 0
+        _first_array.append(first_array[count][0])
+        for i in range(0,len(data)):
+            if first_array[i][0]==_first_array[count]:
+                extra_array.append(second_array[i][0])
+            else:
+                _second_array.append(mean(array(extra_array,dtype=float)))
+                count+=1
+                _first_array.append(first_array[i][0])
+                extra_array=[]
+
+            if i==len(first_array)-1:
+                _second_array.append(mean(array(extra_array,dtype=float)))
+
+        return vstack((array(_first_array,dtype=float),array(_second_array,dtype=float))).T
+        
+    def sort_on_deviation(self, points=5):
+        data = array(self.fobject, dtype=float)
+        filtered_data=[]
+        temp_erray = []
+        index = float(data[0][0])
+        count = 0
+        for datapoint in data:
+            count+=1
+            if datapoint[0]==index:
+                temp_erray.append(float(datapoint[1]))
+            else:
+                nlist = array(temp_erray,dtype=float)
+                m = mean(nlist)
+                sorted_deviation = argsort(abs(nlist - m))
+                filtered_nlist = nlist[sorted_deviation[:points]]
+                indexonelist = array([index]*points)
+                final_list= column_stack((indexonelist,filtered_nlist))
+                for member in final_list:
+                    filtered_data.append(member)
+                index = float(datapoint[0])
+                temp_erray = []
+
+            if count == len(data)-1:
+                nlist = array(temp_erray,dtype=float)
+                m = mean(nlist)
+                sorted_deviation = argsort(abs(nlist - m))
+                filtered_nlist = nlist[sorted_deviation[:points]]
+                indexonelist = array([index]*points)
+                final_list= column_stack((indexonelist,filtered_nlist))
+                for member in final_list:
+                    filtered_data.append(member)
+        return array(filtered_data)
+    
+    def shady_plot(self, color="Blues"):
+        """
+        
+        """
+        data = array(self.fobject,dtype=float)
+        
+        # [here] can be better memort handling !
+        common_array = [[]]
+        index = float(data[0][0])
+        count = 0
+        for datapoint in data:
+            if float(datapoint[0])==index:
+                try:
+                    common_array[count].append([float(datapoint[0]),float(datapoint[1])])
+                    count+=1
+                except IndexError:
+                    common_array.append([])
+                    common_array[count].append([float(datapoint[0]),float(datapoint[1])])
+                    count+=1
+            else:
+                count=0
+                index = float(datapoint[0])
+
+        delete = []
+        common_array.pop()
+        for i in range(len(common_array)-1):    
+            if len(common_array[len(common_array)-1])<len(common_array[i]):
+                common_array[i].pop()
+        common_array = array(common_array)
+        from matplotlib import cm
+        colormap = cm.get_cmap(color, len(common_array))
+        return common_array,colormap
+        
+    def point_mean(self,data):
+        freq = []
+        vo = []
+        freq.append(float(data[0][0]))
+        vo.append(float(data[0][1]))
+        count = 1
+        for i in range(1,len(data)):
+            lenth = len(freq)
+            if float(data[i][0])==freq[lenth-1]:
+                vo[lenth-1]+=float(data[i][1])
+                count+=1
+            else:
+                vo[lenth-1]=vo[lenth-1]/count
+                count=1
+                freq.append(float(data[i][0]))
+                vo.append(float(data[i][1]))
+        freq.pop()
+        vo.pop()
+        return array(freq,dtype=float),array(vo,dtype=float)
+
+if __name__=="__main__":
+    print("No Error")
+\end{minted}
+
+
+
+
+
 
 \end{document}
 

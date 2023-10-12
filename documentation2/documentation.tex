@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[draft,12pt]{article}
 \pagenumbering{roman}
 
 \include{mypackages}
@@ -13,7 +13,7 @@
 \vspace{20pt}
 Regulated power sources are extremely important in day to day lab work. Zener diodes and passive elements share an integral part of the overall circuit of regulated power supply.  When we are dealing with precision measurement and study we need the most precise power sources to work with but because of 'Noise' of components of zener diodes and passive elements it inherits noise internally. Since, this noise will be infested in precision work we are doing in the lab. It is better to study the known structure of noise in these devices to address methodic treatment to our data and circuits. With all this in mind we are doing noise measurement and studying the noise spectrum of the zener diode.
 
-For this semester we had radical plans to try but it evolved into more mature or downgraded in a way. First tried as shot noise to generate a random number generator which could possibly be a true random generator with little transformations. Then we eyed the more on general idea of studying noise theoretically and doing analysis experimentally. Which is exactly what we are doing right now but change is that at start we are working with photodiode and now with zener diode. Thanks to Dr. U S Joshi sir who guided us to try different diodes against photodiode. In this report we are having the following parts in order. First we are studying theoretically components, then we will discuss methods and tools that we used included all instrumentation, data acquisition, data analysis etc., we will conclude with our results and discuss it. The foundational work in thermal noise was done by J B johnson in his paper [site it]. 
+For this semester we had radical plans to try but it evolved into more mature or downgraded in a way. First tried as shot noise to generate a random number generator which could possibly be a true random generator with little transformations. Then we eyed the more on general idea of studying noise theoretically and doing analysis experimentally. Which is exactly what we are doing right now but change is that at start we are working with photodiode and now with zener diode. Thanks to Dr. U S Joshi sir who guided us to try different diodes against photodiode. In this report we are having the following parts in order. First we are studying theoretically components, then we will discuss methods and tools that we used included all instrumentation, data acquisition, data analysis etc., we will conclude with our results and discuss it. we took help from Electronic noise and interfering signals: principles and applications.\cite{vasilescu2005electronic} The foundational work in thermal noise was done by J B johnson in his paper \cote{johnson1928thermal}. Johanson also gave first experimental evidence of frequency dependent noise.\cite{johnson1925schottky}
 
 
 
@@ -102,7 +102,7 @@ The noise voltage $V_n$ is made from different types of noise source which can a
 \subsubsection{Flicker Noise \label{thflicker}}
 
 Flicker noise is also known as 1/f noise in view of the fact that power density decreases with increasing frequency. This implies that at lower frequencies, the flicker noise dominates.
-This type of noise is found  almost in any electronic device which is able to operate at lower frequencies.The main source of this type of noise is D.C supply. Its first evidence was given by J. B. Johnson \cite{j b johnson}. Its first 1/f form is derived by beck and spruit \cite{beck and spruit}. Now the form is given as 
+This type of noise is found  almost in any electronic device which is able to operate at lower frequencies.The main source of this type of noise is D.C supply. Its first evidence was given by J. B. Johnson \cite{johnson1925schottky}. Its first 1/f form is derived by beck and spruit \cite{beck19781}. Now the form is given as 
 
 \begin{align}
 S(f) & = \frac{\gamma}{f^{\alpha}}
@@ -120,7 +120,7 @@ We can see noise levels as from figure \ref{thnoise}.
 
 \subsubsection{Shot noise \label{thshot}}
 
-Shot noise is a form of noise that arises because of the discrete nature of the charges carried by charge carriers, electrons or holes or photons hitting the surface. Shot noise is analogous to the rainfall in which raindrop hitting the surface can be considered as discrete. The sound of rainfall is very similar to noise we hear from speakers when we are considering shot noise. 
+Shot noise is a form of noise that arises because of the discrete nature of the charges carried by charge carriers, electrons or holes or photons hitting the surface. Shot noise is analogous to the rainfall in which raindrop hitting the surface can be considered as discrete. The sound of rainfall is very similar to noise we hear from speakers when we are considering shot noise. Foundational studies in shot noise done my campbell.cite{campbell1909study}
 
 Since, shot noise is a phenomenon for discrete charge passing through a junction, it can be modelled by poisson distribution. Suppose that In the time interval the $\tau$ Q charge passes through a junction in a semiconductor device (in present context zener diode). This gives rise to discrete probability distribution,
 
@@ -211,7 +211,7 @@ And spectral density will be $S(f) = (M+1) 2 e I_0$
 Since this noise is white noise we can measure at every frequency. This is what we are going to do in the next chapter. 
 \subsubsection{Thermal noise \label{thth}}
 
-Thermal noise, also called Johnson–Nyquist noise is the electronic noise generated by random motion of charge carriers. This charge carrier is generated by the thermal agitation inside an electrical conductor at equilibrium, which happens regardless of any applied voltage. Because of their random motion it can be said that they have a mean value at zero. This reason says that we can't model this noise by poisson distribution but have to model with normal or gaussian distribution. In 1936, J B Johnson first gave an idea about thermal noise in thermionic valves. \cite{johnson}
+Thermal noise, also called Johnson–Nyquist noise is the electronic noise generated by random motion of charge carriers. This charge carrier is generated by the thermal agitation inside an electrical conductor at equilibrium, which happens regardless of any applied voltage. Because of their random motion it can be said that they have a mean value at zero. This reason says that we can't model this noise by poisson distribution but have to model with normal or gaussian distribution. In 1936, J B Johnson first gave an idea about thermal noise in thermionic valves. \cite{johnson1928thermal}
 
 The noise amplitude is very similar to that of shot noise and given as,
 
@@ -228,6 +228,7 @@ $df$ is ENBW.
 \begin{align}\label{thths}
 S(f) & = 4 K_B R
 \end{align}
+
 By equation \ref{thths} we can see that thermal noise in an ideal resistor is approximately white, meaning that the power spectral density is nearly constant throughout the frequency spectrum. But practically it does decay to zero at extremely high frequencies (terahertz for room temperature). Also, we are neglecting quantum effects. 
 
 

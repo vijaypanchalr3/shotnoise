@@ -1,0 +1,54 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{pyvisa}
+\PYG{k+kn}{import} \PYG{n+nn}{sys}
+\PYG{k+kn}{from} \PYG{n+nn}{termcolor} \PYG{k+kn}{import} \PYG{n}{cprint}
+
+\PYG{k}{class} \PYG{n+nc}{GPIB}\PYG{p}{:}
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{k+kc}{None}\PYG{p}{:}
+        \PYG{k}{try}\PYG{p}{:}                        \PYG{c+c1}{\PYGZsh{} GPIB connection check}
+            \PYG{n}{cprint}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}checking GPIB connections\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZdq{}}\PYG{p}{,}\PYG{n}{color}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}yellow\PYGZdq{}}\PYG{p}{)}
+            \PYG{n}{resources} \PYG{o}{=} \PYG{n}{pyvisa}\PYG{o}{.}\PYG{n}{ResourceManager}\PYG{p}{()}
+            \PYG{n}{interface} \PYG{o}{=} \PYG{k+kc}{None}
+            \PYG{n}{resourceslist} \PYG{o}{=} \PYG{n}{resources}\PYG{o}{.}\PYG{n}{list\PYGZus{}resources}\PYG{p}{()}
+            \PYG{n}{cprint}\PYG{p}{(}\PYG{n}{resourceslist}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}blue\PYGZsq{}}\PYG{p}{,}\PYG{n}{attrs}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}bold\PYGZsq{}}\PYG{p}{])}
+            \PYG{k}{if} \PYG{n}{resourceslist}\PYG{o}{==}\PYG{p}{():}
+                \PYG{n}{cprint}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}ERROR: please check GPIB connection\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}red\PYGZdq{}}\PYG{p}{)}
+                \PYG{n}{sys}\PYG{o}{.}\PYG{n}{exit}\PYG{p}{()}
+            \PYG{k}{else}\PYG{p}{:}
+                \PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+                    \PYG{k}{try}\PYG{p}{:}
+                        \PYG{n}{choise} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}please, choose your device from this list: \PYGZdq{}}\PYG{p}{))}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}
+                        \PYG{k}{if} \PYG{n}{choise}\PYG{o}{\PYGZgt{}}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{resourceslist}\PYG{p}{):}
+                            \PYG{n+ne}{TypeError}
+                        \PYG{n}{interface} \PYG{o}{=} \PYG{n}{resourceslist}\PYG{p}{[}\PYG{n}{choise}\PYG{p}{]}
+                        \PYG{n}{cprint}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}chose resource\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZdq{}}\PYG{p}{,}\PYG{n}{color}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}green\PYGZdq{}}\PYG{p}{,}\PYG{n}{attrs}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}bold\PYGZdq{}}\PYG{p}{])}
+                        \PYG{n}{cprint}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}following device is connected\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZdq{}}\PYG{p}{,}\PYG{n}{color}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}green\PYGZdq{}}\PYG{p}{,}\PYG{n}{attrs}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}bold\PYGZdq{}}\PYG{p}{])}
+                        \PYG{n}{cprint}\PYG{p}{(}\PYG{n}{interface}\PYG{p}{)}
+                        \PYG{k}{break}
+                    \PYG{k}{except}\PYG{p}{:}
+                        \PYG{n}{cprint}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}choose with interger and from following...\PYGZdq{}}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}red\PYGZdq{}}\PYG{p}{)}
+
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{interface} \PYG{o}{=}  \PYG{n}{resources}\PYG{o}{.}\PYG{n}{open\PYGZus{}resource}\PYG{p}{(}\PYG{n}{interface}\PYG{p}{)}
+        \PYG{k}{except}\PYG{p}{:}
+            \PYG{n}{cprint}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}ERROR in detecting GPIB, there must be problem with setup of pyvisa or there is no connection of gpib}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{ you should look either in pyvisa documentation or try for RS232 interface\PYGZdq{}}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}red\PYGZdq{}}\PYG{p}{,}\PYG{n}{attrs}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}bold\PYGZsq{}}\PYG{p}{])}
+            \PYG{n}{sys}\PYG{o}{.}\PYG{n}{exit}\PYG{p}{()}
+
+    \PYG{k}{def} \PYG{n+nf}{ping}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{k+kc}{None}\PYG{p}{:}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{interface}\PYG{o}{.}\PYG{n}{write}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}*IDN?}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf}{read}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{k+kc}{None}\PYG{p}{:}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{interface}\PYG{o}{.}\PYG{n}{read}\PYG{p}{()}
+
+    \PYG{k}{def} \PYG{n+nf}{reset}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{k+kc}{None}\PYG{p}{:}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{interface}\PYG{o}{.}\PYG{n}{write}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}*RST}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf}{clear\PYGZus{}status}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{k+kc}{None}\PYG{p}{:}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{interface}\PYG{o}{.}\PYG{n}{write}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}*CLS}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf}{close}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{k+kc}{None}\PYG{p}{:}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{interface}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+
+    \PYG{k}{def} \PYG{n+nf}{std\PYGZus{}event}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{k+kc}{None}\PYG{p}{:}
+        \PYG{k}{pass}
+
+\end{Verbatim}

@@ -1,58 +1,48 @@
 This is BibTeX, Version 0.99d (TeX Live 2022/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: documentation.aux
-A level-1 auxiliary file: frontmatter.aux
-White space in argument---line 30 of file documentation.aux
- : \citation{j
- :             b johnson}
-I'm skipping whatever remains of this command
-White space in argument---line 31 of file documentation.aux
- : \citation{beck
- :                and spruit}
-I'm skipping whatever remains of this command
 The style file: plain.bst
 Database file #1: documentation.bib
 Warning--I didn't find a database entry for "campbell"
-Warning--I didn't find a database entry for "johnson"
-You've used 0 entries,
+You've used 4 entries,
             2118 wiz_defined-function locations,
-            499 strings with 4029 characters,
-and the built_in function-call counts, 18 in all, are:
-= -- 0
-> -- 0
+            525 strings with 4501 characters,
+and the built_in function-call counts, 1066 in all, are:
+= -- 102
+> -- 34
 < -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 7
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
++ -- 15
+- -- 10
+* -- 70
+:= -- 190
+add.period$ -- 12
+call.type$ -- 4
+change.case$ -- 16
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
+cite$ -- 4
+duplicate$ -- 45
+empty$ -- 96
+format.name$ -- 10
+if$ -- 217
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 3
-num.names$ -- 0
-pop$ -- 0
+int.to.str$ -- 4
+missing$ -- 5
+newline$ -- 23
+num.names$ -- 8
+pop$ -- 15
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 13
 quote$ -- 0
-skip$ -- 1
+skip$ -- 28
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 64
+swap$ -- 4
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
+type$ -- 14
 warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 2
-(There were 2 error messages)
+while$ -- 12
+width$ -- 5
+write$ -- 45
+(There was 1 warning)

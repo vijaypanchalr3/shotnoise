@@ -1,0 +1,88 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{pyinstro.utils} \PYG{k+kn}{import} \PYG{n}{sysarg}
+\PYG{k+kn}{from} \PYG{n+nn}{pyinstro.utils} \PYG{k+kn}{import} \PYG{n}{datafile}
+
+\PYG{n}{new\PYGZus{}instance} \PYG{o}{=} \PYG{n}{sysarg}\PYG{o}{.}\PYG{n}{CLI}\PYG{p}{()}
+
+\PYG{k}{if} \PYG{n}{new\PYGZus{}instance}\PYG{o}{.}\PYG{n}{get\PYGZus{}connection}\PYG{p}{()}\PYG{o}{==}\PYG{l+s+s2}{\PYGZdq{}GPIB\PYGZdq{}}\PYG{p}{:}
+    \PYG{k+kn}{from} \PYG{n+nn}{pyinstro.interfaces} \PYG{k+kn}{import} \PYG{n}{gpib}
+
+    \PYG{k}{class} \PYG{n+nc}{SR830}\PYG{p}{(}\PYG{n}{gpib}\PYG{o}{.}\PYG{n}{GPIB}\PYG{p}{):}
+        \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{k+kc}{None}\PYG{p}{:}
+            \PYG{n+nb}{super}\PYG{p}{()}\PYG{o}{.}\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{()}
+
+            \PYG{n}{file\PYGZus{}init} \PYG{o}{=} \PYG{n}{datafile}\PYG{o}{.}\PYG{n}{Get\PYGZus{}File}\PYG{p}{(}\PYG{n}{new\PYGZus{}instance}\PYG{o}{.}\PYG{n}{get\PYGZus{}file}\PYG{p}{())}
+
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{get\PYGZus{}levels} \PYG{o}{=} \PYG{n}{new\PYGZus{}instance}\PYG{o}{.}\PYG{n}{get\PYGZus{}levels}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{get\PYGZus{}partitions} \PYG{o}{=} \PYG{n}{new\PYGZus{}instance}\PYG{o}{.}\PYG{n}{get\PYGZus{}partitions}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{writerow} \PYG{o}{=} \PYG{n}{file\PYGZus{}init}\PYG{o}{.}\PYG{n}{writerow}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{longwriterow} \PYG{o}{=} \PYG{n}{file\PYGZus{}init}\PYG{o}{.}\PYG{n}{longwriterow}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{fmin} \PYG{o}{=} \PYG{n}{new\PYGZus{}instance}\PYG{o}{.}\PYG{n}{get\PYGZus{}fmin}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{fmax} \PYG{o}{=} \PYG{n}{new\PYGZus{}instance}\PYG{o}{.}\PYG{n}{get\PYGZus{}fmax}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{freq} \PYG{o}{=} \PYG{n}{new\PYGZus{}instance}\PYG{o}{.}\PYG{n}{get\PYGZus{}freq}
+
+        \PYG{k}{def} \PYG{n+nf}{local\PYGZus{}defaults}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{k+kc}{None}\PYG{p}{:}
+            \PYG{k}{pass}
+
+        \PYG{k}{def} \PYG{n+nf}{local\PYGZus{}arguments}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{k+kc}{None}\PYG{p}{:}
+            \PYG{n}{new\PYGZus{}instance}\PYG{o}{.}\PYG{n}{argparser}\PYG{o}{.}\PYG{n}{add\PYGZus{}argument}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}fl\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}\PYGZhy{}fmin\PYGZsq{}}\PYG{p}{,} \PYG{n}{metavar}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{p}{,} \PYG{n+nb}{type}\PYG{o}{=}\PYG{n+nb}{float}\PYG{p}{,} \PYG{n}{default}\PYG{o}{=}\PYG{l+m+mi}{4545}\PYG{p}{,} \PYG{n}{help}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}give lower limit for reference frequency\PYGZdq{}}\PYG{p}{)}
+            \PYG{n}{new\PYGZus{}instance}\PYG{o}{.}\PYG{n}{argparser}\PYG{o}{.}\PYG{n}{add\PYGZus{}argument}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}fr\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}\PYGZhy{}freq\PYGZsq{}}\PYG{p}{,} \PYG{n}{metavar}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{p}{,} \PYG{n+nb}{type}\PYG{o}{=}\PYG{n+nb}{float}\PYG{p}{,} \PYG{n}{default}\PYG{o}{=}\PYG{l+m+mi}{7888}\PYG{p}{,} \PYG{n}{help}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}give reference frequency\PYGZdq{}}\PYG{p}{)}
+            \PYG{n}{new\PYGZus{}instance}\PYG{o}{.}\PYG{n}{argparser}\PYG{o}{.}\PYG{n}{add\PYGZus{}argument}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}fh\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}\PYGZhy{}fmax\PYGZsq{}}\PYG{p}{,} \PYG{n}{metavar}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{p}{,} \PYG{n+nb}{type}\PYG{o}{=}\PYG{n+nb}{float}\PYG{p}{,} \PYG{n}{default}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{help}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}give upper limit for reference frequency\PYGZdq{}}\PYG{p}{)}
+
+        \PYG{k}{def} \PYG{n+nf}{set\PYGZus{}frequency}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{value}\PYG{p}{,} \PYG{n}{errdelay} \PYG{o}{=} \PYG{l+m+mi}{3}\PYG{p}{)} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{k+kc}{None}\PYG{p}{:}
+\PYG{+w}{            }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}change reference frequency\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{interface}\PYG{o}{.}\PYG{n}{write}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}FREQ \PYGZdq{}}\PYG{o}{+}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZob{}:.4E\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{n}{value}\PYG{p}{))}
+            \PYG{k}{pass}
+
+        \PYG{k}{def} \PYG{n+nf}{autogain}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{k+kc}{None}\PYG{p}{:}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{interface}\PYG{o}{.}\PYG{n}{write}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}AGAN\PYGZdq{}}\PYG{p}{)}
+
+        \PYG{k}{def} \PYG{n+nf}{set\PYGZus{}phase}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,}\PYG{n}{value}\PYG{p}{)} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{k+kc}{None}\PYG{p}{:}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{interface}\PYG{o}{.}\PYG{n}{write}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}PHAS \PYGZdq{}}\PYG{o}{+}\PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{value}\PYG{p}{))}
+            \PYG{k}{pass}
+
+        \PYG{k}{def} \PYG{n+nf}{time\PYGZus{}constant}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,}\PYG{n}{choise}\PYG{p}{)} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{k+kc}{None}\PYG{p}{:}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{interface}\PYG{o}{.}\PYG{n}{write}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}OFLT \PYGZdq{}}\PYG{o}{+}\PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{choise}\PYG{p}{))}
+            \PYG{k}{pass}
+
+        \PYG{k}{def} \PYG{n+nf}{sensitivity}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,}\PYG{n}{choise}\PYG{p}{)} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{k+kc}{None}\PYG{p}{:}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{interface}\PYG{o}{.}\PYG{n}{write}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}SENS \PYGZdq{}}\PYG{o}{+}\PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{choise}\PYG{p}{))}
+            \PYG{k}{pass}
+
+        \PYG{k}{def} \PYG{n+nf}{set\PYGZus{}sample\PYGZus{}rate}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{choise}\PYG{p}{)}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{k+kc}{None}\PYG{p}{:}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{interface}\PYG{o}{.}\PYG{n}{write}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}SRAT \PYGZdq{}}\PYG{o}{+}\PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{choise}\PYG{p}{))}
+
+        \PYG{k}{def} \PYG{n+nf}{start\PYGZus{}data\PYGZus{}acquision}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{k+kc}{None}\PYG{p}{:}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{interface}\PYG{o}{.}\PYG{n}{write}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}STRT\PYGZdq{}}\PYG{p}{)}
+            \PYG{k}{pass}
+
+        \PYG{k}{def} \PYG{n+nf}{pause\PYGZus{}data\PYGZus{}acquision}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{k+kc}{None}\PYG{p}{:}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{interface}\PYG{o}{.}\PYG{n}{write}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}PAUS\PYGZdq{}}\PYG{p}{)}
+            \PYG{k}{pass}
+
+        \PYG{k}{def} \PYG{n+nf}{reset\PYGZus{}data\PYGZus{}acquision}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{k+kc}{None}\PYG{p}{:}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{interface}\PYG{o}{.}\PYG{n}{write}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}REST\PYGZdq{}}\PYG{p}{)}
+            \PYG{k}{pass}
+
+        \PYG{k}{def} \PYG{n+nf}{get\PYGZus{}data}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{k+kc}{None}\PYG{p}{:}
+            \PYG{k}{pass}
+
+        \PYG{k}{def} \PYG{n+nf}{get\PYGZus{}data\PYGZus{}explicitly}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{data\PYGZus{}variable}\PYG{o}{=}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{n}{errdelay}\PYG{o}{=}\PYG{l+m+mi}{3}\PYG{p}{):}
+\PYG{+w}{            }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+sd}{            two params, give resource object and the second params is parameter to variable read,}
+\PYG{l+s+sd}{            default to data\PYGZus{}variable = 3 which is equievalent to reading R.}
+\PYG{l+s+sd}{            as SR830manual,}
+\PYG{l+s+sd}{            data\PYGZus{}variable = 1 =\PYGZgt{} X,}
+\PYG{l+s+sd}{            data\PYGZus{}variable = 2 =\PYGZgt{} Y,}
+\PYG{l+s+sd}{            data\PYGZus{}variable = 3 =\PYGZgt{} R,}
+\PYG{l+s+sd}{            data\PYGZus{}variable = 4 =\PYGZgt{} phase}
+\PYG{l+s+sd}{            \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+            \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{interface}\PYG{o}{.}\PYG{n}{query}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}OUTP? \PYGZdq{}}\PYG{o}{+}\PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{data\PYGZus{}variable}\PYG{p}{))}
+
+
+\PYG{k}{else}\PYG{p}{:}
+
+    \PYG{k+kn}{from} \PYG{n+nn}{pyinstro.interfaces} \PYG{k+kn}{import} \PYG{n}{rs232}
+
+    \PYG{k}{class} \PYG{n+nc}{SR830}\PYG{p}{(}\PYG{n}{rs232}\PYG{o}{.}\PYG{n}{RS232}\PYG{p}{):}
+\end{Verbatim}

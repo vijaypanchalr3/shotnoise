@@ -25,5 +25,5 @@
 \contentsline {section}{\numberline {5}Conclutions}{22}{section.5}%
 \contentsline {section}{References}{23}{section.5}%
 \contentsline {section}{Appendix}{24}{section.5}%
-\contentsline {subsection}{Code for data analysis}{24}{section*.1}%
-\contentsline {subsection}{PyInstro}{24}{section*.1}%
+\contentsline {subsection}{Code for data analysis}{24}{section.5}%
+\contentsline {subsection}{PyInstro}{24}{section.5}%
