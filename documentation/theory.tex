@@ -29,7 +29,7 @@ Here, $A^{\prime} = (\frac{1}{R_s}+\frac{1}{R_L})$ and $B^{\prime} = \frac{V_s}{
 We can write $I_z = \frac{V_z}{R_z}$, where $V_z$ and $R_z$ are respectively zener voltages and impedance.  This relation is quite linear in the breakdown region as you can see in the figure \ref{thiv}. \footnote{Image is taken from Electronics Devices and Circuit Theory by Robert Boylsted}
 
 \begin{figure}[hbt!]
-\centering{\includegraphics[width=.48\textwidth, trim={.5cm 0.5cm .5cm .5cm},clip]{thzenerIV.png}}
+\centering{\includegraphics[width=.48\textwidth, trim={.8cm 0.6cm .8cm .5cm},clip]{thzenerIV.png}}
 \caption{theoretical current and voltage relation for zener diode \label{thiv}}
 \end{figure}
 
@@ -68,7 +68,7 @@ So, we can conclude that here as $V_o \propo V_n$.  This will be the main focus 
 
 \subsection{Different noises in the circuit \label{thno}}
 
-The noise voltage $V_n$ is made from different types of noise source which can act as a symbol voltage source. So, $V_n$ can be broken into sub noise sources such as $V_n = V_{flicker}+V_{thermal} + V_{shot} +\cdots$. We will see this noise source and its origin then we will derive its respective distribution and equations.
+The noise voltage $V_n$ is made from different types of noise source which can act as a symbol voltage source. So, $V_n$ can be broken into sub noise sources such as $V_n = V_{flicker}+V_{thermal} + V_{shot} +\cdots$. We will see this noise source and its origin then we will derive its respective distribution and equations.\cite{reggiani1997monte}\cite{wilamowski2018fundamentals}
 
 \begin{figure}[hbt!]
 \centering{\includegraphics[width=.48\textwidth]{noiseeq.png}}
@@ -92,11 +92,20 @@ Here, $\gamma$ and $\alpha$ determine the nature of flicker noise. $\alpha$ dete
 \item ($\alpha < 0$): This means noise is increasing as frequency. Also, shows that noise will be persistent with a higher range of frequencies. Typically white noise dominates traditional flicker noise.
 \end{enumerate}
 
-We can see noise levels as from figure \ref{thnoise}.
+We can see noise levels as from figure \ref{thnoise}. mostly flicker noise is at considered as $1/f$ noise. In which $\alpha = 1$.
 
+\subsubsection{$1/f^2$ noise}
+$1/f^2$ noise is a derivative of  $1/f$ noise and it's mostly seen in metal interconnections of intregrated circuits.
+
+It is modeled by following,
+\begin{align*}
+  S_{1/f^2}(f) = C \frac{j^{\beta}}{f^{\gamma}\cdot T}\cdot e^{\frac{-E_a}{kT}} 
+\end{align*}
+
+Here, C is costant which can be found from experiment, $E_a$ is activation energy for electromigration, $k$ is boltzmann contant, $T$ is temperature. $j$ is current density, $\beta$ and $\gamma$ are contants canbe found from experiment. ($\beta \geq 3$ and $\gamma \geq 2$).
 \subsubsection{Shot noise \label{thshot}}
 
-Shot noise is a form of noise that arises because of the discrete nature of the charges carried by charge carriers, electrons or holes or photons hitting the surface. Shot noise is analogous to the rainfall in which raindrop hitting the surface can be considered as discrete. The sound of rainfall is very similar to noise we hear from speakers when we are considering shot noise. Foundational studies in shot noise done my campbell. \cite{campbell1909study}
+Shot noise is a form of noise that arises because of the discrete nature of the charges carried by charge carriers, electrons or holes or photons hitting the surface. Shot noise is analogous to the rainfall in which raindrop hitting the surface can be considered as discrete. The sound of rainfall is very similar to noise we hear from speakers when we are considering shot noise. Foundational studies in shot noise done my campbell.\cite{campbell1909study}
 
 Since, shot noise is a phenomenon for discrete charge passing through a junction, it can be modelled by poisson distribution. Suppose that In the time interval the $\tau$ Q charge passes through a junction in a semiconductor device (in present context zener diode). This gives rise to discrete probability distribution,
 
@@ -132,7 +141,9 @@ P(f) & = S df
 
 Where S is the spectral density of noise.
 
-Here we can write specific form for shot noise in equation \ref{thgen} \cite{campbell}.
+Here we can write specific form for shot noise in equation \ref{thgen}.\cite{campbell1909study}
+
+%% \cite{campbell}
 
 \begin{align}\label{thshotvo}
 \langle V_{shot}^2\rangle & = 2 e I_0 df
@@ -149,6 +160,7 @@ S(f) & = 2 e I_0
 \end{align}
 
 \begin{figure}[hbt!]
+\label{thnoise}
 \centering{\includegraphics[width=.48\textwidth]{thnoise.png}}
 \caption{Equivalent noise sources}
 \end{figure}
@@ -181,7 +193,10 @@ Here, we can combine this both avalanche and shot noise to make one noise source
 
 And spectral density will be $S(f) = (M+1) 2 e I_0$
 
-Since this noise is white noise we can measure at every frequency. This is what we are going to do in the next chapter. 
+Since this noise is white noise we can measure at every frequency. This is what we are going to do in the next chapter.
+
+
+
 \subsubsection{Thermal noise \label{thth}}
 
 Thermal noise, also called Johnson–Nyquist noise is the electronic noise generated by random motion of charge carriers. This charge carrier is generated by the thermal agitation inside an electrical conductor at equilibrium, which happens regardless of any applied voltage. Because of their random motion it can be said that they have a mean value at zero. This reason says that we can't model this noise by poisson distribution but have to model with normal or gaussian distribution. In 1936, J B Johnson first gave an idea about thermal noise in thermionic valves. \cite{johnson1928thermal}
@@ -198,9 +213,10 @@ R is resistance of device or component,
 
 $df$ is ENBW.
 
-\begin{align}\label{thths}
+\begin{align*}
 S(f) & = 4 K_B R
-\end{align}
+\end{align*}
+
 
 By equation \ref{thths} we can see that thermal noise in an ideal resistor is approximately white, meaning that the power spectral density is nearly constant throughout the frequency spectrum. But practically it does decay to zero at extremely high frequencies (terahertz for room temperature). Also, we are neglecting quantum effects. 
 
@@ -210,8 +226,7 @@ Total noise in the circuit will bre frequency dependent noise and white noise,
 
 \begin{align*}
 V_n & = V_{n}(f)+ V_{white}\\
-S(f) & = \frac{\gamma}{f^{\alpha}}+(2e(M+1)I_0+4K_bR)+\mathcal{O}(other)\\
-
+S(f) & = \frac{\gamma}{f^{\alpha}}+(2e(M+1)I_0+4K_bR)+\mathcal{O}(other)
 \end{align*}
 
 \begin{align}\label{theoryvn}
@@ -219,3 +234,4 @@ S(f) & \approx \frac{\gamma}{f^{\alpha}}+(2e(M+1)I_0+4K_bR)
 \end{align}
 
 which is main derivation of our project.
+

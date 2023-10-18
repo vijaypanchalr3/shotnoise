@@ -9,6 +9,7 @@
 \begin{document}
 \include{frontmatter}
 \section{Introduction}\label{introduction}
+
 Regulated power sources are extremely important in day to day lab work. Zener diodes and passive elements share an integral part of the overall circuit of regulated power supply.  When we are dealing with precision measurement and study we need the most precise power sources to work with but because of 'Noise' of components of zener diodes and passive elements it inherits noise internally. Since, this noise will be infested in precision work we are doing in the lab. It is better to study the known structure of noise in these devices to address methodic treatment to our data and circuits. With all this in mind we are doing noise measurement and studying the noise spectrum of the zener diode.
 
 For this semester we had radical plans to try but it evolved into more mature or downgraded in a way. First tried as shot noise to generate a random number generator which could possibly be a true random generator with little transformations. Then we eyed the more on general idea of studying noise theoretically and doing analysis experimentally. Which is exactly what we are doing right now but change is that at start we are working with photodiode and now with zener diode. Thanks to Dr. U S Joshi sir who guided us to try different diodes against photodiode. In this report we are having the following parts in order. First we are studying theoretically components, then we will discuss methods and tools that we used included all instrumentation, data acquisition, data analysis etc., we will conclude with our results and discuss it. we took help from Electronic noise and interfering signals: principles and applications.\cite{vasilescu2005electronic} The foundational work in thermal noise was done by J B johnson in his paper \cote{johnson1928thermal}. Johanson also gave first experimental evidence of frequency dependent noise.\cite{johnson1925schottky}
@@ -23,19 +24,18 @@ For this semester we had radical plans to try but it evolved into more mature or
 \input{results}
 \section{Conclutions}
 
-In 1k to 10k data, we have specified flicker noise power AKA $(\frac{1}{f})^{\alpha}$ as $\alpha = 1.34677368$, which is close to flicker noise theoretical values for maximum flicker noise which is equal to 1. white noise level in $\mu V$ region, which is expected (at $2.0644381e-05$). 
+Our analysis on noise spectrum analysis gave us insight of intrinsic noises in the circuit and zener diode. In results, we have got parameterised noise as our theoretical model was built. 
+
+In 1k to 10k data, we have specified magnitude flicker noise power AKA $1/f$ , which is at $0.024474431610177427$. We have also observed $1/f^2$ noise in the system and it is at $179.6472361690183$. white noise level in first data set ($10 kHz$), which is $1.305593689e-07 V^2/Hz$. 
 
 
-The most mysterious results came from second data sets, very low frequency data sets. Here  $\alpha= -0.64836618$ which is negative. This means that noise increases as frequency increases, this case already discussed in theoritical part. Our assumtion here is that as frequency increases the white noise gets saturated to it’s related power. This means that white noise is not quite white as it seems. Assumption is also be made that frequency dependence of flicker noise is not quite like that of distrubution as theory discussed. Well, we have to dig deep into that.
+The most mysterious results came from second data sets, very low frequency data sets. Here, Raw data is quite opposite of any frequency dependent noise models.  Our assumtion here is that as frequency increases the white noise gets saturated to it’s related power. This means that white noise is not quite white as it seems. Assumption is also be made that frequency dependence of flicker noise is not quite like that of distrubution as theory discussed. Well, we have to dig deep into that. Analysed data gave magnitude for both $1/f$ and $1/f^2$ are $9.83301255e-06$ and $7.03135395e-07$ respectively. White noise bed is following at $3.03149895e-06 V^2/Hz$. 
 
-Last data set is quite normal, it satisfy first data sets and closely correlate with the theoritical model. We have white noise level is similar to that of first data sets with different is of $2.0644381e-05-1.20525914e-05 = 0.85917896e-05$. which is very small. 
+Last data gets following values $1.17694942e-05$  and $4.40498840e-02$ for $1/f$ and $1/f^2$ noise levels. It satisfy first data sets and closely correlate with the theoritical model. We have white noise level is similar to that of first data sets, but one trend which we so in it is that as frequency get increased the white noise level decreases. This can be result from that of correlation from flicker noises and understandable as we can only get one noise source to strip down. (white noise level at $3.5367046e-10 V^2/Hz$).
 
 Further studies can be conducted to anamolous behaviour at very low frequency noise $\approx 1Hz$. This can be important in regulated power supply usage since 1Hz is very near to DC level. 
 
 We hope that our contribution to Open source community is well recevied and gets more contribution to our package \textbf{PyInstro}.
-
-
-
 
 \addcontentsline{toc}{section}{References}
 \bibliographystyle{plain}
@@ -58,12 +58,19 @@ We hope that our contribution to Open source community is well recevied and gets
 \clearpage
 \subsection*{Zener diode datasheet}
 \begin{figure*}[hbt!]
-\centering{\centering\includegraphics[width=.55\textwidth,page=1,trim={1cm 1cm 1cm 1cm, clip}]{sr830m.pdf}}
+\centering{\centering\includegraphics[width=.9\textwidth,page=1,trim={1cm 1cm 1cm 1cm, clip}]{bzx55.pdf}}
 \end{figure*}
 \clearpage
 \begin{figure*}[hbt!]
-\centering{\centering\includegraphics[width=.55\textwidth,page=2,trim={1cm 1cm 1cm 1cm, clip}]{sr830m.pdf}}
+  \centering{\centering\includegraphics[width=.9\textwidth,page=2,trim={1cm 1cm 1cm 1cm, clip}]{bzx55.pdf}}
 \end{figure*}
+\clearpage
+\begin{figure*}[hbt!]
+\centering{\centering\includegraphics[width=.9\textwidth,page=4,trim={1cm 1cm 1cm 1cm, clip}]{bzx55.pdf}}
+\end{figure*}
+
+
+
 \end{document}
 
 

@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{beck19781}
 HGE Beck and WP~Spruit.
@@ -11,6 +11,29 @@ Norman Campbell.
 \newblock In {\em Proceedings of the Cambridge Philosophical Society},
   volume~15, page 250, 1909.
 
+\bibitem{harris2020array}
+Charles~R. Harris, K.~Jarrod Millman, St{\'{e}}fan~J. van~der Walt, Ralf
+  Gommers, Pauli Virtanen, David Cournapeau, Eric Wieser, Julian Taylor,
+  Sebastian Berg, Nathaniel~J. Smith, Robert Kern, Matti Picus, Stephan Hoyer,
+  Marten~H. van Kerkwijk, Matthew Brett, Allan Haldane, Jaime~Fern{\'{a}}ndez
+  del R{\'{i}}o, Mark Wiebe, Pearu Peterson, Pierre G{\'{e}}rard-Marchant,
+  Kevin Sheppard, Tyler Reddy, Warren Weckesser, Hameer Abbasi, Christoph
+  Gohlke, and Travis~E. Oliphant.
+\newblock Array programming with {NumPy}.
+\newblock {\em Nature}, 585(7825):357--362, September 2020.
+
+\bibitem{Hunter:2007}
+J.~D. Hunter.
+\newblock Matplotlib: A 2d graphics environment.
+\newblock {\em Computing in Science \& Engineering}, 9(3):90--95, 2007.
+
+\bibitem{zhistpricipleoflockin}
+Zurich Instruments.
+\newblock Principles of lock-in detection.
+\newblock
+  \url{https://www.zhinst.com/others/en/resources/principles-of-lock-in-detection}.
+\newblock online; Accessed 2023-10-13.
+
 \bibitem{johnson1925schottky}
 John~B Johnson.
 \newblock The schottky effect in low frequency circuits.
@@ -21,10 +44,54 @@ John~Bertrand Johnson.
 \newblock Thermal agitation of electricity in conductors.
 \newblock {\em Physical review}, 32(1):97, 1928.
 
+\bibitem{reggiani1997monte}
+Lino Reggiani, P~Golinelli, L~Varani, T~Gonzalez, D~Pardo, E~Starikov,
+  P~Shiktorov, and V~Gru{\v{z}}inskis.
+\newblock Monte carlo analysis of electronic noise in semiconductor materials
+  and devices.
+\newblock {\em Microelectronics journal}, 28(2):183--198, 1997.
+
+\bibitem{mjntr101}
+Terry Ritter.
+\newblock Measuring junction noise.
+\newblock \url{http://www.ciphersbyritter.com/RADELECT/MEASNOIS/MEASNOIS.HTM}.
+\newblock online; Accessed 2023-10-13.
+
+\bibitem{thinksrslockin}
+Standford~Research Systems.
+\newblock About lias.
+\newblock
+  \url{https://www.thinksrs.com/downloads/pdfs/applicationnotes/AboutLIAs.pdf}.
+\newblock online; Accessed 2023-10-13.
+
+\bibitem{srssr830m}
+Standord~Research Systems.
+\newblock Sr830 manual.
+\newblock \url{https://www.thinksrs.com/downloads/pdfs/manuals/SR830m.pdf}.
+\newblock online; Accessed 2023-10-13.
+
+\bibitem{srssr830}
+Standord~Research Systems.
+\newblock Standford research sr830.
+\newblock \url{https://www.thinksrs.com/products/sr830.html}.
+\newblock online; Accessed 2023-10-13.
+
 \bibitem{vasilescu2005electronic}
 Gabriel Vasilescu.
 \newblock {\em Electronic noise and interfering signals: principles and
   applications}.
 \newblock Springer Science \& Business Media, 2005.
+
+\bibitem{wilamowski2018fundamentals}
+Bogdan~M Wilamowski and J~David Irwin.
+\newblock {\em Fundamentals of industrial electronics}.
+\newblock CRC Press, 2018.
+
+\bibitem{zhistnoise}
+Mehdi~Alem Zurich~Instruments.
+\newblock Noise spectral density measured with lock-in amplifiers.
+\newblock
+  \url{https://www.zhinst.com/others/en/blogs/noise-spectral-density-measured-lock-amplifiers}.
+\newblock online; Accessed 2023-10-17.
 
 \end{thebibliography}

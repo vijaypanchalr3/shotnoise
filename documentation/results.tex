@@ -4,7 +4,7 @@ We have surveyed voltage regulated circuits we made with zener diodes and found 
 
 \subsection{Low frequency: up to 10k hertz}
 
-We are mainly focused low frequency results since we are only intrested in regulated power supply applications. We had original assumption that in low frequency flicker noise is higly dominating.
+We are mainly focused low frequency results since we are only intrested in regulated power supply applications. We had original assumption that in low frequency flicker noise is higly dominating.\cite{harris2020array}\cite{Hunter:2007}
 
 \begin{figure}[hbt!]
 \centering{\includegraphics[width=.5\textwidth,trim={.5cm 0cm 1cm 0cm}, clip]{raw_1000_100us.png}}
@@ -60,14 +60,16 @@ Here we can see some traces of flicker noise. Parameterized as follows,
 
 
 \begin{align*}
-S(f) & = \frac{\gamma}{f^{\alpha}}
+S(f) & = S_{flicker}(f)+ S_{burst}(f) + S_{white}\\
+S(f) & = \frac{A}{f}+\frac{B}{f^2}+ S_{white}
 \end{align*}
 
-Here, $\gamma$ and $\alpha$ determine the nature of flicker noise. Results are from theoritical section.
+Here, $A$ determines the magnitude of flicker noise and $B$ determines the magnitude of burst noise.
 
 \begin{align}\label{eq1}
-S_{flicker}(f) & = 5.90923491 \frac{1}{f^{1.34677368}}\\
-S_{white}(f) & =2.0644381e-05
+S_{flicker}(f) & = \frac{0.024474431610177427}{f}\\
+S_{burst}(f) & = \frac{179.6472361690183}{f^2}\\  
+S_{white}(f) & = 1.305593689e-07
 \end{align}
 
 
@@ -77,9 +79,17 @@ Let's take a second data set where we have sub hertz frequency data. This data s
 
 
 \begin{figure}[hbt!]
-\centering{\includegraphics[width=.5\textwidth]{raw_1_100us.png}}
+\centering{\includegraphics[width=.5\textwidth]{raw_1_100ms.png}}
 \caption{This is row data for sub one hertz band with TIME CONSTANT = $100ms$ and roll of factor $12dB/oct$} 
 \label{rawsubhz}
+\end{figure}\\
+
+
+Final data will be look like this,
+
+\begin{figure}[hbt!]
+\centering{\includegraphics[width=.5\textwidth]{final_1_100ms.png}}
+\caption{final analysed data for sub one hertz band with TIME CONSTANT = $100ms$ and roll of factor $12dB/oct$}
 \end{figure}\\
 
 
@@ -90,21 +100,14 @@ For analysing data ENBW is calculated for TIME CONSTANT = $100ms$ and roll of fa
 ENBW = \frac{1}{8T} = 1.25 Hz 
 \]
 
-Final data will be look like this,
+Parameters are following,
 
-\begin{figure}[hbt!]
-\centering{\includegraphics[width=.5\textwidth]{final_1_100ms.png}}
-\caption{final analysed data for sub one hertz band with TIME CONSTANT = $100ms$ and roll of factor $12dB/oct$}
-\end{figure}\\
-
-
-Here data feeted at negative $-alpha$,
-
-\begin{align}\label{eq2}
-S_{flicker}(f) & =  \frac{-0.64836618}{f^{-0.64836618}}
+\begin{align}\label{eq3}
+S_{flicker}(f) & = \frac{9.83301255e-06}{f^1}\\
+S_{burst}(f) & = \frac{7.03135395e-07}{f^2}\\
+S_{white}(f) & = 3.03149895e-06
 \end{align}
 
-Here two things is important $\alpha < 0$ and $\gamma$ is small.
 
 \subsection{High frequency data: up to 100k hertz}
 
@@ -112,7 +115,7 @@ Same as we discussed previously raw data is given here, we have up to 50khz freq
 
 
 \begin{figure}[hbt!]
-\centering{\includegraphics[width=.5\textwidth]{raw10000100ms.png}}
+\centering{\includegraphics[width=.5\textwidth]{raw_10000_100ms.png}}
 \caption{This is row data for high frequency band with TIME CONSTANT = $100ms$ and roll of factor $12dB/oct$} 
 \label{raw100k}
 \end{figure}\\
@@ -127,9 +130,9 @@ same as previous sections, we sorted data and take ENBW calculations at here.
 the noise spectral density is as following.
 
 \begin{align}\label{eq3}
-S_{flicker}(f) & = \frac{0.13707877}{f^{0.92287006}}\\
-S_{white}(f) & = 1.20525914e-05
+S_{flicker}(f) & = \frac{1.17694942e-05}{f^1}\\
+S_{burst}(f) & = \frac{4.40498840e-02}{f^2}\\
+S_{white}(f) & = 3.5367046e-10
 \end{align}
 
 
-Here this parameters are similar to that of first data set aka low frequency data.

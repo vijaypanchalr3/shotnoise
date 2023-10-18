@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Debian)  (format=lualatex 2023.10.1)  12 OCT 2023 19:38
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Debian)  (format=lualatex 2023.10.1)  18 OCT 2023 19:22
  system commands enabled.
 **documentation.tex
 (./documentation.tex
@@ -779,7 +779,11 @@ File: l3backend-luatex.def 2023-01-16 L3 backend support: PDF output (LuaTeX)
 \l__color_backend_stack_int=\count364
 \l__pdf_internal_box=\box114
 )
-(./documentation.aux (./frontmatter.aux))
+(./documentation.aux (./frontmatter.aux)
+
+LaTeX Warning: Label `eq3' multiply defined.
+
+)
 \openout1 = documentation.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -793,8 +797,7 @@ LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3
 .
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 3.
@@ -884,7 +887,7 @@ Package svg Warning: No version of Inkscape was detected by invoking
 
 warning  (file GUlogo.pdf) (pdf inclusion): PDF inclusion: found PDF version '1.
 7', but at most version '1.5' allowed
-<GUlogo.pdf, id=123, 1195.01576pt x 845.04689pt>
+<GUlogo.pdf, id=131, 1195.01576pt x 845.04689pt>
 File: GUlogo.pdf Graphic file (type pdf)
 <use GUlogo.pdf>
 Package luatex.def Info: GUlogo.pdf  used on input line 8.
@@ -941,7 +944,7 @@ or  <return>  to continue without it.
 
 ])
 ! Undefined control sequence.
-l.14 ...e was done by J B johnson in his paper \cote
+l.15 ...e was done by J B johnson in his paper \cote
                                                   {johnson1928thermal}. Joha...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -950,20 +953,19 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 4316) in paragraph at lines 18--18
+Underfull \hbox (badness 4316) in paragraph at lines 19--19
 |[]\TU/lmr/bx/n/20.74 The-o-ret-i-cal com-pi-la-
  []
 
 (./theory.tex
-<./images//circuit-20231005-2243.png, id=201, 273.9836pt x 171.6814pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+<./images//circuit-20231005-2243.png, id=214, 273.9836pt x 171.6814pt>
 File: ./images//circuit-20231005-2243.png Graphic file (type png)
 <use ./images//circuit-20231005-2243.png>
 Package luatex.def Info: ./images//circuit-20231005-2243.png  used on input lin
 e 11.
 (luatex.def)             Requested size: 250.55777pt x 157.00833pt.
-
-Underfull \vbox (badness 5878) has occurred while \output is active []
-
  [4
 
 
@@ -972,18 +974,18 @@ Underfull \vbox (badness 5878) has occurred while \output is active []
 
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.1'
 <./images//circuit-20231005-2243.png>]
-<./images//thzenerIV.png, id=217, 1076.02pt x 671.50874pt>
+<./images//thzenerIV.png, id=229, 1076.02pt x 671.50874pt>
 File: ./images//thzenerIV.png Graphic file (type png)
 <use ./images//thzenerIV.png>
 Package luatex.def Info: ./images//thzenerIV.png  used on input line 32.
-(luatex.def)             Requested size: 250.55777pt x 153.80673pt.
-<./images//circuit-20231005-2244.png, id=221, 273.9836pt x 171.6814pt>
+(luatex.def)             Requested size: 250.55777pt x 155.65628pt.
+<./images//circuit-20231005-2244.png, id=233, 273.9836pt x 171.6814pt>
 File: ./images//circuit-20231005-2244.png Graphic file (type png)
 <use ./images//circuit-20231005-2244.png>
 Package luatex.def Info: ./images//circuit-20231005-2244.png  used on input lin
 e 40.
 (luatex.def)             Requested size: 250.55777pt x 157.00833pt.
-<./images//circuit-20231005-2245.png, id=223, 273.9836pt x 195.7714pt>
+<./images//circuit-20231005-2245.png, id=235, 273.9836pt x 195.7714pt>
 File: ./images//circuit-20231005-2245.png Graphic file (type png)
 <use ./images//circuit-20231005-2245.png>
 Package luatex.def Info: ./images//circuit-20231005-2245.png  used on input lin
@@ -1012,192 +1014,142 @@ warning  (pdf backend): ignoring duplicate destination with the name 'figure.3'
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.4'
 <./images//thzenerIV.png><./images//circuit-20231005-2244.png><./images//circuit
 -20231005-2245.png>]
-<./images//noiseeq.png, id=247, 274.04784pt x 195.70715pt>
+<./images//noiseeq.png, id=259, 274.04784pt x 195.70715pt>
 File: ./images//noiseeq.png Graphic file (type png)
 <use ./images//noiseeq.png>
 Package luatex.def Info: ./images//noiseeq.png  used on input line 74.
 (luatex.def)             Requested size: 250.55777pt x 178.92992pt.
 
 
-LaTeX Warning: Reference `thnoise' on page 6 undefined on input line 95.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 97.
 
 
-LaTeX Warning: Reference `thN0' on page 6 undefined on input line 119.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 97.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 97.
 
 [6
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.5'
 <./images//noiseeq.png>]
 
-LaTeX Warning: Reference `thgen' on page 7 undefined on input line 135.
+LaTeX Warning: Reference `thN0' on page 7 undefined on input line 128.
 
 
-Package natbib Warning: Citation `campbell' on page 7 undefined on input line 1
-35.
+LaTeX Warning: Reference `thgen' on page 7 undefined on input line 144.
 
-<./images//thnoise.png, id=267, 462.528pt x 346.896pt>
+<./images//thnoise.png, id=285, 462.528pt x 346.896pt>
 File: ./images//thnoise.png Graphic file (type png)
 <use ./images//thnoise.png>
-Package luatex.def Info: ./images//thnoise.png  used on input line 152.
+Package luatex.def Info: ./images//thnoise.png  used on input line 164.
 (luatex.def)             Requested size: 250.55777pt x 187.91917pt.
 [7
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.6'
-<./images//thnoise.png>]
-Runaway argument?
- V_n & = V_{n}(f)+ V_{white}\\ S(f) & = \frac {\gamma }{f^{\alpha }}+\ETC.
-! Paragraph ended before \align* was complete.
-<to be read again> 
-\par 
-l.214 
-    
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-! Missing $ inserted.
-<inserted text> 
-$
-l.214 
-    
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing \endgroup inserted.
-<inserted text> 
-\endgroup 
-l.214 
-    
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Display math should end with $$.
-<to be read again> 
-\tex_par:D 
-l.214 
-    
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-! Misplaced \cr.
-\math@cr@@@ ->\cr 
-                  
-l.215 \end{align*}
-                
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced \noalign.
-\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
-                                                  {\vskip #1\relax }
-l.215 \end{align*}
-                
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Misplaced \noalign.
-\black@ #1->\noalign 
-                     {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
-l.215 \end{align*}
-                
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-
-Overfull \hbox (72.16127pt too wide) detected at line 215
-[]
- []
-
-! Extra }, or forgotten \endgroup.
-\endalign ->\math@cr \black@ \totwidth@ \egroup 
-                                                \ifingather@ \restorealignst...
-l.215 \end{align*}
-                
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-$
-l.215 \end{align*}
-                
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Display math should end with $$.
-<to be read again> 
-\endgroup 
-l.215 \end{align*}
-                
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-) (./methodology.tex
+<./images//thnoise.png>]) (./methodology.tex
 Underfull \hbox (badness 3199) in paragraph at lines 2--2
 |[]\TU/lmr/bx/n/17.28 Our volt-age reg-u-la-tion
  []
 
-<./images//zener.png, id=284, 1186.4325pt x 638.385pt>
+<./images//zener.png, id=301, 1186.4325pt x 638.385pt>
 File: ./images//zener.png Graphic file (type png)
 <use ./images//zener.png>
 Package luatex.def Info: ./images//zener.png  used on input line 10.
 (luatex.def)             Requested size: 250.55777pt x 134.81485pt.
-<./images//zenerIV.png, id=285, 462.528pt x 346.896pt>
+[8
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.7'
+<./images//zener.png>]
+<./images//zenerIV.png, id=315, 462.528pt x 346.896pt>
 File: ./images//zenerIV.png Graphic file (type png)
 <use ./images//zenerIV.png>
 Package luatex.def Info: ./images//zenerIV.png  used on input line 17.
 (luatex.def)             Requested size: 522.0pt x 391.5221pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--24
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+|[]\TU/lmr/bx/n/14.4 The-o-rit-i-cal noise spec-tral
+ []
+
+Missing character: There is no × (U+00D7) in font cmr12!
+Missing character: There is no × (U+00D7) in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+[]\TU/lmr/m/n/12 Ther-mal noise: If we com-pute
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+\TU/lmr/m/n/12 this val-ues for our val-ues, $\OML/cmm/m/it/12 K[] \OT1/cmr/m/n
+/12 =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 38064910[]\OML/cmm/m/it/12 m[]kgs[]K[]$ \TU/lmr/m/n/12 and Trend
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+\TU/lmr/m/n/12 from cur-rent and volt-age re-la-tion is
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 00544\OML/cmm/m/it/12 V[] \O
+T1/cmr/m/n/12 + 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 02519$ \TU/lmr/m/n/12 gives 
+im-pe-dence
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
 |[]\TU/lmr/bx/n/17.28 Mea-sur-ing in-stru-ment:
  []
 
-[8
-warning  (pdf backend): ignoring duplicate destination with the name 'figure.7'
-<./images//zener.png>]
 
-LaTeX Warning: Reference `psd' on page 9 undefined on input line 30.
+LaTeX Warning: Reference `psd' on page 9 undefined on input line 62.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-<./images//PSD.png, id=296, 340.82532pt x 194.83992pt>
+<./images//PSD.png, id=323, 340.82532pt x 194.83992pt>
 File: ./images//PSD.png Graphic file (type png)
 <use ./images//PSD.png>
-Package luatex.def Info: ./images//PSD.png  used on input line 34.
+Package luatex.def Info: ./images//PSD.png  used on input line 66.
 (luatex.def)             Requested size: 250.55777pt x 143.23979pt.
-
+[9]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9
+
+! Undefined control sequence.
+<argument>  Z(t) & = V_s(t)\timesV 
+                        _r(t)\\ \\ & = \frac {A}{2}(e^{i\left [ (w_s-w_r)t+\the
+l.98 \end{align*}
+               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument>  Z(t) & = V_s(t)\timesV 
+                        _r(t)\\ \\ & = \frac {A}{2}(e^{i\left [ (w_s-w_r)t+\the
+l.98 \end{align*}
+               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[10
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.8'
-<./images//zenerIV.png>]
-! Undefined control sequence.
-<argument>  Z(t) & = V_s(t)\timesV 
-                        _r(t)\\ \\ & = \frac {A}{2}(e^{i\left [ (w_s-w_r)t+\the
-l.66 \end{align*}
-               
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.9'
+<./images//zenerIV.png><./images//PSD.png>]
 ! Undefined control sequence.
-<argument>  Z(t) & = V_s(t)\timesV 
-                        _r(t)\\ \\ & = \frac {A}{2}(e^{i\left [ (w_s-w_r)t+\the
-l.66 \end{align*}
-               
+<argument>  X(t) & =\re 
+             (Z(t))\\ \\ & = \frac {A}{2}\cos (\theta ) 
+l.113 \end{align*}
+                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1207,19 +1159,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument>  X(t) & =\re 
              (Z(t))\\ \\ & = \frac {A}{2}\cos (\theta ) 
-l.81 \end{align*}
-               
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument>  X(t) & =\re 
-             (Z(t))\\ \\ & = \frac {A}{2}\cos (\theta ) 
-l.81 \end{align*}
-               
+l.113 \end{align*}
+                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1229,8 +1170,8 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument>  Y(t) & = \im 
               (Z(t))\\ \\ & = \frac {A}{2}\sin (\theta ) 
-l.89 \end{align*}
-               
+l.121 \end{align*}
+                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1240,32 +1181,44 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument>  Y(t) & = \im 
               (Z(t))\\ \\ & = \frac {A}{2}\sin (\theta ) 
-l.89 \end{align*}
-               
+l.121 \end{align*}
+                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+<./images//timeconstants_comparison.pdf, id=344, page=2, 597.23125pt x 845.1575
+pt>
+File: ./images//timeconstants_comparison.pdf Graphic file (type pdf)
+<use ./images//timeconstants_comparison.pdf, page 2>
+Package luatex.def Info: ./images//timeconstants_comparison.pdf , page2 used on
+ input line 154.
+(luatex.def)             Requested size: 250.55777pt x 185.6908pt.
+[11
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.10'
 
-Underfull \hbox (badness 7116) in paragraph at lines 111--111
+<./images//timeconstants_comparison.pdf>]
+Underfull \hbox (badness 5771) in paragraph at lines 175--175
+|[]\TU/lmr/bx/n/14.4 How LOCK IN am-pli-fier
+ []
+
+
+Underfull \hbox (badness 7116) in paragraph at lines 199--199
 |[]\TU/lmr/bx/n/14.4 LOCK IN am-pli-fier over
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--111
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
 \TU/lmr/bx/n/14.4 tra-di-tional mea-sur-ing de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--118
+Underfull \hbox (badness 10000) in paragraph at lines 201--206
 
  []
 
-[10
-warning  (pdf backend): ignoring duplicate destination with the name 'figure.9'
-<./images//PSD.png>]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1273,7 +1226,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.122 \\
+l.210 \\
       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1286,14 +1239,30 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.123 \emph
+l.211 \emph
           {\large Cons of LOCK IN amplifier:}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
+[12]
+warning  (file ./images//sr830m.pdf) (pdf inclusion): PDF inclusion: found PDF v
+ersion '1.6', but at most version '1.5' allowed
+<./images//sr830m.pdf, id=383, page=33, 614.295pt x 794.97pt>
+File: ./images//sr830m.pdf Graphic file (type pdf)
+<use ./images//sr830m.pdf, page 33>
+Package luatex.def Info: ./images//sr830m.pdf , page33 used on input line 226.
+(luatex.def)             Requested size: 417.6016pt x 380.55443pt.
+
+Underfull \hbox (badness 5050) in paragraph at lines 235--236
+[]\TU/lmr/m/n/12 for more in-for-ma-tions go to man-ual of
+ []
+
 ) (./results.tex
-<./images//raw_1000_100us.png, id=310, 462.528pt x 346.896pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+<./images//raw_1000_100us.png, id=393, 462.528pt x 346.896pt>
 File: ./images//raw_1000_100us.png Graphic file (type png)
 <use ./images//raw_1000_100us.png>
 Package luatex.def Info: ./images//raw_1000_100us.png  used on input line 10.
@@ -1316,13 +1285,12 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
+[14
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.11'
 
-Underfull \vbox (badness 2181) has occurred while \output is active []
-
- [11]
+<./images/SR830m.pdf>]
 \openout5 = documentation.pyg
-
-(./_minted-documentation/default.pygstyle)
+ (./_minted-documentation/default.pygstyle)
 (./_minted-documentation/E1E4C9EC0CC28C03BF69EC42974BC1FE443E24249015C36B16D3C9
 7157B6CE98.pygtex
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
@@ -1339,7 +1307,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<./images//final_1000_100us.png, id=318, 462.528pt x 346.896pt>
+<./images//final_1000_100us.png, id=407, 462.528pt x 346.896pt>
 File: ./images//final_1000_100us.png Graphic file (type png)
 <use ./images//final_1000_100us.png>
 Package luatex.def Info: ./images//final_1000_100us.png  used on input line 55.
@@ -1363,20 +1331,13 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[12
-warning  (pdf backend): ignoring duplicate destination with the name 'figure.10'
-
-
-warning  (pdf backend): ignoring duplicate destination with the name 'figure.11'
-
-<./images//raw_1000_100us.png><./images//final_1000_100us.png>]
-<./images//raw_1_100us.png, id=338, 462.528pt x 346.896pt>
-File: ./images//raw_1_100us.png Graphic file (type png)
-<use ./images//raw_1_100us.png>
-Package luatex.def Info: ./images//raw_1_100us.png  used on input line 80.
+<./images//raw_1_100ms.png, id=409, 462.528pt x 346.896pt>
+File: ./images//raw_1_100ms.png Graphic file (type png)
+<use ./images//raw_1_100ms.png>
+Package luatex.def Info: ./images//raw_1_100ms.png  used on input line 82.
 (luatex.def)             Requested size: 261.0pt x 195.7584pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 80--81
+Overfull \hbox (9.0pt too wide) in paragraph at lines 82--83
  [][] 
  []
 
@@ -1387,14 +1348,37 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.84 
+l.86 
+   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<./images//final_1_100ms.png, id=410, 462.528pt x 346.896pt>
+File: ./images//final_1_100ms.png Graphic file (type png)
+<use ./images//final_1_100ms.png>
+Package luatex.def Info: ./images//final_1_100ms.png  used on input line 91.
+(luatex.def)             Requested size: 261.0pt x 195.7584pt.
+
+Overfull \hbox (9.0pt too wide) in paragraph at lines 91--92
+ [][] 
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.94 
    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Extra }, or forgotten \endgroup.
-l.86 ...ANT = $100ms$ and roll of factor $12dB/oct$}
+l.96 ...ANT = $100ms$ and roll of factor $12dB/oct$}
                                                   ,
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1402,90 +1386,154 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-<./images//final_1_100ms.png, id=339, 462.528pt x 346.896pt>
-File: ./images//final_1_100ms.png Graphic file (type png)
-<use ./images//final_1_100ms.png>
-Package luatex.def Info: ./images//final_1_100ms.png  used on input line 96.
-(luatex.def)             Requested size: 261.0pt x 195.7584pt.
-
-Overfull \hbox (9.0pt too wide) in paragraph at lines 96--97
- [][] 
- []
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.99 
-   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-<./images//raw10000100ms.png, id=340, 462.528pt x 346.896pt>
-File: ./images//raw10000100ms.png Graphic file (type png)
-<use ./images//raw10000100ms.png>
-Package luatex.def Info: ./images//raw10000100ms.png  used on input line 115.
-(luatex.def)             Requested size: 261.0pt x 195.7584pt.
-
-Overfull \hbox (9.0pt too wide) in paragraph at lines 115--116
- [][] 
- []
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.119 
-    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-<./images//final_10000_100ms.png, id=341, 462.528pt x 346.896pt>
-File: ./images//final_10000_100ms.png Graphic file (type png)
-<use ./images//final_10000_100ms.png>
-Package luatex.def Info: ./images//final_10000_100ms.png  used on input line 12
-3.
-(luatex.def)             Requested size: 261.0pt x 195.7584pt.
-
-Overfull \hbox (9.0pt too wide) in paragraph at lines 123--124
- [][] 
- []
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.126 
-    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-) [13
+[15
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.12'
 
 
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.13'
 
+<./images//raw_1000_100us.png><./images//final_1000_100us.png>]
+Underfull \vbox (badness 3803) has occurred while \output is active []
 
+<./images//raw_10000_100ms.png, id=430, 462.528pt x 346.896pt>
+File: ./images//raw_10000_100ms.png Graphic file (type png)
+<use ./images//raw_10000_100ms.png>
+Package luatex.def Info: ./images//raw_10000_100ms.png  used on input line 118.
+
+(luatex.def)             Requested size: 261.0pt x 195.7584pt.
+
+Overfull \hbox (9.0pt too wide) in paragraph at lines 118--119
+ [][] 
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.122 
+    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<./images//final_10000_100ms.png, id=431, 462.528pt x 346.896pt>
+File: ./images//final_10000_100ms.png Graphic file (type png)
+<use ./images//final_10000_100ms.png>
+Package luatex.def Info: ./images//final_10000_100ms.png  used on input line 12
+6.
+(luatex.def)             Requested size: 261.0pt x 195.7584pt.
+
+Overfull \hbox (9.0pt too wide) in paragraph at lines 126--127
+ [][] 
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.129 
+    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+) [16
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.14'
 
-<./images//raw_1_100us.png><./images//final_1_100ms.png><./images//raw10000100ms
-.png>] (./documentation.bbl) [14
+
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.15'
 
+
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.16'
+
+<./images//raw_1_100ms.png><./images//final_1_100ms.png><./images//raw_10000_100
+ms.png>]
+Underfull \vbox (badness 2302) has occurred while \output is active []
+
+
+(./documentation.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 31--36
+[]\TU/lmr/m/n/12 Zurich In-stru-ments.  Prin-ci-ples of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--36
+\TU/lmr/m/n/12 lock-in de-tec-tion.  []$\TU/lmtt/m/n/12 https://www.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--36
+\TU/lmtt/m/n/12 zhinst.com/others/en/resources/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--36
+\TU/lmtt/m/n/12 principles-[]of-[]lock-[]in-[]detection$[]\TU/lmr/m/n/12 .
+ []
+
+[17
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.17'
+
 <./images//final_10000_100ms.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 55--59
+[]$\TU/lmtt/m/n/12 http://www.ciphersbyritter.com/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--66
+[]$\TU/lmtt/m/n/12 https://www.thinksrs.com/downloads/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--66
+\TU/lmtt/m/n/12 pdfs/applicationnotes/AboutLIAs.pdf$[]\TU/lmr/m/n/12 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--72
+[]$\TU/lmtt/m/n/12 https://www.thinksrs.com/downloads/
+ []
+
+
+Underfull \hbox (badness 1448) in paragraph at lines 68--72
+\TU/lmtt/m/n/12 pdfs/manuals/SR830m.pdf$[]\TU/lmr/m/n/12 .  on-line; Ac-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--96
+[]\TU/lmr/m/n/12 Mehdi Alem Zurich In-stru-ments.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--96
+\TU/lmr/m/n/12 Noise spec-tral den-sity mea-sured
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--96
+\TU/lmr/m/n/12 with lock-in am-pli-fiers.  []$\TU/lmtt/m/n/12 https:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--96
+\TU/lmtt/m/n/12 //www.zhinst.com/others/en/blogs/
+ []
+
+
+Overfull \hbox (68.51169pt too wide) in paragraph at lines 91--96
+\TU/lmtt/m/n/12 noise-[]spectral-[]density-[]measured-[]lock-[]amplifiers$[]\TU
+/lmr/m/n/12 .
+ []
+
+) [18
+
+]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
 (hyperref)                be the same. Added a new anchor on input line 49.
@@ -1494,73 +1542,84 @@ Package hyperref Warning: The anchor of a bookmark and its parent's must not
 \openout5 = documentation.pyg
 
 (./_minted-documentation/3913FD2E1D462B2F9C18E0DA287496315E620CAA758430E5E8F729
-407B2BB55F.pygtex [15
+407B2BB55F.pygtex
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 33.
+ [19
 
 ])
 \openout5 = documentation.pyg
 
 (./_minted-documentation/E2805082EE57695B101ACE10FA21FF6C5E620CAA758430E5E8F729
-407B2BB55F.pygtex [16]
+407B2BB55F.pygtex [20]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17])
+ [21])
 \openout5 = documentation.pyg
 
 (./_minted-documentation/7E9CD662CF8ED03213ADF28C4058A9835E620CAA758430E5E8F729
-407B2BB55F.pygtex [18])
+407B2BB55F.pygtex [22])
 \openout5 = documentation.pyg
 
 (./_minted-documentation/DE35E66043593FFD15EB64990C5BB8D55E620CAA758430E5E8F729
-407B2BB55F.pygtex [19]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [20]))
-(./analysis.tex
-\openout5 = documentation.pyg
-
-(./_minted-documentation/BCEE1ED7C84BC283148E338224FE45395E620CAA758430E5E8F729
-407B2BB55F.pygtex [21]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [22]
+407B2BB55F.pygtex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [23]
+[24]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24]))
-[25]
-warning  (file ./images//sr830m.pdf) (pdf inclusion): PDF inclusion: found PDF v
-ersion '1.6', but at most version '1.5' allowed
-<./images//sr830m.pdf, id=408, page=1, 614.295pt x 794.97pt>
-File: ./images//sr830m.pdf Graphic file (type pdf)
-<use ./images//sr830m.pdf, page 1>
-Package luatex.def Info: ./images//sr830m.pdf , page1 used on input line 61.
-(luatex.def)             Requested size: 287.1016pt x 380.16942pt.
-[26
+ [25])
+\openout5 = documentation.pyg
 
-<./images/SR830m.pdf>]
-warning  (file ./images//sr830m.pdf) (pdf inclusion): PDF inclusion: found PDF v
-ersion '1.6', but at most version '1.5' allowed
-<./images//sr830m.pdf, id=420, page=2, 614.295pt x 794.97pt>
-File: ./images//sr830m.pdf Graphic file (type pdf)
-<use ./images//sr830m.pdf, page 2>
-Package luatex.def Info: ./images//sr830m.pdf , page2 used on input line 65.
-(luatex.def)             Requested size: 287.1016pt x 380.16942pt.
+(./_minted-documentation/35BA9C3A6D8CD0C6A30344341911206F5E620CAA758430E5E8F729
+407B2BB55F.pygtex [26])) (./analysis.tex
+\openout5 = documentation.pyg
 
-Package natbib Warning: There were undefined citations.
+(./_minted-documentation/BCEE1ED7C84BC283148E338224FE45395E620CAA758430E5E8F729
+407B2BB55F.pygtex [27]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[27
+ [28]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<./images/SR830m.pdf>] (./documentation.aux (./frontmatter.aux))
+ [29]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30]))
+[31]
+<./images//bzx55.pdf, id=534, page=1, 606.265pt x 794.97pt>
+File: ./images//bzx55.pdf Graphic file (type pdf)
+<use ./images//bzx55.pdf, page 1>
+Package luatex.def Info: ./images//bzx55.pdf , page1 used on input line 61.
+(luatex.def)             Requested size: 469.79681pt x 631.18687pt.
+ [32
+
+<./images//bzx55.pdf>]
+<./images//bzx55.pdf, id=573, page=2, 606.265pt x 794.97pt>
+File: ./images//bzx55.pdf Graphic file (type pdf)
+<use ./images//bzx55.pdf, page 2>
+Package luatex.def Info: ./images//bzx55.pdf , page2 used on input line 65.
+(luatex.def)             Requested size: 469.79681pt x 631.18687pt.
+ [33
+
+<./images//bzx55.pdf>]
+<./images//bzx55.pdf, id=578, page=4, 606.265pt x 794.97pt>
+File: ./images//bzx55.pdf Graphic file (type pdf)
+<use ./images//bzx55.pdf, page 4>
+Package luatex.def Info: ./images//bzx55.pdf , page4 used on input line 69.
+(luatex.def)             Requested size: 469.79681pt x 631.18687pt.
+ [34
+
+<./images//bzx55.pdf>] (./documentation.aux (./frontmatter.aux))
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `documentation.out' has not changed.
-(rerunfilecheck)             Checksum: 695F31AE12AC3DC9F2D6DAECDECF15C3;4793.
+(rerunfilecheck)             Checksum: D0231DCF81F4F899FACD62654CE81BEC;5385.
 runsystem(rm documentation.pyg)...executed
 )
 (\end occurred inside a group at level 1)
@@ -1569,15 +1628,16 @@ runsystem(rm documentation.pyg)...executed
 ### bottom level
 
 Here is how much of LuaTeX's memory you used:
- 18768 strings out of 478382
- 125009,1977958 words of node,token memory allocated
- 684 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 6 glue, 4 kern, 1 glyph, 17 attribute, 74 glue_spec
-, 17 attribute_list, 2 write, 1 pdf_action nodes
-   avail lists: 2:2553,3:321,4:590,5:1046,6:93,7:7404,8:64,9:3049,10:41,11:797
- 37656 multiletter control sequences out of 65536+600000
- 86 fonts using 6582031 bytes
- 101i,10n,92p,1275b,917s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 18889 strings out of 478382
+ 156270,1977958 words of node,token memory allocated
+ 750 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 6 glue, 4 kern, 1 glyph, 23 attribute, 74 glue_spec
+, 23 attribute_list, 2 write, 8 pdf_action nodes
+   avail lists: 2:4294,3:341,4:646,5:1422,6:94,7:8965,8:100,9:4103,10:110,11:118
+1
+ 37715 multiletter control sequences out of 65536+600000
+ 91 fonts using 7223735 bytes
+ 101i,10n,92p,1349b,968s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/opentype/public/lm/lmmono10-italic.otf></usr/share/texmf
 /fonts/opentype/public/lm/lmmono12-regular.otf></usr/share/texmf/fonts/opentype/
 public/lm/lmmonolt10-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman
@@ -1600,11 +1660,12 @@ e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive
 st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy8.pfb>
-Output written on documentation.pdf (27 pages, 7526205 bytes).
+msfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+symbols/msbm10.pfb>
+Output written on documentation.pdf (34 pages, 7020741 bytes).
 
-PDF statistics: 556 PDF objects out of 1000 (max. 8388607)
- 427 compressed objects within 5 object streams
- 94 named destinations out of 1000 (max. 131072)
- 276 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 715 PDF objects out of 1000 (max. 8388607)
+ 554 compressed objects within 6 object streams
+ 121 named destinations out of 1000 (max. 131072)
+ 312 words of extra memory for PDF output out of 10000 (max. 100000000)
 

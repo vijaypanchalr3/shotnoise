@@ -4,47 +4,46 @@ The top-level auxiliary file: documentation.aux
 A level-1 auxiliary file: frontmatter.aux
 The style file: plain.bst
 Database file #1: documentation.bib
-Warning--I didn't find a database entry for "campbell"
 Warning--can't use both volume and number fields in campbell1909study
-You've used 5 entries,
+You've used 15 entries,
             2118 wiz_defined-function locations,
-            534 strings with 4647 characters,
-and the built_in function-call counts, 1400 in all, are:
-= -- 133
-> -- 41
+            589 strings with 6637 characters,
+and the built_in function-call counts, 4808 in all, are:
+= -- 441
+> -- 279
 < -- 2
-+ -- 19
-- -- 12
-* -- 88
-:= -- 236
-add.period$ -- 15
-call.type$ -- 5
-change.case$ -- 20
++ -- 115
+- -- 98
+* -- 326
+:= -- 835
+add.period$ -- 51
+call.type$ -- 15
+change.case$ -- 92
 chr.to.int$ -- 0
-cite$ -- 6
-duplicate$ -- 66
-empty$ -- 128
-format.name$ -- 12
-if$ -- 295
+cite$ -- 16
+duplicate$ -- 153
+empty$ -- 361
+format.name$ -- 98
+if$ -- 973
 int.to.chr$ -- 0
-int.to.str$ -- 5
-missing$ -- 6
-newline$ -- 28
-num.names$ -- 10
-pop$ -- 21
+int.to.str$ -- 15
+missing$ -- 11
+newline$ -- 84
+num.names$ -- 30
+pop$ -- 128
 preamble$ -- 1
-purify$ -- 16
+purify$ -- 79
 quote$ -- 0
-skip$ -- 45
+skip$ -- 102
 stack$ -- 0
-substring$ -- 76
-swap$ -- 15
+substring$ -- 195
+swap$ -- 25
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 18
+type$ -- 56
 warning$ -- 1
-while$ -- 15
-width$ -- 6
-write$ -- 57
-(There were 2 warnings)
+while$ -- 41
+width$ -- 17
+write$ -- 166
+(There was 1 warning)
