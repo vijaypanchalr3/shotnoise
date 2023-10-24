@@ -24,7 +24,7 @@
 \contentsline {subsection}{\numberline {4.1}Low frequency: up to 10k hertz}{14}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Very low frequency: upto 1 hertz}{15}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}High frequency data: up to 100k hertz}{16}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Conclutions}{16}{section.5}%
+\contentsline {section}{\numberline {5}Conclusions}{16}{section.5}%
 \contentsline {section}{References}{17}{section.5}%
 \contentsline {section}{Appendix}{19}{section.5}%
 \contentsline {subsection}{PyInstro}{19}{section*.1}%

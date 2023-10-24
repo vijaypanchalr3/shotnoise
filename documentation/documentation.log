@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Debian)  (format=lualatex 2023.10.1)  18 OCT 2023 19:22
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Debian)  (format=lualatex 2023.10.1)  19 OCT 2023 12:27
  system commands enabled.
 **documentation.tex
 (./documentation.tex
@@ -1618,8 +1618,14 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `documentation.out' has not changed.
-(rerunfilecheck)             Checksum: D0231DCF81F4F899FACD62654CE81BEC;5385.
+
+Package rerunfilecheck Warning: File `documentation.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `documentation.out':
+(rerunfilecheck)             Before: D0231DCF81F4F899FACD62654CE81BEC;5385
+(rerunfilecheck)             After:  DC00D0C4112F1CA024DF14054A1B60FA;5385.
 runsystem(rm documentation.pyg)...executed
 )
 (\end occurred inside a group at level 1)
@@ -1662,7 +1668,7 @@ s/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msbm10.pfb>
-Output written on documentation.pdf (34 pages, 7020741 bytes).
+Output written on documentation.pdf (34 pages, 7020737 bytes).
 
 PDF statistics: 715 PDF objects out of 1000 (max. 8388607)
  554 compressed objects within 6 object streams
