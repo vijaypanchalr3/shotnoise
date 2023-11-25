@@ -384,8 +384,8 @@
 
  \parbox[b]{.75\textwidth}{\centering\normalsize Under the the guidance of: }\vskip10pt
 
- \parbox[b]{.75\textwidth}{\centering\normalsize \Large \textbf{D. B. Patel}}\vskip10pt
- \parbox[b]{.75\textwidth}{\centering\normalsize \Large \textbf{U. S. Joshi}}\vskip10pt
+ \parbox[b]{.75\textwidth}{\centering\normalsize \Large \textbf{Mr. D. B. Patel}}\vskip10pt
+ \parbox[b]{.75\textwidth}{\centering\normalsize \Large \textbf{Dr. U. S. Joshi}}\vskip10pt
  \parbox[b]{.75\textwidth}{\centering\normalsize Department of Physics, Electronics and Space Sciences, Gujarat University, Ahmedabad,380009}\vskip10pt
  \vskip20pt\hrule height 2pt
 }
