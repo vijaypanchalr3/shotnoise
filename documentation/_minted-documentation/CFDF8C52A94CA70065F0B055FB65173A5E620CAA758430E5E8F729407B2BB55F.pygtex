@@ -1,0 +1,120 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{tools}
+
+\PYG{k+kn}{import} \PYG{n+nn}{matplotlib.pyplot} \PYG{k}{as} \PYG{n+nn}{plt}
+\PYG{k+kn}{import} \PYG{n+nn}{matplotlib} \PYG{k}{as} \PYG{n+nn}{mpl}
+\PYG{k+kn}{import} \PYG{n+nn}{matplotlib.font\PYGZus{}manager} \PYG{k}{as} \PYG{n+nn}{font\PYGZus{}manager}
+
+\PYG{n}{mpl}\PYG{o}{.}\PYG{n}{rcParams}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}font.family\PYGZsq{}}\PYG{p}{]}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}serif\PYGZsq{}}
+\PYG{n}{cmfont} \PYG{o}{=} \PYG{n}{font\PYGZus{}manager}\PYG{o}{.}\PYG{n}{FontProperties}\PYG{p}{(}\PYG{n}{fname}\PYG{o}{=}\PYG{n}{mpl}\PYG{o}{.}\PYG{n}{get\PYGZus{}data\PYGZus{}path}\PYG{p}{()} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}cmr10.ttf\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{mpl}\PYG{o}{.}\PYG{n}{rcParams}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}font.serif\PYGZsq{}}\PYG{p}{]}\PYG{o}{=}\PYG{n}{cmfont}\PYG{o}{.}\PYG{n}{get\PYGZus{}name}\PYG{p}{()}
+\PYG{n}{mpl}\PYG{o}{.}\PYG{n}{rcParams}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}mathtext.fontset\PYGZsq{}}\PYG{p}{]}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}cm\PYGZsq{}}
+\PYG{n}{mpl}\PYG{o}{.}\PYG{n}{rcParams}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}axes.unicode\PYGZus{}minus\PYGZsq{}}\PYG{p}{]}\PYG{o}{=}\PYG{k+kc}{False}
+\PYG{n}{leg\PYGZus{}font} \PYG{o}{=} \PYG{n}{font\PYGZus{}manager}\PYG{o}{.}\PYG{n}{FontProperties}\PYG{p}{(}\PYG{n}{size}\PYG{o}{=}\PYG{l+m+mi}{12}\PYG{p}{)}
+\PYG{n}{font} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}color\PYGZsq{}}\PYG{p}{:}\PYG{l+s+s1}{\PYGZsq{}black\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}size\PYGZsq{}}\PYG{p}{:}\PYG{l+m+mi}{12}\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+
+\PYG{k+kn}{from} \PYG{n+nn}{scipy.optimize} \PYG{k+kn}{import} \PYG{n}{curve\PYGZus{}fit}
+
+
+
+
+\PYG{n}{file1} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}../data/final2.csv\PYGZdq{}}
+\PYG{n}{file2} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}../data/file3002.csv\PYGZdq{}}
+\PYG{n}{file3} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}../data/filelow.csv\PYGZdq{}}
+\PYG{n}{file4} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}../data/file10001.csv\PYGZdq{}}
+\PYG{n}{file5} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}../data/file100001.csv\PYGZdq{}}
+\PYG{n}{file6} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}../data/file10002.csv\PYGZdq{}}
+
+\PYG{n}{ufile1} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}../data/file1k100us.csv\PYGZdq{}}
+\PYG{n}{ufile2} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}../data/file1k2100us.csv\PYGZdq{}}
+\PYG{n}{ufile3} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}../data/file1k3100us.csv\PYGZdq{}}
+
+\PYG{n}{file1\PYGZus{}init} \PYG{o}{=} \PYG{n}{tools}\PYG{o}{.}\PYG{n}{files}\PYG{p}{(}\PYG{n}{file1}\PYG{p}{)}
+\PYG{n}{file2\PYGZus{}init} \PYG{o}{=} \PYG{n}{tools}\PYG{o}{.}\PYG{n}{files}\PYG{p}{(}\PYG{n}{file2}\PYG{p}{)}
+\PYG{n}{file3\PYGZus{}init} \PYG{o}{=} \PYG{n}{tools}\PYG{o}{.}\PYG{n}{files}\PYG{p}{(}\PYG{n}{file3}\PYG{p}{)}
+\PYG{n}{file4\PYGZus{}init} \PYG{o}{=} \PYG{n}{tools}\PYG{o}{.}\PYG{n}{files}\PYG{p}{(}\PYG{n}{file4}\PYG{p}{)}
+\PYG{n}{file5\PYGZus{}init} \PYG{o}{=} \PYG{n}{tools}\PYG{o}{.}\PYG{n}{files}\PYG{p}{(}\PYG{n}{file5}\PYG{p}{)}
+\PYG{n}{file6\PYGZus{}init} \PYG{o}{=} \PYG{n}{tools}\PYG{o}{.}\PYG{n}{files}\PYG{p}{(}\PYG{n}{file6}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} file7\PYGZus{}init = tools.files(file7)}
+\PYG{c+c1}{\PYGZsh{} file8\PYGZus{}init = tools.files(file8)}
+
+\PYG{n}{ufile1\PYGZus{}init} \PYG{o}{=} \PYG{n}{tools}\PYG{o}{.}\PYG{n}{files}\PYG{p}{(}\PYG{n}{ufile1}\PYG{p}{)}
+\PYG{n}{ufile2\PYGZus{}init} \PYG{o}{=} \PYG{n}{tools}\PYG{o}{.}\PYG{n}{files}\PYG{p}{(}\PYG{n}{ufile2}\PYG{p}{)}
+\PYG{n}{ufile3\PYGZus{}init} \PYG{o}{=} \PYG{n}{tools}\PYG{o}{.}\PYG{n}{files}\PYG{p}{(}\PYG{n}{ufile3}\PYG{p}{)}
+
+
+
+
+\PYG{n}{diff\PYGZus{}data}\PYG{p}{,} \PYG{n}{colormap} \PYG{o}{=} \PYG{n}{file3\PYGZus{}init}\PYG{o}{.}\PYG{n}{shady\PYGZus{}plot}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}plasma\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{total\PYGZus{}points}\PYG{o}{=}\PYG{l+m+mi}{5}
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{()}
+\PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{diff\PYGZus{}data}\PYG{p}{),}\PYG{n+nb}{int}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{diff\PYGZus{}data}\PYG{p}{)}\PYG{o}{/}\PYG{n}{total\PYGZus{}points}\PYG{p}{)):}
+    \PYG{n}{ax}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{diff\PYGZus{}data}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][:,}\PYG{l+m+mi}{0}\PYG{p}{],}\PYG{n}{diff\PYGZus{}data}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][:,}\PYG{l+m+mi}{1}\PYG{p}{],}\PYG{n}{color}\PYG{o}{=}\PYG{n}{colormap}\PYG{p}{(}\PYG{n}{i}\PYG{p}{),} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}run }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{i}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}\PYG{n}{linewidth}\PYG{o}{=} \PYG{l+m+mf}{.6}\PYG{p}{)}
+    \PYG{c+c1}{\PYGZsh{} ax.plot(diff\PYGZus{}data[i][:,0],diff\PYGZus{}data[i][:,1],\PYGZsq{}ro\PYGZsq{})}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{diff\PYGZus{}data}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][:,}\PYG{l+m+mi}{0}\PYG{p}{],}\PYG{n}{diff\PYGZus{}data}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][:,}\PYG{l+m+mi}{1}\PYG{p}{],}\PYG{l+s+s2}{\PYGZdq{}r\PYGZdq{}}\PYG{p}{,}\PYG{n}{label}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}FIRST RUN\PYGZdq{}}\PYG{p}{,}\PYG{n}{linewidth} \PYG{o}{=}\PYG{l+m+mf}{1.5}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} ax.set(ylim=(0.0,0.001))}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{set\PYGZus{}xlabel}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}frequency\PYGZdq{}}\PYG{p}{,}\PYG{n}{fontdict}\PYG{o}{=}\PYG{n}{font}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{set\PYGZus{}ylabel}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}R\PYGZdq{}}\PYG{p}{,}\PYG{n}{fontdict}\PYG{o}{=}\PYG{n}{font}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} ax.set\PYGZus{}title(\PYGZdq{}RAW data: Noise for sub 1Hz frequency with TIME CONSTANT=100\PYGZdl{}ms\PYGZdl{}\PYGZdq{},fontdict=font)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{n}{which}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}both\PYGZdq{}}\PYG{p}{,}\PYG{n}{axis}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}both\PYGZdq{}}\PYG{p}{,}\PYG{n}{color}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}orange\PYGZdq{}}\PYG{p}{,}\PYG{n}{alpha}\PYG{o}{=}\PYG{l+m+mf}{0.4}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{(}\PYG{n}{prop}\PYG{o}{=} \PYG{n}{leg\PYGZus{}font}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{savefig}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}raw1100us.png\PYGZdq{}}\PYG{p}{,}\PYG{n}{dpi}\PYG{o}{=}\PYG{l+m+mi}{700}\PYG{p}{)}
+
+
+
+\PYG{n}{diff\PYGZus{}data}\PYG{p}{,} \PYG{n}{colormap} \PYG{o}{=} \PYG{n}{file5\PYGZus{}init}\PYG{o}{.}\PYG{n}{shady\PYGZus{}plot}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}plasma\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{total\PYGZus{}points}\PYG{o}{=}\PYG{l+m+mi}{10}
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{()}
+\PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{diff\PYGZus{}data}\PYG{p}{),}\PYG{n+nb}{int}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{diff\PYGZus{}data}\PYG{p}{)}\PYG{o}{/}\PYG{n}{total\PYGZus{}points}\PYG{p}{)):}
+    \PYG{n}{ax}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{diff\PYGZus{}data}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][:,}\PYG{l+m+mi}{0}\PYG{p}{],}\PYG{n}{diff\PYGZus{}data}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][:,}\PYG{l+m+mi}{1}\PYG{p}{],}\PYG{n}{color}\PYG{o}{=}\PYG{n}{colormap}\PYG{p}{(}\PYG{n}{i}\PYG{p}{),} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}data }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{i}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}\PYG{n}{linewidth}\PYG{o}{=} \PYG{l+m+mf}{.6}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} ax.set(ylim=(0.0,0.0002))}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{()}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{set\PYGZus{}xlabel}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}frequency\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{set\PYGZus{}ylabel}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Vrms(Noise)\PYGZdq{}}\PYG{p}{)}
+
+
+\PYG{n}{diff\PYGZus{}data}\PYG{p}{,} \PYG{n}{colormap} \PYG{o}{=} \PYG{n}{file6\PYGZus{}init}\PYG{o}{.}\PYG{n}{shady\PYGZus{}plot}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}plasma\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{total\PYGZus{}points}\PYG{o}{=}\PYG{l+m+mi}{10}
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{()}
+\PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{diff\PYGZus{}data}\PYG{p}{),}\PYG{n+nb}{int}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{diff\PYGZus{}data}\PYG{p}{)}\PYG{o}{/}\PYG{n}{total\PYGZus{}points}\PYG{p}{)):}
+    \PYG{n}{ax}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{diff\PYGZus{}data}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][:,}\PYG{l+m+mi}{0}\PYG{p}{],}\PYG{n}{diff\PYGZus{}data}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][:,}\PYG{l+m+mi}{1}\PYG{p}{],}\PYG{n}{color}\PYG{o}{=}\PYG{n}{colormap}\PYG{p}{(}\PYG{n}{i}\PYG{p}{),} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}data }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{i}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}\PYG{n}{linewidth}\PYG{o}{=} \PYG{l+m+mf}{.6}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} ax.set(ylim=(0.0,0.0002))}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{()}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{set\PYGZus{}xlabel}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}frequency\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{set\PYGZus{}ylabel}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Vrms(Noise)\PYGZdq{}}\PYG{p}{)}
+
+\PYG{n}{diff\PYGZus{}data}\PYG{p}{,} \PYG{n}{colormap} \PYG{o}{=} \PYG{n}{ufile1\PYGZus{}init}\PYG{o}{.}\PYG{n}{shady\PYGZus{}plot}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}plasma\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{data} \PYG{o}{=} \PYG{n}{ufile1\PYGZus{}init}\PYG{o}{.}\PYG{n}{get\PYGZus{}mean}\PYG{p}{()}
+\PYG{n}{total\PYGZus{}points}\PYG{o}{=}\PYG{l+m+mi}{5}
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{()}
+\PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{diff\PYGZus{}data}\PYG{p}{),}\PYG{n+nb}{int}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{diff\PYGZus{}data}\PYG{p}{)}\PYG{o}{/}\PYG{n}{total\PYGZus{}points}\PYG{p}{)):}
+    \PYG{n}{ax}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{diff\PYGZus{}data}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][:,}\PYG{l+m+mi}{0}\PYG{p}{],}\PYG{n}{diff\PYGZus{}data}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][:,}\PYG{l+m+mi}{1}\PYG{p}{],}\PYG{n}{color}\PYG{o}{=}\PYG{n}{colormap}\PYG{p}{(}\PYG{n}{i}\PYG{p}{),} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}run }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{i}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}\PYG{n}{linewidth}\PYG{o}{=} \PYG{l+m+mf}{.6}\PYG{p}{)}
+    \PYG{c+c1}{\PYGZsh{} ax.plot(diff\PYGZus{}data[i][:,0],diff\PYGZus{}data[i][:,1],\PYGZsq{}ro\PYGZsq{})}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{data}\PYG{p}{[:,}\PYG{l+m+mi}{0}\PYG{p}{],}\PYG{n}{data}\PYG{p}{[:,}\PYG{l+m+mi}{1}\PYG{p}{],}\PYG{l+s+s2}{\PYGZdq{}r\PYGZdq{}}\PYG{p}{,}\PYG{n}{label}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}MEAN\PYGZdq{}}\PYG{p}{,}\PYG{n}{linewidth} \PYG{o}{=}\PYG{l+m+mf}{1.5}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} ax.set\PYGZus{}xscale(\PYGZsq{}log\PYGZsq{})}
+\PYG{c+c1}{\PYGZsh{} ax.set(ylim=(0.0,0.001))}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{set\PYGZus{}xlabel}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}frequency\PYGZdq{}}\PYG{p}{,}\PYG{n}{fontdict}\PYG{o}{=}\PYG{n}{font}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{set\PYGZus{}ylabel}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}R\PYGZdq{}}\PYG{p}{,}\PYG{n}{fontdict}\PYG{o}{=}\PYG{n}{font}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} ax.set\PYGZus{}title(\PYGZdq{}RAW data: Noise for sub 10k frequency with TIME CONSTANT=100\PYGZdl{}\PYGZbs{}mu s\PYGZdl{}\PYGZdq{},fontdict=font)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{n}{which}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}both\PYGZdq{}}\PYG{p}{,}\PYG{n}{axis}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}both\PYGZdq{}}\PYG{p}{,}\PYG{n}{color}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}orange\PYGZdq{}}\PYG{p}{,}\PYG{n}{alpha}\PYG{o}{=}\PYG{l+m+mf}{0.4}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{(}\PYG{n}{prop}\PYG{o}{=} \PYG{n}{leg\PYGZus{}font}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{savefig}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}raw1000100ms.png\PYGZdq{}}\PYG{p}{,}\PYG{n}{dpi}\PYG{o}{=}\PYG{l+m+mi}{700}\PYG{p}{)}
+
+
+\PYG{n}{data} \PYG{o}{=} \PYG{n}{ufile1\PYGZus{}init}\PYG{o}{.}\PYG{n}{sort\PYGZus{}on\PYGZus{}deviation}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{)}
+\PYG{n}{fig}\PYG{p}{,} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{()}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{diff\PYGZus{}data}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][:,}\PYG{l+m+mi}{0}\PYG{p}{],}\PYG{n}{diff\PYGZus{}data}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][:,}\PYG{l+m+mi}{1}\PYG{p}{],} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{p}{,}\PYG{n}{linewidth}\PYG{o}{=} \PYG{l+m+mf}{.6}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} ax.plot(diff\PYGZus{}data[i][:,0],diff\PYGZus{}data[i][:,1],\PYGZsq{}ro\PYGZsq{})}
+\PYG{c+c1}{\PYGZsh{} ax.set(ylim=(0.0,0.001))}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{set\PYGZus{}xlabel}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}frequency\PYGZdq{}}\PYG{p}{,}\PYG{n}{fontdict}\PYG{o}{=}\PYG{n}{font}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{set\PYGZus{}ylabel}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}V\PYGZus{}}\PYG{l+s+si}{\PYGZob{}rms\PYGZcb{}}\PYG{l+s+s2}{\PYGZdl{}(Noise)\PYGZdq{}}\PYG{p}{,}\PYG{n}{fontdict}\PYG{o}{=}\PYG{n}{font}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{set\PYGZus{}title}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}RAW data: zener diode data for sub 10k frequency with TIME CONSTANT=100\PYGZdl{}\PYGZbs{}mu s\PYGZdl{}\PYGZdq{}}\PYG{p}{,}\PYG{n}{fontdict}\PYG{o}{=}\PYG{n}{font}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{grid}\PYG{p}{(}\PYG{n}{which}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}both\PYGZdq{}}\PYG{p}{,}\PYG{n}{axis}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}both\PYGZdq{}}\PYG{p}{,}\PYG{n}{color}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}orange\PYGZdq{}}\PYG{p}{,}\PYG{n}{alpha}\PYG{o}{=}\PYG{l+m+mf}{0.4}\PYG{p}{)}
+\PYG{n}{ax}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{(}\PYG{n}{prop}\PYG{o}{=} \PYG{n}{leg\PYGZus{}font}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{savefig}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}mean1000100us.png\PYGZdq{}}\PYG{p}{,}\PYG{n}{dpi}\PYG{o}{=}\PYG{l+m+mi}{500}\PYG{p}{)}
+
+
+
+\end{Verbatim}

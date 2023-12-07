@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Debian)  (format=lualatex 2023.10.1)  25 NOV 2023 11:02
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Debian)  (format=lualatex 2023.10.1)  7 DEC 2023 13:23
  system commands enabled.
 **documentation.tex
 (./documentation.tex
@@ -974,18 +974,18 @@ e 11.
 
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.1'
 <./images//circuit-20231005-2243.png>]
-<./images//thzenerIV.png, id=229, 1076.02pt x 671.50874pt>
-File: ./images//thzenerIV.png Graphic file (type png)
-<use ./images//thzenerIV.png>
-Package luatex.def Info: ./images//thzenerIV.png  used on input line 32.
-(luatex.def)             Requested size: 250.55777pt x 155.65628pt.
-<./images//circuit-20231005-2244.png, id=233, 273.9836pt x 171.6814pt>
+<./images//thZenerIV.png, id=229, 272.01625pt x 318.18875pt>
+File: ./images//thZenerIV.png Graphic file (type png)
+<use ./images//thZenerIV.png>
+Package luatex.def Info: ./images//thZenerIV.png  used on input line 32.
+(luatex.def)             Requested size: 156.6016pt x 183.19014pt.
+<./images//circuit-20231005-2244.png, id=232, 273.9836pt x 171.6814pt>
 File: ./images//circuit-20231005-2244.png Graphic file (type png)
 <use ./images//circuit-20231005-2244.png>
 Package luatex.def Info: ./images//circuit-20231005-2244.png  used on input lin
 e 40.
 (luatex.def)             Requested size: 250.55777pt x 157.00833pt.
-<./images//circuit-20231005-2245.png, id=235, 273.9836pt x 195.7714pt>
+<./images//circuit-20231005-2245.png, id=234, 273.9836pt x 195.7714pt>
 File: ./images//circuit-20231005-2245.png Graphic file (type png)
 <use ./images//circuit-20231005-2245.png>
 Package luatex.def Info: ./images//circuit-20231005-2245.png  used on input lin
@@ -1012,9 +1012,9 @@ warning  (pdf backend): ignoring duplicate destination with the name 'figure.2'
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.3'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.4'
-<./images//thzenerIV.png><./images//circuit-20231005-2244.png><./images//circuit
+<./images//thZenerIV.png><./images//circuit-20231005-2244.png><./images//circuit
 -20231005-2245.png>]
-<./images//noiseeq.png, id=259, 274.04784pt x 195.70715pt>
+<./images//noiseeq.png, id=257, 274.04784pt x 195.70715pt>
 File: ./images//noiseeq.png Graphic file (type png)
 <use ./images//noiseeq.png>
 Package luatex.def Info: ./images//noiseeq.png  used on input line 74.
@@ -1035,18 +1035,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [6
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.5'
 <./images//noiseeq.png>]
-
-LaTeX Warning: Reference `thN0' on page 7 undefined on input line 128.
-
-
-LaTeX Warning: Reference `thgen' on page 7 undefined on input line 144.
-
 <./images//thnoise.png, id=285, 462.528pt x 346.896pt>
 File: ./images//thnoise.png Graphic file (type png)
 <use ./images//thnoise.png>
 Package luatex.def Info: ./images//thnoise.png  used on input line 164.
 (luatex.def)             Requested size: 250.55777pt x 187.91917pt.
-[7
+ [7
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.6'
 <./images//thnoise.png>]) (./methodology.tex
 Underfull \hbox (badness 3199) in paragraph at lines 2--2
@@ -1061,7 +1055,7 @@ Package luatex.def Info: ./images//zener.png  used on input line 10.
 [8
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.7'
 <./images//zener.png>]
-<./images//zenerIV.png, id=315, 462.528pt x 346.896pt>
+<./images//zenerIV.png, id=316, 462.528pt x 346.896pt>
 File: ./images//zenerIV.png Graphic file (type png)
 <use ./images//zenerIV.png>
 Package luatex.def Info: ./images//zenerIV.png  used on input line 17.
@@ -1106,7 +1100,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--56
 |[]\TU/lmr/bx/n/17.28 Mea-sur-ing in-stru-ment:
  []
 
-<./images//PSD.png, id=324, 340.82532pt x 194.83992pt>
+<./images//PSD.png, id=325, 340.82532pt x 194.83992pt>
 File: ./images//PSD.png Graphic file (type png)
 <use ./images//PSD.png>
 Package luatex.def Info: ./images//PSD.png  used on input line 66.
@@ -1538,80 +1532,102 @@ Package hyperref Warning: The anchor of a bookmark and its parent's must not
 (./pyinstro.tex
 \openout5 = documentation.pyg
 
-(./_minted-documentation/3913FD2E1D462B2F9C18E0DA287496315E620CAA758430E5E8F729
+(./_minted-documentation/D34ED727145759BA046033D4E2FF21825E620CAA758430E5E8F729
 407B2BB55F.pygtex
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 33.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 35.
  [19
 
 ])
 \openout5 = documentation.pyg
 
-(./_minted-documentation/E2805082EE57695B101ACE10FA21FF6C5E620CAA758430E5E8F729
+(./_minted-documentation/CE61EE178B33EB7030BFC47E730082915E620CAA758430E5E8F729
 407B2BB55F.pygtex [20]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21])
+ [21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23])
 \openout5 = documentation.pyg
 
-(./_minted-documentation/7E9CD662CF8ED03213ADF28C4058A9835E620CAA758430E5E8F729
-407B2BB55F.pygtex [22])
+(./_minted-documentation/5BF813EE1075CAE77F26559A4FF2146F5E620CAA758430E5E8F729
+407B2BB55F.pygtex [24])
 \openout5 = documentation.pyg
 
-(./_minted-documentation/DE35E66043593FFD15EB64990C5BB8D55E620CAA758430E5E8F729
+(./_minted-documentation/1AA80A09041B533A85EE47E0E8393EC95E620CAA758430E5E8F729
+407B2BB55F.pygtex [25]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26])
+\openout5 = documentation.pyg
+
+(./_minted-documentation/F25302B5C6997177113ED511CBA836525E620CAA758430E5E8F729
 407B2BB55F.pygtex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [23]
-[24]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [25])
-\openout5 = documentation.pyg
-
-(./_minted-documentation/35BA9C3A6D8CD0C6A30344341911206F5E620CAA758430E5E8F729
-407B2BB55F.pygtex [26])) (./analysis.tex
-\openout5 = documentation.pyg
-
-(./_minted-documentation/BCEE1ED7C84BC283148E338224FE45395E620CAA758430E5E8F729
-407B2BB55F.pygtex [27]
+ [27]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [28]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29]
+ [29])
+\openout5 = documentation.pyg
+
+(./_minted-documentation/9A53AD741793234D8802E612A822DBE25E620CAA758430E5E8F729
+407B2BB55F.pygtex [30])) (./analysis.tex
+\openout5 = documentation.pyg
+
+(./_minted-documentation/855A8131EEED94127A3FFE97C48281E45E620CAA758430E5E8F729
+407B2BB55F.pygtex [31]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [30]))
-[31]
-<./images//bzx55.pdf, id=535, page=1, 606.265pt x 794.97pt>
+ [32]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [34])
+\openout5 = documentation.pyg
+
+(./_minted-documentation/CFDF8C52A94CA70065F0B055FB65173A5E620CAA758430E5E8F729
+407B2BB55F.pygtex [35]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [36]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37]))
+[38]
+<./images//bzx55.pdf, id=564, page=1, 606.265pt x 794.97pt>
 File: ./images//bzx55.pdf Graphic file (type pdf)
 <use ./images//bzx55.pdf, page 1>
 Package luatex.def Info: ./images//bzx55.pdf , page1 used on input line 61.
 (luatex.def)             Requested size: 469.79681pt x 631.18687pt.
- [32
+ [39
 
 <./images//bzx55.pdf>]
-<./images//bzx55.pdf, id=574, page=2, 606.265pt x 794.97pt>
+<./images//bzx55.pdf, id=602, page=2, 606.265pt x 794.97pt>
 File: ./images//bzx55.pdf Graphic file (type pdf)
 <use ./images//bzx55.pdf, page 2>
 Package luatex.def Info: ./images//bzx55.pdf , page2 used on input line 65.
 (luatex.def)             Requested size: 469.79681pt x 631.18687pt.
- [33
+ [40
 
 <./images//bzx55.pdf>]
-<./images//bzx55.pdf, id=579, page=4, 606.265pt x 794.97pt>
+<./images//bzx55.pdf, id=607, page=4, 606.265pt x 794.97pt>
 File: ./images//bzx55.pdf Graphic file (type pdf)
 <use ./images//bzx55.pdf, page 4>
 Package luatex.def Info: ./images//bzx55.pdf , page4 used on input line 69.
 (luatex.def)             Requested size: 469.79681pt x 631.18687pt.
- [34
+ [41
 
 <./images//bzx55.pdf>] (./documentation.aux (./frontmatter.aux))
-
-LaTeX Warning: There were undefined references.
-
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1625,16 +1641,16 @@ runsystem(rm documentation.pyg)...executed
 ### bottom level
 
 Here is how much of LuaTeX's memory you used:
- 18889 strings out of 478382
- 156270,1977958 words of node,token memory allocated
+ 18934 strings out of 478382
+ 381547,1977958 words of node,token memory allocated
  750 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 6 glue, 4 kern, 1 glyph, 23 attribute, 74 glue_spec
 , 23 attribute_list, 2 write, 8 pdf_action nodes
-   avail lists: 2:4294,3:341,4:646,5:1422,6:94,7:8965,8:100,9:4103,10:110,11:118
-1
- 37715 multiletter control sequences out of 65536+600000
+   avail lists: 1:1,2:11420,3:341,4:872,5:3979,6:95,7:16063,8:100,9:11863,10:110
+,11:3642
+ 37719 multiletter control sequences out of 65536+600000
  91 fonts using 7223735 bytes
- 101i,10n,92p,1349b,967s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,10n,92p,1349b,969s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/opentype/public/lm/lmmono10-italic.otf></usr/share/texmf
 /fonts/opentype/public/lm/lmmono12-regular.otf></usr/share/texmf/fonts/opentype/
 public/lm/lmmonolt10-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman
@@ -1659,10 +1675,10 @@ s/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msbm10.pfb>
-Output written on documentation.pdf (34 pages, 7020688 bytes).
+Output written on documentation.pdf (41 pages, 6968311 bytes).
 
-PDF statistics: 716 PDF objects out of 1000 (max. 8388607)
- 555 compressed objects within 6 object streams
- 121 named destinations out of 1000 (max. 131072)
- 312 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 745 PDF objects out of 1000 (max. 8388607)
+ 578 compressed objects within 6 object streams
+ 128 named destinations out of 1000 (max. 131072)
+ 302 words of extra memory for PDF output out of 10000 (max. 100000000)
 

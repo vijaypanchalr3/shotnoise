@@ -68,7 +68,7 @@ class files:
                 _second_array.append(mean(array(extra_array,dtype=float)))
 
         return vstack((array(_first_array,dtype=float),array(_second_array,dtype=float))).T
-        
+                
     def sort_on_deviation(self, points=5):
         data = array(self.fobject, dtype=float)
         filtered_data=[]
@@ -124,17 +124,25 @@ class files:
             else:
                 count=0
                 index = float(datapoint[0])
+        
+        
+        
 
         delete = []
         common_array.pop()
         for i in range(len(common_array)-1):    
             if len(common_array[len(common_array)-1])<len(common_array[i]):
                 common_array[i].pop()
-        common_array = array(common_array)
-        from matplotlib import cm
-        colormap = cm.get_cmap(color, len(common_array))
-        return common_array,colormap
         
+        common_array = array(common_array)
+        
+        from matplotlib import cm
+
+        colormap = cm.get_cmap(color, len(common_array))
+
+        return common_array,colormap
+
+
     def point_mean(self,data):
         freq = []
         vo = []
@@ -155,9 +163,135 @@ class files:
         vo.pop()
         return array(freq,dtype=float),array(vo,dtype=float)
 
+
+
+ 
+
 if __name__=="__main__":
     print("No Error")
 \end{minted}
 
 
 
+Some analysis code,
+
+\begin{minted}[breaklines, breakanywhere, linenos, xleftmargin=20pt]{python}
+import tools
+
+import matplotlib.pyplot as plt
+import matplotlib as mpl
+import matplotlib.font_manager as font_manager
+
+mpl.rcParams['font.family']='serif'
+cmfont = font_manager.FontProperties(fname=mpl.get_data_path() + 'cmr10.ttf')
+mpl.rcParams['font.serif']=cmfont.get_name()
+mpl.rcParams['mathtext.fontset']='cm'
+mpl.rcParams['axes.unicode_minus']=False
+leg_font = font_manager.FontProperties(size=12)
+font = {'color':'black','size':12}
+
+import numpy as np
+
+from scipy.optimize import curve_fit
+
+
+
+
+file1 = "../data/final2.csv"
+file2 = "../data/file3002.csv"
+file3 = "../data/filelow.csv"
+file4 = "../data/file10001.csv"
+file5 = "../data/file100001.csv"
+file6 = "../data/file10002.csv"
+
+ufile1 = "../data/file1k100us.csv"
+ufile2 = "../data/file1k2100us.csv"
+ufile3 = "../data/file1k3100us.csv"
+
+file1_init = tools.files(file1)
+file2_init = tools.files(file2)
+file3_init = tools.files(file3)
+file4_init = tools.files(file4)
+file5_init = tools.files(file5)
+file6_init = tools.files(file6)
+# file7_init = tools.files(file7)
+# file8_init = tools.files(file8)
+
+ufile1_init = tools.files(ufile1)
+ufile2_init = tools.files(ufile2)
+ufile3_init = tools.files(ufile3)
+
+
+
+
+diff_data, colormap = file3_init.shady_plot("plasma")
+total_points=5
+fig, ax = plt.subplots()
+for i in range(2,len(diff_data),int(len(diff_data)/total_points)):
+    ax.plot(diff_data[i][:,0],diff_data[i][:,1],color=colormap(i), label=f"run {i+1}",linewidth= .6)
+    # ax.plot(diff_data[i][:,0],diff_data[i][:,1],'ro')
+ax.plot(diff_data[0][:,0],diff_data[0][:,1],"r",label="FIRST RUN",linewidth =1.5)
+# ax.set(ylim=(0.0,0.001))
+ax.set_xlabel("frequency",fontdict=font)
+ax.set_ylabel("R",fontdict=font)
+# ax.set_title("RAW data: Noise for sub 1Hz frequency with TIME CONSTANT=100$ms$",fontdict=font)
+ax.grid(which="both",axis="both",color="orange",alpha=0.4)
+ax.legend(prop= leg_font)
+plt.savefig("raw1100us.png",dpi=700)
+
+
+
+diff_data, colormap = file5_init.shady_plot("plasma")
+total_points=10
+fig, ax = plt.subplots()
+for i in range(0,len(diff_data),int(len(diff_data)/total_points)):
+    ax.plot(diff_data[i][:,0],diff_data[i][:,1],color=colormap(i), label=f"data {i}",linewidth= .6)
+# ax.set(ylim=(0.0,0.0002))
+ax.legend()
+ax.set_xlabel("frequency")
+ax.set_ylabel("Vrms(Noise)")
+
+
+diff_data, colormap = file6_init.shady_plot("plasma")
+total_points=10
+fig, ax = plt.subplots()
+for i in range(0,len(diff_data),int(len(diff_data)/total_points)):
+    ax.plot(diff_data[i][:,0],diff_data[i][:,1],color=colormap(i), label=f"data {i}",linewidth= .6)
+# ax.set(ylim=(0.0,0.0002))
+ax.legend()
+ax.set_xlabel("frequency")
+ax.set_ylabel("Vrms(Noise)")
+
+diff_data, colormap = ufile1_init.shady_plot("plasma")
+data = ufile1_init.get_mean()
+total_points=5
+fig, ax = plt.subplots()
+for i in range(1,len(diff_data),int(len(diff_data)/total_points)):
+    ax.plot(diff_data[i][:,0],diff_data[i][:,1],color=colormap(i), label=f"run {i}",linewidth= .6)
+    # ax.plot(diff_data[i][:,0],diff_data[i][:,1],'ro')
+ax.plot(data[:,0],data[:,1],"r",label="MEAN",linewidth =1.5)
+# ax.set_xscale('log')
+# ax.set(ylim=(0.0,0.001))
+ax.set_xlabel("frequency",fontdict=font)
+ax.set_ylabel("R",fontdict=font)
+# ax.set_title("RAW data: Noise for sub 10k frequency with TIME CONSTANT=100$\mu s$",fontdict=font)
+ax.grid(which="both",axis="both",color="orange",alpha=0.4)
+ax.legend(prop= leg_font)
+plt.savefig("raw1000100ms.png",dpi=700)
+
+
+data = ufile1_init.sort_on_deviation(5)
+fig, ax = plt.subplots()
+ax.plot(diff_data[i][:,0],diff_data[i][:,1], label="",linewidth= .6)
+# ax.plot(diff_data[i][:,0],diff_data[i][:,1],'ro')
+# ax.set(ylim=(0.0,0.001))
+ax.set_xlabel("frequency",fontdict=font)
+ax.set_ylabel("$V_{rms}$(Noise)",fontdict=font)
+ax.set_title("RAW data: zener diode data for sub 10k frequency with TIME CONSTANT=100$\mu s$",fontdict=font)
+ax.grid(which="both",axis="both",color="orange",alpha=0.4)
+ax.legend(prop= leg_font)
+plt.savefig("mean1000100us.png",dpi=500)
+
+
+
+\end{minted}

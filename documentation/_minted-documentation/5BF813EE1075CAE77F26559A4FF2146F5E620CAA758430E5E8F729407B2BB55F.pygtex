@@ -1,0 +1,61 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{pyinstro.utils} \PYG{k+kn}{import} \PYG{n}{getpath}
+\PYG{k+kn}{from} \PYG{n+nn}{pyinstro.utils} \PYG{k+kn}{import} \PYG{n}{getpath}
+
+\PYG{k+kn}{import} \PYG{n+nn}{csv}
+\PYG{k+kn}{import} \PYG{n+nn}{os}
+
+\PYG{k}{class} \PYG{n+nc}{Get\PYGZus{}File}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+sd}{    INFO: just to write file, must be CSV}
+\PYG{l+s+sd}{    \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,}\PYG{n}{file}\PYG{p}{)} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{k+kc}{None}\PYG{p}{:}
+        \PYG{n}{\PYGZus{}project\PYGZus{}dir\PYGZus{}path\PYGZus{}abs} \PYG{o}{=} \PYG{n}{getpath}\PYG{o}{.}\PYG{n}{getpath}\PYG{p}{()}
+
+        \PYG{k}{if} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{exists}\PYG{p}{(}\PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{\PYGZus{}project\PYGZus{}dir\PYGZus{}path\PYGZus{}abs}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}data\PYGZdq{}}\PYG{p}{)):}
+            \PYG{n}{\PYGZus{}data\PYGZus{}dir\PYGZus{}path\PYGZus{}abs} \PYG{o}{=} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{\PYGZus{}project\PYGZus{}dir\PYGZus{}path\PYGZus{}abs}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}data\PYGZdq{}}\PYG{p}{)}
+        \PYG{k}{else}\PYG{p}{:}
+            \PYG{n}{os}\PYG{o}{.}\PYG{n}{mkdir}\PYG{p}{(}\PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{\PYGZus{}project\PYGZus{}dir\PYGZus{}path\PYGZus{}abs}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}data\PYGZdq{}}\PYG{p}{))}
+            \PYG{n}{\PYGZus{}data\PYGZus{}dir\PYGZus{}path\PYGZus{}abs} \PYG{o}{=} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{\PYGZus{}project\PYGZus{}dir\PYGZus{}path\PYGZus{}abs}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}data\PYGZdq{}}\PYG{p}{)}
+
+        \PYG{k}{if} \PYG{n}{file}\PYG{o}{==}\PYG{l+s+s1}{\PYGZsq{}default\PYGZsq{}}\PYG{p}{:}
+            \PYG{n}{file} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}auto0.csv\PYGZdq{}}
+            \PYG{n}{count} \PYG{o}{=} \PYG{l+m+mi}{0}
+            \PYG{k}{while} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{exists}\PYG{p}{(}\PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{\PYGZus{}data\PYGZus{}dir\PYGZus{}path\PYGZus{}abs}\PYG{p}{,}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}auto}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{count}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{.csv\PYGZdq{}}\PYG{p}{)):}
+                \PYG{n}{count}\PYG{o}{+=}\PYG{l+m+mi}{1}
+                \PYG{n}{file} \PYG{o}{=} \PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}auto}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{count}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{.csv\PYGZdq{}}
+
+        \PYG{n}{file} \PYG{o}{=} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{\PYGZus{}data\PYGZus{}dir\PYGZus{}path\PYGZus{}abs}\PYG{p}{,}\PYG{n}{file}\PYG{p}{)}
+
+        \PYG{c+c1}{\PYGZsh{} i did not used re module down here}
+        \PYG{k}{if} \PYG{o+ow}{not} \PYG{p}{((}\PYG{n}{file}\PYG{p}{[}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{file}\PYG{p}{)}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{==}\PYG{l+s+s1}{\PYGZsq{}v\PYGZsq{}}\PYG{p}{)}\PYG{o+ow}{and}\PYG{p}{(}\PYG{n}{file}\PYG{p}{[}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{file}\PYG{p}{)}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{o}{==}\PYG{l+s+s1}{\PYGZsq{}s\PYGZsq{}}\PYG{p}{)}\PYG{o+ow}{and}\PYG{p}{(}\PYG{n}{file}\PYG{p}{[}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{file}\PYG{p}{)}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{3}\PYG{p}{]}\PYG{o}{==}\PYG{l+s+s1}{\PYGZsq{}c\PYGZsq{}}\PYG{p}{)}\PYG{o+ow}{and}\PYG{p}{(}\PYG{n}{file}\PYG{p}{[}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{file}\PYG{p}{)}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{4}\PYG{p}{]}\PYG{o}{==}\PYG{l+s+s1}{\PYGZsq{}.\PYGZsq{}}\PYG{p}{)):}
+            \PYG{n}{file} \PYG{o}{=} \PYG{n}{file}\PYG{o}{+}\PYG{l+s+s2}{\PYGZdq{}.csv\PYGZdq{}}
+        \PYG{k}{else}\PYG{p}{:}
+            \PYG{k}{pass}
+
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{filepath} \PYG{o}{=} \PYG{n}{file}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{firsttime} \PYG{o}{=} \PYG{k+kc}{True}
+
+    \PYG{k}{def} \PYG{n+nf}{writerow}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{data}\PYG{p}{)}\PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{k+kc}{None}\PYG{p}{:}
+\PYG{+w}{        }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+sd}{        open file one time ad write it}
+\PYG{l+s+sd}{        \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+        \PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{firsttime}\PYG{p}{:}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{file} \PYG{o}{=} \PYG{n+nb}{open}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{filepath}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}w\PYGZsq{}}\PYG{p}{,}\PYG{n}{newline}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{writer} \PYG{o}{=} \PYG{n}{csv}\PYG{o}{.}\PYG{n}{writer}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{file}\PYG{p}{)}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{writer}\PYG{o}{.}\PYG{n}{writerow}\PYG{p}{(}\PYG{n}{data}\PYG{p}{)}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{firsttime} \PYG{o}{=} \PYG{k+kc}{False}
+            \PYG{n+nb}{print}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{filepath}\PYG{p}{)}
+        \PYG{k}{else}\PYG{p}{:}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{writer}\PYG{o}{.}\PYG{n}{writerow}\PYG{p}{(}\PYG{n}{data}\PYG{p}{)}
+
+
+    \PYG{k}{def} \PYG{n+nf}{longwriterow}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,}\PYG{n}{data}\PYG{p}{)}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{k+kc}{None}\PYG{p}{:}
+\PYG{+w}{        }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+sd}{        for long data, i think it is suitable to write file each time open and close}
+\PYG{l+s+sd}{        \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+        \PYG{k}{with} \PYG{n+nb}{open}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{filepath}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}a\PYGZsq{}}\PYG{p}{,}\PYG{n}{newline}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{datafile}\PYG{p}{:}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{writer} \PYG{o}{=} \PYG{n}{csv}\PYG{o}{.}\PYG{n}{writer}\PYG{p}{(}\PYG{n}{datafile}\PYG{p}{)}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{writer}\PYG{o}{.}\PYG{n}{writerow}\PYG{p}{(}\PYG{n}{data}\PYG{p}{)}
+
+\end{Verbatim}
