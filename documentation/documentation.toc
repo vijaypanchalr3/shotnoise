@@ -28,5 +28,5 @@
 \contentsline {section}{References}{17}{section.5}%
 \contentsline {section}{Appendix}{19}{section.5}%
 \contentsline {subsection}{PyInstro}{19}{section*.1}%
-\contentsline {subsection}{Code for data analysis}{19}{section*.1}%
-\contentsline {subsection}{Zener diode datasheet}{19}{section*.1}%
+\contentsline {subsection}{Code for data analysis}{31}{section*.1}%
+\contentsline {subsection}{Zener diode datasheet}{39}{section*.1}%
