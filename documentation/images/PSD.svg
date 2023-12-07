@@ -27,7 +27,7 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="pt"
      inkscape:zoom="0.77913846"
-     inkscape:cx="257.33552"
+     inkscape:cx="203.42982"
      inkscape:cy="121.92955"
      inkscape:window-width="1366"
      inkscape:window-height="736"
@@ -157,7 +157,7 @@
          d="M 21.843989,61.216606 H 14.346031"
          id="path6" />
       <ellipse
-         style="fill:#f5f5f5;stroke:#000000;stroke-width:0.564444;stroke-dasharray:none;fill-opacity:1"
+         style="fill:#f9f9f9;fill-opacity:1;stroke:#000000;stroke-width:0.564444;stroke-dasharray:none"
          id="path7"
          cx="58.03244"
          cy="30.714424"
@@ -179,7 +179,7 @@
          inkscape:path-effect="#path-effect12"
          inkscape:original-d="m 54.779753,61.411693 c 0.975609,-0.04641 1.951218,-0.09282 2.926826,-0.139234 0.116145,-0.502724 0.232281,-1.005427 0.34842,-1.508138 0,-0.494573 0,-0.989124 0,-1.483686" />
       <rect
-         style="fill:#f5f5f5;stroke:#000000;stroke-width:0.564444;stroke-dasharray:none;fill-opacity:1"
+         style="fill:#f9f9f9;fill-opacity:1;stroke:#000000;stroke-width:0.564444;stroke-dasharray:none"
          id="rect3"
          width="18.187012"
          height="18.826643"
@@ -188,7 +188,7 @@
          ry="0.65882844" />
       <path
          sodipodi:type="star"
-         style="fill:#f5f5f5;stroke:#000000;stroke-width:1.29591;stroke-dasharray:none;fill-opacity:1"
+         style="fill:#f9f9f9;fill-opacity:1;stroke:#000000;stroke-width:1.29591;stroke-dasharray:none"
          id="path1"
          inkscape:flatsided="true"
          sodipodi:sides="3"
@@ -205,7 +205,7 @@
          inkscape:transform-center-y="2.0239299"
          transform="matrix(0.17520204,0.39876822,-0.39876822,0.17520204,35.979159,17.391162)" />
       <rect
-         style="fill:#f5f5f5;stroke:#000000;stroke-width:0.564444;stroke-dasharray:none;fill-opacity:1"
+         style="fill:#f9f9f9;fill-opacity:1;stroke:#000000;stroke-width:0.564444;stroke-dasharray:none"
          id="rect9"
          width="17.204638"
          height="17.204638"
@@ -219,7 +219,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect12);display:inline;fill:#000000;stroke:none;stroke-width:2.13333;stroke-dasharray:none"><tspan
            x="10.679688"
            y="106.42969"
-           id="tspan9">Signal</tspan></text>
+           id="tspan1">Signal</tspan></text>
       <text
          xml:space="preserve"
          transform="matrix(0.26458333,0,0,0.26458333,-6.5025848,3.3384169)"
@@ -229,11 +229,11 @@
          y="0"><tspan
            x="3.7910156"
            y="211.98633"
-           id="tspan10">Reference
+           id="tspan2">Reference
 </tspan><tspan
            x="20.904297"
            y="231.98633"
-           id="tspan11">signal</tspan></text>
+           id="tspan3">signal</tspan></text>
       <text
          xml:space="preserve"
          transform="matrix(0.26458333,0,0,0.26458333,-5.4471058,0.26626249)"
@@ -243,11 +243,11 @@
          y="0"><tspan
            x="113.37207"
            y="229.29688"
-           id="tspan12">Phase
+           id="tspan4">Phase
 </tspan><tspan
            x="110.96582"
            y="249.29688"
-           id="tspan13">shifter</tspan></text>
+           id="tspan5">shifter</tspan></text>
       <text
          xml:space="preserve"
          transform="matrix(0.26458333,0,0,0.26458333,-4.3588002,-16.213024)"
@@ -257,11 +257,11 @@
          y="0"><tspan
            x="88.333008"
            y="110.6582"
-           id="tspan14">differential
+           id="tspan6">differential
 </tspan><tspan
            x="99.129883"
            y="130.6582"
-           id="tspan15">amplifer</tspan></text>
+           id="tspan7">amplifer</tspan></text>
       <path
          style="fill:none;stroke:#000000;stroke-width:0.421484;stroke-dasharray:none"
          d="m 57.335602,30.776058 c -1.68503,-2.092312 -3.37006,-4.184624 -5.05509,-6.276936"
@@ -285,7 +285,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect17);display:inline;fill:#000000;stroke:none;stroke-width:2.13333;stroke-dasharray:none"><tspan
            x="308.94727"
            y="130.24219"
-           id="tspan16">LPF</tspan></text>
+           id="tspan8">LPF</tspan></text>
     </g>
   </g>
 </svg>

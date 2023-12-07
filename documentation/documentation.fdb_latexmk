@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex documentation"] 1701935605 "documentation.aux" "documentation.bbl" "documentation" 1701935605 0
+["bibtex documentation"] 1701935605 "documentation.aux" "documentation.bbl" "documentation" 1701936306 0
   "./documentation.bib" 1700888800 5442 a7745d2e11c032013ed03880f66eee62 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "documentation.aux" 1701935604 12497 5215c8e26e315e81a8bd80f29954676c "pdflatex"
-  "frontmatter.aux" 1701935586 1792 038bbc0c1f7d3d24703d6b2b0d0abae1 "pdflatex"
+  "documentation.aux" 1701936304 12497 5215c8e26e315e81a8bd80f29954676c "pdflatex"
+  "frontmatter.aux" 1701936286 1792 038bbc0c1f7d3d24703d6b2b0d0abae1 "pdflatex"
   (generated)
   "documentation.bbl"
   "documentation.blg"
   (rewritten before read)
-["pdflatex"] 1701935584 "documentation.tex" "documentation.pdf" "documentation" 1701935605 2
+["pdflatex"] 1701936284 "documentation.tex" "documentation.pdf" "documentation" 1701936306 2
   "/home/vijay/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-italic.luc" 1696783485 82945 19e775900c328ccf83074e1ad367107c ""
   "/home/vijay/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc" 1696593964 81819 943de47a424d8006cb945ecfb1acc821 ""
   "/home/vijay/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lmmono12-regular.luc" 1696592679 81754 a51e06484a5bb20849344039a7cc5b7d ""
@@ -253,16 +253,16 @@
   "_minted-documentation/F25302B5C6997177113ED511CBA836525E620CAA758430E5E8F729407B2BB55F.pygtex" 1701932971 13893 9059f39511d5e90489430e0c30f93b73 ""
   "_minted-documentation/default.pygstyle" 1700888800 6365 683ea4fd81022f120108d52c508c17f9 ""
   "analysis.tex" 1701932914 10006 b03c8b93a73e151b579cee9821b897d9 ""
-  "documentation.aux" 1701935604 12497 5215c8e26e315e81a8bd80f29954676c "pdflatex"
+  "documentation.aux" 1701936304 12497 5215c8e26e315e81a8bd80f29954676c "pdflatex"
   "documentation.bbl" 1701935605 3407 ff7dff13531aaacac304e6716ad5544c "bibtex documentation"
-  "documentation.out" 1701935604 5385 dc00d0c4112f1ca024df14054a1b60fa "pdflatex"
-  "documentation.spl" 1701935585 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "documentation.out" 1701936304 5385 dc00d0c4112f1ca024df14054a1b60fa "pdflatex"
+  "documentation.spl" 1701936285 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "documentation.tex" 1700888800 5271 3f35489c053bf5c56d13a0c3ca9a8a2b ""
-  "documentation.toc" 1701935604 2769 013873966f6517aa47ca941351729364 "pdflatex"
+  "documentation.toc" 1701936305 2769 013873966f6517aa47ca941351729364 "pdflatex"
   "elsaarticle.cls" 1701933583 27385 27450555a3b6107cced411ef0357868e ""
-  "frontmatter.aux" 1701935586 1792 038bbc0c1f7d3d24703d6b2b0d0abae1 "pdflatex"
+  "frontmatter.aux" 1701936286 1792 038bbc0c1f7d3d24703d6b2b0d0abae1 "pdflatex"
   "frontmatter.tex" 1700888800 3422 a879361a129d103d3e8945ef81ebfa8e ""
-  "images//PSD.png" 1701934155 127315 d5cf7346da68680ae824fd272d876a2b ""
+  "images//PSD.png" 1701936277 127352 cf0f69b8dcd981192e91803971db31e3 ""
   "images//bzx55.pdf" 1700888800 104588 7eaca4da3fddc1152fed11b347a73667 ""
   "images//circuit-20231005-2243.png" 1700888800 28065 26706ad38d111865b406203459fb5d58 ""
   "images//circuit-20231005-2244.png" 1700888800 31518 2ee7bf4e6692d025eff348da3c959354 ""
@@ -280,7 +280,7 @@
   "images//zener.png" 1700888800 128400 75b438d35af5507b9c02c8501221c75f ""
   "images//zenerIV.png" 1700888800 339647 f931b19e3db7ae1d3e706a235694512b ""
   "images/SR830m.pdf" 1700888800 4655825 a2c44d5ef3f570b2abb7117954a49025 ""
-  "methodology.tex" 1700890376 15709 5a3844dec0d0dcc13a18d7777282d37b ""
+  "methodology.tex" 1701935982 15709 6a34e0fe37496f2d5958b75818c9baab ""
   "mypackages.tex" 1700888800 349 886eeac9b919099863516cafff4ce2da ""
   "pyinstro.tex" 1701931960 20448 64ac4e0a86b68fb86ca54bdc9de5a160 ""
   "results.tex" 1700888800 4933 4c39bfe10bb89a00676f3a5ef9fb400c ""
